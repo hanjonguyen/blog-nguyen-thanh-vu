@@ -3,952 +3,405 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Tôi từng mất tất cả vì một cú khóa kênh — Nguyễn Thanh Vũ</title>
-<meta name="description" content="Câu chuyện của Nguyễn Thanh Vũ — Coach xây kênh online cho chuyên gia y tế và người khởi nghiệp. Làm sạch, làm bền, đúng tiêu chuẩn cộng đồng." />
+<title>Nguyễn Thanh Vũ — Coach xây kênh online cho chuyên gia y tế</title>
+<meta name="description" content="Nguyễn Thanh Vũ — coach xây kênh online cho bác sĩ, dược sĩ, chuyên gia y tế. Làm sạch, làm bền, đúng tiêu chuẩn cộng đồng. Thế giới bên trong, giá trị cốt lõi và các bài viết về xây kênh." />
 <meta name="theme-color" content="#7b1e2b" />
-<meta property="og:title" content="Tôi từng mất tất cả vì một cú khóa kênh" />
-<meta property="og:description" content="Câu chuyện của Nguyễn Thanh Vũ — làm sạch, làm bền, đúng tiêu chuẩn cộng đồng." />
-<meta property="og:type" content="article" />
+<meta property="og:title" content="Nguyễn Thanh Vũ — Coach xây kênh online cho chuyên gia y tế" />
+<meta property="og:description" content="Giúp người giỏi nghề được nhiều người biết đến — bằng cách sạch và bền." />
+<meta property="og:type" content="website" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
   :root{
-    /* ----- thang đỏ rượu vang 4 bậc theo trục độ sáng (hue ~351°), mọi glow/viền đều phái sinh từ đây ----- */
-    --wine-deep:#561019;   /* đáy gradient / đổ bóng sâu */
-    --wine:#7b1e2b;        /* màu thương hiệu chủ đạo, nền nút */
-    --wine-bright:#a02234; /* đỉnh gradient / hover */
-    --wine-soft:#c97b85;   /* accent / chữ nhấn trên nền tối */
-
-    --cream:#f7f4ef;
-    --cream-pure:#ffffff;
-    --ink:#1a1416;
-    --ink-dim:#5c5256;
-    --ink-faint:#7a7176;
+    --wine:#7b1e2b; --wine-deep:#561019; --wine-bright:#a02234; --wine-soft:#c97b85;
+    --cream:#f7f4ef; --cream-pure:#ffffff;
+    --ink:#1a1416; --ink-dim:#5c5256; --ink-faint:#7a7176;
     --black:#0d0b0c;
-    --black-2:#161213;
-    --light:#f2ede6;
-    --light-dim:rgba(242,237,230,0.62);
-    --light-faint:rgba(242,237,230,0.42);
-
-    --rule:rgba(123,30,43,0.26);
-    --rule-soft:rgba(26,20,22,0.12);
-
-    --maxw:700px;
+    --light:#f2ede6; --light-dim:rgba(242,237,230,0.72); --light-faint:rgba(242,237,230,0.45);
+    --rule:rgba(123,30,43,0.22); --rule-soft:rgba(26,20,22,0.12);
+    --maxw:1120px;
     --serif:'Playfair Display', Georgia, 'Times New Roman', serif;
-    --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --sans:'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
-  *{box-sizing:border-box;margin:0;padding:0;}
+  *{box-sizing:border-box;}
   html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
-  body{
-    background:var(--cream);
-    color:var(--ink);
-    font-family:var(--sans);
-    font-size:18px;
-    line-height:1.75;
-    -webkit-font-smoothing:antialiased;
-    text-rendering:optimizeLegibility;
-    overflow-x:hidden;
-  }
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;}
+  img{max-width:100%;display:block;}
+  a{color:var(--wine);text-decoration:none;transition:color .2s ease;}
+  a:hover{color:var(--wine-bright);}
+  h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.15;color:var(--ink);margin:0;}
   ::selection{background:var(--wine);color:var(--light);}
+  .wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:28px;}
+  .eyebrow{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--wine);font-weight:600;margin:0 0 18px;}
 
-  /* ---------- reading progress ---------- */
-  .progress-track{
-    position:fixed;top:0;left:0;right:0;height:3px;
-    background:transparent;z-index:140;pointer-events:none;
-  }
-  .progress-bar{
-    height:100%;width:0%;
-    background:linear-gradient(90deg,var(--wine),var(--wine-bright));
-    transition:width .12s linear;
-  }
+  /* nav */
+  .nav{position:sticky;top:0;z-index:50;background:rgba(247,244,239,0.88);backdrop-filter:saturate(140%) blur(10px);-webkit-backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--rule-soft);}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:74px;}
+  .brand{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-weight:700;font-size:20px;color:var(--ink);letter-spacing:.01em;}
+  .brand .dot{width:9px;height:9px;border-radius:50%;background:var(--wine);box-shadow:0 0 0 4px rgba(123,30,43,.12);flex:none;}
+  .nav-links{display:flex;gap:30px;}
+  .nav-links a{color:var(--ink-dim);font-size:12.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;}
+  .nav-links a:hover{color:var(--wine);}
+  .nav-toggle{display:none;background:none;border:0;font-size:26px;line-height:1;color:var(--wine);cursor:pointer;padding:6px;}
 
-  /* ---------- navbar ---------- */
-  .nav{
-    position:sticky;top:0;z-index:120;
-    background:rgba(247,244,239,0.86);
-    backdrop-filter:blur(12px);
-    -webkit-backdrop-filter:blur(12px);
-    border-bottom:1px solid var(--rule-soft);
-  }
-  .nav-inner{
-    max-width:1140px;margin:0 auto;
-    padding:13px 28px;
-    display:flex;align-items:center;justify-content:space-between;gap:16px;
-  }
-  .nav-brand{
-    font-family:var(--serif);
-    font-weight:700;font-size:19px;letter-spacing:.01em;
-    color:var(--ink);text-decoration:none;
-    display:flex;align-items:center;gap:11px;
-    min-height:44px;
-  }
-  .nav-brand .mark{
-    width:32px;height:32px;border-radius:50%;
-    background:var(--wine);color:var(--light);
-    font-family:var(--serif);font-weight:700;font-size:16px;
-    display:flex;align-items:center;justify-content:center;
-    flex-shrink:0;object-fit:cover;object-position:50% 12%;
-    border:1px solid var(--wine-deep);
-    transition:transform .25s ease;
-  }
-  .nav-brand:hover .mark{background:var(--wine-bright);transform:rotate(-6deg);}
-  .nav-cta{
-    font-family:var(--sans);font-weight:600;font-size:14px;
-    letter-spacing:.02em;
-    background:var(--wine);color:var(--light);
-    border:none;border-radius:0;
-    padding:11px 20px;min-height:44px;
-    text-decoration:none;cursor:pointer;
-    display:inline-flex;align-items:center;
-    transition:background .2s ease;
-    white-space:nowrap;
-  }
-  .nav-cta:hover{background:var(--wine-bright);}
-  .nav-menu{display:flex;align-items:center;gap:24px;}
-  .nav-menu a{font-family:var(--sans);font-weight:500;font-size:14.5px;color:var(--ink-dim);text-decoration:none;white-space:nowrap;transition:color .2s ease;}
-  .nav-menu a:hover,.nav-menu a.current{color:var(--wine);}
-  @media(max-width:680px){.nav-menu{display:none;}}
+  /* hero */
+  .hero{position:relative;overflow:hidden;padding:104px 0 92px;border-bottom:1px solid var(--rule);}
+  .hero-inner{position:relative;display:grid;grid-template-columns:1.3fr .82fr;gap:60px;align-items:center;}
+  .hero h1{font-size:clamp(40px,6vw,84px);margin:6px 0 24px;letter-spacing:-.5px;}
+  .hero h1 span{color:var(--wine);font-style:italic;}
+  .hero .lead{font-family:var(--serif);font-size:clamp(18px,2.1vw,23px);font-weight:400;font-style:italic;color:var(--ink-dim);margin:0 0 36px;max-width:46ch;line-height:1.6;}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:15px 28px;border-radius:0;font-weight:600;font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-family:var(--sans);border:1px solid transparent;cursor:pointer;transition:background .2s ease,color .2s ease,border-color .2s ease;}
+  .btn-primary{background:var(--wine);color:var(--light);}
+  .btn-primary:hover{background:var(--wine-bright);color:var(--light);}
+  .btn-ghost{background:transparent;color:var(--wine);border-color:var(--rule);}
+  .btn-ghost:hover{border-color:var(--wine);color:var(--wine-bright);}
 
-  /* ---------- layout grid : article + sticky TOC ---------- */
-  .shell{
-    max-width:1140px;margin:0 auto;
-    display:grid;
-    grid-template-columns:1fr minmax(0,var(--maxw)) 1fr;
-    column-gap:36px;
-  }
-  .shell > .col-main{grid-column:2;min-width:0;}
-  .shell > .col-toc{grid-column:3;}
+  .hero-card{background:var(--wine-deep);border:1px solid rgba(201,123,133,.30);padding:26px;color:var(--light);position:relative;overflow:hidden;}
+  .hero-card::before{content:"";position:absolute;inset:9px;border:1px solid rgba(201,123,133,.16);pointer-events:none;}
+  .hero-photo{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 16%;border:1px solid rgba(201,123,133,.40);margin-bottom:20px;}
+  .hero-card h3{color:var(--light);font-size:22px;margin:0 0 4px;}
+  .hero-card .role{color:var(--light-dim);font-size:13.5px;margin:0 0 18px;}
+  .pill{display:inline-block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:6px 11px;border:1px solid rgba(201,123,133,.34);color:var(--wine-soft);margin:0 7px 7px 0;}
 
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+  /* sections */
+  section{padding:96px 0;}
+  .alt{background:var(--cream-pure);}
+  .section-head{max-width:64ch;margin-bottom:54px;}
+  .section-head h2{font-size:clamp(30px,4.2vw,48px);margin:0 0 16px;}
+  .section-head p{color:var(--ink-dim);font-family:var(--serif);font-style:italic;font-size:20px;margin:0;}
 
-  /* ---------- TOC (desktop sidebar) ---------- */
-  .toc{
-    position:sticky;top:88px;
-    align-self:start;
-    padding:30px 0 0 4px;
-    font-family:var(--sans);
-  }
-  .toc-label{
-    font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;
-    color:var(--wine);margin-bottom:16px;padding-left:14px;
-  }
-  .toc ol{list-style:none;}
-  .toc a{
-    display:flex;gap:11px;align-items:baseline;
-    padding:9px 14px;min-height:44px;
-    text-decoration:none;
-    border-left:2px solid var(--rule-soft);
-    color:var(--ink-dim);
-    font-size:13.5px;line-height:1.4;
-    transition:color .2s ease, border-color .2s ease, background .2s ease;
-  }
-  .toc a .tn{
-    font-family:var(--serif);font-style:italic;font-weight:600;
-    font-size:13px;color:var(--ink-dim);flex:none;
-    transition:color .2s ease;
-  }
-  .toc a:hover{color:var(--ink);border-left-color:var(--wine-soft);}
-  .toc a.active{
-    color:var(--wine-deep);font-weight:500;
-    border-left-color:var(--wine);
-    background:rgba(123,30,43,0.06);
-  }
-  .toc a.active .tn{color:var(--wine);}
+  /* story (thế giới bên trong) */
+  .story{border-top:1px solid var(--rule);}
+  .story-item{padding:44px 4px;border-bottom:1px solid var(--rule);transition:background .2s ease;}
+  .story-item:hover{background:rgba(123,30,43,.035);}
+  .story-item .q{display:flex;align-items:baseline;gap:22px;margin:0 0 16px;}
+  .story-item .num{font-family:var(--serif);font-size:50px;color:var(--wine-soft);font-weight:700;line-height:1;flex:none;}
+  .story-item h3{font-size:25px;}
+  .story-item p{margin:0 0 12px;color:var(--ink-dim);max-width:82ch;}
+  .story-item p:last-child{margin-bottom:0;}
+  .story-item .takeaway{margin-top:18px;padding-left:20px;border-left:2px solid var(--wine);font-family:var(--serif);font-style:italic;color:var(--wine-deep);font-size:19px;line-height:1.5;max-width:74ch;}
 
-  /* ---------- hero ---------- */
-  .hero{
-    padding:80px 0 56px;
-    border-bottom:1px solid var(--rule);
-    position:relative;
-  }
-  .issue-line{
-    display:flex;align-items:center;gap:14px;
-    font-family:var(--sans);font-weight:600;
-    font-size:12px;letter-spacing:.22em;text-transform:uppercase;
-    color:var(--wine);
-    margin-bottom:30px;
-  }
-  .issue-line::before,.issue-line::after{
-    content:"";height:1px;flex:0 0 28px;background:var(--wine);opacity:.5;
-  }
-  .issue-line::after{flex:1 1 auto;}
-  .issue-line .dot{width:5px;height:5px;border-radius:50%;background:var(--wine);flex:none;}
-  .eyebrow{
-    font-family:var(--sans);font-weight:600;
-    font-size:13px;letter-spacing:.18em;text-transform:uppercase;
-    color:var(--ink-dim);margin-bottom:22px;
-  }
-  .hero h1{
-    font-family:var(--serif);
-    font-weight:800;
-    font-size:clamp(34px,8.2vw,84px);
-    line-height:1.06;
-    letter-spacing:-0.012em;
-    color:var(--ink);
-    margin-bottom:30px;
-    overflow-wrap:break-word;
-    word-break:break-word;
-  }
-  .hero h1 .accent{color:var(--wine);font-style:italic;font-weight:700;}
-  .hero .lead{
-    font-family:var(--serif);
-    font-style:italic;
-    font-size:clamp(20px,2.6vw,25px);
-    line-height:1.5;
-    color:var(--ink-dim);
-    max-width:600px;
-    margin-bottom:40px;
-  }
-  .byline{
-    display:flex;align-items:center;gap:16px;
-    padding-top:26px;border-top:1px solid var(--rule-soft);
-  }
-  .avatar{
-    width:56px;height:56px;border-radius:50%;flex:none;
-    background:var(--wine);
-    object-fit:cover;object-position:50% 16%;
-    border:2px solid var(--wine-deep);
-  }
-  .byline-meta .name{
-    font-family:var(--serif);font-weight:600;font-size:18px;color:var(--ink);
-    line-height:1.2;
-  }
-  .byline-meta .role{
-    font-family:var(--sans);font-size:13.5px;color:var(--ink-dim);
-    margin-top:3px;
-  }
+  /* pull quote block (Câu chuyện) - dark */
+  .feature-dark{background:var(--black);color:var(--light);position:relative;overflow:hidden;}
+  .feature-dark::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 120% at 20% 0%,rgba(160,34,52,.34),transparent 56%),radial-gradient(100% 100% at 100% 100%,rgba(123,30,43,.30),transparent 60%);pointer-events:none;}
+  .feature-dark .wrap{position:relative;}
+  .feature-dark .eyebrow{color:var(--wine-soft);}
+  .feature-dark h2{color:var(--light);font-size:clamp(28px,3.8vw,44px);margin:0 0 22px;}
+  .feature-dark p{color:var(--light-dim);max-width:62ch;margin:0 0 18px;}
+  .feature-dark .pull{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(22px,3.2vw,34px);line-height:1.4;color:var(--wine-soft);border-left:2px solid rgba(201,123,133,.5);padding-left:26px;margin:30px 0;max-width:30ch;}
 
-  /* ---------- hero portrait (two-column) ---------- */
-  .hero-grid{
-    max-width:1140px;margin:0 auto;padding:0 28px;
-    display:grid;grid-template-columns:1fr;gap:38px;align-items:center;
-  }
-  .hero-copy{min-width:0;}
-  .hero-portrait{position:relative;margin:0;justify-self:center;width:100%;max-width:360px;}
-  .hero-portrait img{
-    width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 14%;
-    display:block;border:1px solid var(--rule);position:relative;z-index:1;
-  }
-  .hero-portrait::before{
-    content:"";position:absolute;z-index:0;left:16px;top:16px;right:-16px;bottom:-16px;
-    background:var(--wine);opacity:.15;pointer-events:none;
-  }
-  @media(min-width:900px){
-    .hero-grid{grid-template-columns:1.12fr 0.88fr;gap:54px;}
-    .hero-portrait{max-width:none;justify-self:stretch;}
-  }
+  /* values */
+  .values{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--rule);background:var(--cream-pure);}
+  .value{padding:38px 30px;border-right:1px solid var(--rule-soft);}
+  .value:last-child{border-right:0;}
+  .value .ic{width:50px;height:50px;display:grid;place-items:center;border:1px solid var(--rule);margin-bottom:22px;}
+  .value .ic svg{width:24px;height:24px;stroke:var(--wine);fill:none;stroke-width:1.6;}
+  .value h3{font-size:22px;margin:0 0 9px;color:var(--wine);}
+  .value p{margin:0;color:var(--ink-dim);font-size:14.5px;}
 
-  /* ---------- inline figure ---------- */
-  .figure{margin:42px 0;}
-  .figure img{width:100%;height:auto;display:block;border:1px solid var(--rule);}
-  .figure.figure-narrow{max-width:560px;}
-  .figure figcaption,.gallery figcaption{
-    font-family:var(--sans);font-size:13.5px;line-height:1.55;color:var(--ink-dim);
-    margin-top:14px;padding-left:14px;border-left:2px solid var(--wine);
-  }
+  /* gallery */
+  .gallery{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .gallery figure{margin:0;border:1px solid var(--rule);overflow:hidden;background:var(--cream-pure);}
+  .gallery figure img{width:100%;height:480px;object-fit:cover;object-position:center 30%;transition:transform .4s ease;}
+  .gallery figure:hover img{transform:scale(1.03);}
+  .gallery .g-wide{grid-column:1 / -1;}
+  .gallery .g-wide img{height:420px;object-position:center 28%;}
+  .gallery figcaption{padding:14px 18px;font-size:13.5px;color:var(--ink-dim);border-top:1px solid var(--rule-soft);}
 
-  /* ---------- gallery (thể thao) ---------- */
-  .gallery{margin:34px 0 8px;}
-  .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
-  .gallery-grid img{
-    width:100%;height:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 26%;
-    display:block;border:1px solid var(--rule);
-  }
-  @media(max-width:560px){
-    .gallery-grid{grid-template-columns:1fr 1fr;}
-    .gallery-grid img.span2{grid-column:1 / -1;aspect-ratio:16/10;object-position:50% 32%;}
-  }
+  /* posts grid */
+  .posts-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  .post-card{background:var(--cream-pure);border:1px solid var(--rule);padding:32px 34px;display:flex;flex-direction:column;transition:border-color .2s ease,transform .2s ease;}
+  .post-card:hover{border-color:var(--wine);transform:translateY(-3px);}
+  .post-card.feat{grid-column:1 / -1;padding:42px 42px;}
+  .post-tag{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--wine);margin-bottom:14px;}
+  .post-card h3{font-size:23px;margin:0 0 12px;line-height:1.26;transition:color .2s ease;}
+  .post-card.feat h3{font-size:32px;}
+  .post-card:hover h3{color:var(--wine);}
+  .post-card p{color:var(--ink-dim);margin:0 0 20px;flex:1 1 auto;}
+  .post-card.feat p{font-family:var(--serif);font-size:18px;max-width:62ch;}
+  .read-more{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--wine);display:inline-flex;align-items:center;gap:8px;transition:gap .2s ease;}
+  .post-card:hover .read-more{gap:12px;}
 
-  /* ---------- article body ---------- */
-  .article{padding:18px 0 40px;}
-  .article p{
-    margin:0 0 26px;
-    color:var(--ink);
-  }
-  .article p .strong{font-weight:600;color:var(--wine-deep);}
+  /* contact */
+  .contact-card{background:var(--black);color:var(--light);border:1px solid rgba(201,123,133,.4);padding:64px 56px;display:grid;grid-template-columns:1.2fr 1fr;gap:44px;align-items:center;position:relative;overflow:hidden;}
+  .contact-card::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 16% 0%,rgba(160,34,52,.4),transparent 58%);pointer-events:none;}
+  .contact-card .c-copy{position:relative;}
+  .contact-card .eyebrow{color:var(--wine-soft);}
+  .contact-card h2{color:var(--light);font-size:clamp(26px,3.6vw,40px);margin:0 0 14px;}
+  .contact-card p{color:var(--light-dim);margin:0;font-family:var(--serif);font-style:italic;font-size:18px;}
+  .contact-actions{display:flex;flex-direction:column;gap:11px;position:relative;}
+  .contact-actions a{display:flex;align-items:center;gap:14px;background:transparent;border:1px solid rgba(201,123,133,.34);color:var(--light);padding:15px 20px;font-weight:500;font-size:15px;transition:border-color .2s ease,color .2s ease;}
+  .contact-actions a:hover{border-color:var(--wine-soft);color:var(--wine-soft);}
+  .contact-actions svg{width:18px;height:18px;stroke:var(--wine-soft);fill:none;stroke-width:1.6;flex:none;}
 
-  .dropcap::first-letter{
-    font-family:var(--serif);
-    font-weight:800;
-    color:var(--wine);
-    float:left;
-    font-size:5.6em;
-    line-height:.72;
-    padding:10px 14px 0 0;
-    margin-top:6px;
-  }
+  /* footer */
+  .footer{border-top:1px solid var(--rule-soft);padding:44px 0;color:var(--ink-faint);font-size:12.5px;letter-spacing:.06em;}
+  .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;}
+  .footer .fb{font-family:var(--serif);font-size:18px;color:var(--ink);}
 
-  /* ---------- section heads ---------- */
-  .section{padding-top:30px;margin-top:30px;scroll-margin-top:96px;}
-  .section-rule{
-    border:none;border-top:1px solid var(--rule);
-    margin:6px 0 38px;
-  }
-  .section h2{
-    font-family:var(--serif);
-    font-weight:700;
-    font-size:clamp(26px,4.2vw,42px);
-    line-height:1.18;
-    letter-spacing:-0.01em;
-    color:var(--ink);
-    margin-bottom:28px;
-    position:relative;
-    overflow-wrap:break-word;
-    word-break:break-word;
-  }
-  .sec-num{
-    display:block;
-    font-family:var(--sans);font-weight:600;
-    font-size:12px;letter-spacing:.24em;text-transform:uppercase;
-    color:var(--wine);
-    margin-bottom:14px;
-  }
-  .section h2::after{
-    content:"";display:block;width:54px;height:2px;background:var(--wine);
-    margin-top:20px;opacity:.85;
-  }
-
-  /* ---------- pull quote (light, inline) ---------- */
-  .pullquote{
-    margin:48px auto;
-    text-align:center;
-    max-width:620px;
-    padding:8px 0;
-  }
-  .pullquote .qmark{
-    font-family:var(--serif);
-    font-size:64px;line-height:0;color:var(--wine);
-    opacity:.55;display:block;height:34px;
-  }
-  .pullquote p{
-    font-family:var(--serif);
-    font-style:italic;
-    font-weight:600;
-    font-size:clamp(23px,3.4vw,32px);
-    line-height:1.34;
-    color:var(--wine-deep);
-    margin:18px 0;
-  }
-  .pullquote .by{
-    font-family:var(--sans);
-    font-weight:600;font-size:12px;letter-spacing:.2em;text-transform:uppercase;
-    color:var(--ink-dim);
-  }
-  .pullquote::after{
-    content:"";display:block;width:48px;height:1px;
-    background:var(--wine);margin:22px auto 0;opacity:.6;
-  }
-
-  /* ---------- interlude full-bleed dark (cinematic) ---------- */
-  .interlude{
-    position:relative;
-    margin:64px 0;
-    margin-left:calc(50% - 50vw);
-    width:100vw;
-    background:var(--black);
-    color:var(--light);
-    overflow:hidden;
-    isolation:isolate;
-  }
-  .interlude::before{
-    content:"";position:absolute;inset:0;z-index:-1;
-    background:radial-gradient(120% 120% at 22% 0%, rgba(160,34,52,0.40), transparent 56%),
-               radial-gradient(100% 100% at 100% 100%, rgba(123,30,43,0.34), transparent 60%);
-    pointer-events:none;
-  }
-  .interlude .bigmark{
-    position:absolute;top:-0.18em;left:0.02em;z-index:-1;
-    font-family:var(--serif);font-weight:900;
-    font-size:clamp(180px,34vw,340px);line-height:1;
-    color:var(--wine-soft);opacity:.10;
-    pointer-events:none;user-select:none;
-  }
-  .interlude-inner{
-    max-width:var(--maxw);margin:0 auto;
-    padding:88px 28px 92px;
-    position:relative;
-  }
-  .interlude .ksig{
-    font-family:var(--sans);font-weight:600;
-    font-size:12px;letter-spacing:.24em;text-transform:uppercase;
-    color:var(--wine-soft);margin-bottom:24px;
-  }
-  .interlude blockquote{
-    font-family:var(--serif);font-style:italic;font-weight:600;
-    font-size:clamp(26px,4.4vw,42px);
-    line-height:1.3;
-    color:var(--light);
-    letter-spacing:-0.01em;
-  }
-  .interlude .qby{
-    margin-top:26px;
-    font-family:var(--sans);font-weight:600;font-size:12px;
-    letter-spacing:.2em;text-transform:uppercase;
-    color:var(--light-dim);
-    display:flex;align-items:center;gap:12px;
-  }
-  .interlude .qby::before{content:"";width:30px;height:1px;background:var(--wine-soft);flex:none;}
-
-  /* ---------- beliefs / Q&A ---------- */
-  .beliefs{
-    margin:38px 0 8px;
-    display:flex;flex-direction:column;gap:0;
-  }
-  .belief{
-    padding:26px 0;
-    border-top:1px solid var(--rule-soft);
-  }
-  .belief:last-child{border-bottom:1px solid var(--rule-soft);}
-  .belief .q{
-    display:flex;gap:14px;align-items:flex-start;
-    margin-bottom:12px;
-  }
-  .belief .q .qi{
-    font-family:var(--serif);font-weight:700;font-style:italic;
-    font-size:21px;color:var(--wine);
-    flex:none;line-height:1.25;
-  }
-  .belief .q h3{
-    font-family:var(--serif);
-    font-weight:600;font-size:20px;line-height:1.32;
-    color:var(--ink);
-  }
-  .belief .a{
-    color:var(--ink);
-    padding-left:35px;
-    margin:0;
-  }
-  @media(max-width:480px){.belief .a{padding-left:0;}}
-
-  /* ---------- chips ---------- */
-  .chips{
-    display:flex;flex-wrap:wrap;gap:11px;
-    margin:8px 0 34px;
-  }
-  .chip{
-    font-family:var(--sans);font-weight:500;font-size:14px;
-    color:var(--wine-deep);
-    background:rgba(123,30,43,0.07);
-    border:1px solid var(--rule);
-    border-radius:0;
-    padding:12px 16px;min-height:44px;
-    display:inline-flex;align-items:center;gap:8px;
-    transition:background .2s ease, color .2s ease, transform .18s ease;
-  }
-  .chip:hover{background:var(--wine);color:var(--light);transform:translateY(-2px);}
-  .chip .ic{font-size:11px;line-height:1;color:var(--wine);transition:color .2s ease;}
-  .chip:hover .ic{color:var(--light);}
-
-  /* ---------- CTA / lời mời ---------- */
-  .invite{
-    background:var(--black);
-    color:var(--light);
-    margin-top:72px;
-    position:relative;
-    overflow:hidden;
-  }
-  .invite::before{
-    content:"";position:absolute;inset:0;
-    background:radial-gradient(120% 90% at 18% 0%, rgba(160,34,52,0.42), transparent 58%),
-               radial-gradient(90% 80% at 100% 100%, rgba(123,30,43,0.30), transparent 60%);
-    pointer-events:none;
-  }
-  .invite-inner{
-    position:relative;
-    max-width:var(--maxw);margin:0 auto;
-    padding:74px 28px 78px;
-  }
-  .invite .eyebrow{color:var(--wine-soft);margin-bottom:24px;}
-  .invite h2{
-    font-family:var(--serif);
-    font-weight:700;
-    font-size:clamp(30px,5vw,48px);
-    line-height:1.14;
-    color:var(--light);
-    margin-bottom:26px;
-    letter-spacing:-0.01em;
-    overflow-wrap:break-word;
-    word-break:break-word;
-  }
-  .invite p{
-    color:var(--light-dim);
-    font-size:18px;
-    margin-bottom:22px;
-    max-width:620px;
-  }
-  .invite p .hl{color:var(--light);font-weight:600;}
-  .invite-actions{
-    display:flex;flex-wrap:wrap;gap:16px;margin-top:38px;
-  }
-  .btn{
-    font-family:var(--sans);font-weight:600;font-size:15px;letter-spacing:.02em;
-    border-radius:0;padding:16px 30px;min-height:44px;
-    cursor:pointer;text-decoration:none;
-    display:inline-flex;align-items:center;gap:10px;
-    transition:background .2s ease, color .2s ease, border-color .2s ease, transform .15s ease;
-  }
-  .btn:active{transform:translateY(1px);}
-  .btn-primary{background:var(--wine-bright);color:var(--light);border:1px solid var(--wine-bright);}
-  .btn-primary:hover{background:var(--light);color:var(--wine-deep);border-color:var(--light);}
-  .btn-ghost{background:transparent;color:var(--light);border:1px solid rgba(242,237,230,0.4);}
-  .btn-ghost:hover{border-color:var(--light);background:rgba(242,237,230,0.08);}
-
-  /* ---------- signature ---------- */
-  .signoff{
-    max-width:var(--maxw);margin:0 auto;
-    padding:60px 28px 20px;text-align:center;
-  }
-  .signoff .sig{
-    font-family:var(--serif);font-style:italic;font-weight:600;
-    font-size:30px;color:var(--wine);
-    margin-bottom:8px;
-  }
-  .signoff .sig-line{
-    width:64px;height:1px;background:var(--rule);margin:18px auto 0;
-  }
-
-  /* ---------- footer ---------- */
-  footer{
-    border-top:1px solid var(--rule-soft);
-    margin-top:30px;
-    padding:46px 28px 60px;
-    text-align:center;
-  }
-  .foot-brand{
-    font-family:var(--serif);font-weight:700;font-size:22px;color:var(--ink);
-    margin-bottom:8px;
-  }
-  .foot-role{font-family:var(--sans);font-size:13.5px;color:var(--ink-dim);margin-bottom:24px;}
-  .foot-meta{
-    font-family:var(--sans);font-size:12.5px;letter-spacing:.06em;
-    color:var(--ink-dim);
-    display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center;align-items:center;
-  }
-  .foot-meta .sep{width:3px;height:3px;border-radius:50%;background:var(--wine);opacity:.6;}
-
-  /* ---------- reveal ---------- */
-  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease, transform .8s ease;}
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease;}
   .reveal.in{opacity:1;transform:none;}
   .no-js .reveal{opacity:1;transform:none;}
 
-  @media (prefers-reduced-motion: reduce){
-    .reveal{opacity:1 !important;transform:none !important;transition:none;}
-    html{scroll-behavior:auto;}
-    .progress-bar{transition:none;}
+  @media (max-width:900px){
+    .hero-inner{grid-template-columns:1fr;gap:40px;}
+    .hero-card{max-width:380px;}
+    .hero{padding:64px 0 56px;}
+    .values{grid-template-columns:repeat(2,1fr);}
+    .value:nth-child(2){border-right:0;}
+    .value{border-bottom:1px solid var(--rule-soft);}
+    .contact-card{grid-template-columns:1fr;padding:44px 30px;}
+    .nav-links{display:none;}
+    .nav-toggle{display:block;}
+    .nav-links.open{display:flex;position:absolute;top:74px;left:0;right:0;flex-direction:column;gap:0;background:var(--cream-pure);border-bottom:1px solid var(--rule);padding:6px 28px 16px;}
+    .nav-links.open a{padding:14px 0;border-bottom:1px solid var(--rule-soft);}
   }
-
-  /* ---------- responsive : collapse TOC ---------- */
-  @media(max-width:1080px){
-    .shell{
-      display:block;max-width:var(--maxw);
-    }
-    .shell > .col-main{grid-column:auto;}
-    .toc{
-      position:static;
-      padding:0;margin:0 0 8px;
-      border-top:1px solid var(--rule-soft);
-      border-bottom:1px solid var(--rule-soft);
-    }
-    .toc-label{padding:18px 28px 0;margin-bottom:12px;}
-    .toc ol{
-      display:flex;gap:8px;overflow-x:auto;
-      padding:0 28px 18px;
-      -webkit-overflow-scrolling:touch;
-      scrollbar-width:none;
-    }
-    .toc ol::-webkit-scrollbar{display:none;}
-    .toc a{
-      border-left:none;border:1px solid var(--rule-soft);
-      white-space:nowrap;flex:none;min-height:44px;
-      padding:11px 14px;border-radius:0;
-    }
-    .toc a.active{border-color:var(--wine);background:rgba(123,30,43,0.07);}
-    .toc a .tlabel{display:none;}
-    .toc a .tn{font-size:13px;}
-    .toc a .tshort{display:inline;}
+  @media (max-width:560px){
+    section{padding:64px 0;}
+    .values{grid-template-columns:1fr;}
+    .value{border-right:0;}
+    .story-item{padding:34px 0;}
+    .story-item .q{gap:14px;}
+    .story-item .num{font-size:38px;}
+    .posts-grid{grid-template-columns:1fr;}
+    .post-card.feat h3{font-size:26px;}
+    .gallery{grid-template-columns:1fr;}
+    .gallery figure img,.gallery .g-wide img{height:340px;}
   }
-  @media(min-width:1081px){.toc a .tshort{display:none;}}
-
-  @media(max-width:600px){
-    body{font-size:17px;}
-    .wrap,.invite-inner,.interlude-inner,.signoff,footer{padding-left:22px;padding-right:22px;}
-    .hero{padding:54px 0 44px;}
-    .nav-inner{padding:11px 20px;}
-    .nav-cta{padding:10px 16px;font-size:13px;}
-    .dropcap::first-letter{font-size:4.6em;padding:8px 10px 0 0;}
-    .pullquote{margin:40px auto;}
-    .interlude{margin:48px 0;}
-    .interlude-inner{padding:64px 22px 68px;}
-    .toc-label,.toc ol{padding-left:22px;padding-right:22px;}
-  }
-
-  /* ---------- danh sách "Bài viết khác" ---------- */
-  .morelist{max-width:var(--maxw);margin:0 auto;padding:64px 28px 8px;}
-  .ml-head{font-family:var(--sans);font-weight:600;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--wine);margin-bottom:8px;display:flex;align-items:center;gap:14px;}
-  .ml-head::after{content:"";height:1px;flex:1;background:var(--rule);}
-  .ml-sub{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--ink-dim);margin-bottom:16px;}
-  .pcard{display:block;text-decoration:none;border-top:1px solid var(--rule-soft);padding:26px 0;transition:padding-left .2s ease;}
-  .pcard:last-of-type{border-bottom:1px solid var(--rule-soft);}
-  .pcard:hover{padding-left:10px;}
-  .pc-cat{font-family:var(--sans);font-weight:600;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--wine);margin-bottom:10px;}
-  .pc-title{font-family:var(--serif);font-weight:700;font-size:clamp(20px,3vw,27px);line-height:1.24;color:var(--ink);margin-bottom:10px;transition:color .2s ease;}
-  .pcard:hover .pc-title{color:var(--wine);}
-  .pc-ex{font-family:var(--sans);font-size:15.5px;line-height:1.6;color:var(--ink-dim);margin-bottom:13px;}
-  .pc-more{font-family:var(--sans);font-weight:600;font-size:14px;color:var(--wine);display:inline-flex;align-items:center;gap:7px;transition:gap .2s ease;}
-  .pcard:hover .pc-more{gap:12px;}
+  @media (prefers-reduced-motion: reduce){.reveal{opacity:1!important;transform:none!important;}html{scroll-behavior:auto;}}
 </style>
 </head>
 <body class="no-js">
 
-  <div class="progress-track"><div class="progress-bar" id="progress"></div></div>
-
   <nav class="nav">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-brand"><img class="mark" src="assets/vu-portrait-suit.jpg" alt="" />Nguyễn Thanh Vũ</a>
-                  <div class="nav-menu">
-        <a href="#danh-muc">Danh mục</a>
-        <a href="bai-5-duoc-biet-den.html">Bài viết mới</a>
-        <a href="index.html" class="current">Nguyễn Thanh Vũ là ai?</a>
-      </div>
-      <a href="#loi-moi" class="nav-cta">Nói chuyện với tôi</a>
+    <div class="wrap nav-inner">
+      <a class="brand" href="index.html"><span class="dot"></span>Nguyễn Thanh Vũ</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#the-gioi">Thế giới bên trong</a>
+        <a href="#cau-chuyen">Câu chuyện</a>
+        <a href="#gia-tri">Giá trị</a>
+        <a href="#bai-viet">Bài viết</a>
+        <a href="#lien-he">Liên hệ</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Mở menu">☰</button>
     </div>
   </nav>
 
-  <main id="top">
-
-    <!-- HERO -->
-    <header class="hero">
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <div class="issue-line">
-            <span>Tự sự</span><span class="dot"></span><span>Số 01 · Hành trình làm sạch</span>
-          </div>
-          <p class="eyebrow">Câu chuyện cá nhân</p>
-          <h1 class="reveal">Tôi từng mất tất cả vì một cú <span class="accent">khóa kênh</span> — và đó là lý do hôm nay tôi dạy người khác làm “sạch”</h1>
-          <p class="lead reveal">Câu chuyện của Nguyễn Thanh Vũ — Coach xây kênh online cho chuyên gia y tế &amp; người khởi nghiệp.</p>
-          <div class="byline reveal">
-            <img class="avatar" src="assets/vu-portrait-suit.jpg" alt="Chân dung Nguyễn Thanh Vũ" />
-            <div class="byline-meta">
-              <div class="name">Nguyễn Thanh Vũ</div>
-              <div class="role">Coach xây kênh online · Mentor cầm tay chỉ việc</div>
-            </div>
-          </div>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Coach xây kênh online · Chuyên gia y tế</p>
+        <h1>Xin chào, tôi là <span>Nguyễn Thanh Vũ</span></h1>
+        <p class="lead">Tôi giúp bác sĩ, dược sĩ, chuyên gia y tế xây kênh online sạch và bền — để người giỏi nghề được nhiều người biết đến mà không phải chạy theo chiêu trò.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#the-gioi">Thế giới bên trong tôi</a>
+          <a class="btn btn-ghost" href="#bai-viet">Xem bài viết</a>
         </div>
-        <figure class="hero-portrait reveal">
-          <img src="assets/vu-portrait-suit.jpg" width="800" height="1000" alt="Nguyễn Thanh Vũ — chân dung studio, vest đen cà vạt đỏ rượu vang" />
-        </figure>
       </div>
-    </header>
-
-    <div class="shell">
-
-      <!-- ARTICLE -->
-      <div class="col-main">
-        <article class="article">
-          <div class="wrap">
-
-            <!-- INTRO -->
-            <section class="intro" id="mo-dau">
-              <p class="dropcap reveal" style="margin-top:48px;">Có một buổi sáng tôi mở điện thoại lên và thấy dòng thông báo lạnh người: kênh của tôi đã bị Facebook khóa.</p>
-              <p class="reveal">Không phải khóa tạm 24 giờ. Là biến mất. Bao nhiêu nội dung, bao nhiêu khách hàng đang nhắn tin, bao nhiêu công sức xây từng chút một — tất cả về số không chỉ sau một cú click của hệ thống. Tôi ngồi đó, nhìn màn hình, và lần đầu tiên trong hành trình làm online, tôi thật sự muốn bỏ cuộc.</p>
-              <p class="reveal">Nếu bạn từng xây một thứ gì đó bằng cả tâm huyết rồi chứng kiến nó sụp đổ trong một đêm, bạn sẽ hiểu cảm giác của tôi lúc ấy. Và nếu bạn là một bác sĩ, một dược sĩ, một chuyên gia đang ngại ngần bước chân lên mạng vì sợ “lỡ làm sai cái gì đó” — thì câu chuyện này, tôi viết cho bạn.</p>
-            </section>
-
-            <!-- SECTION 1 -->
-            <section class="section reveal" id="loay-hoay">
-              <hr class="section-rule" />
-              <h2><span class="sec-num">Phần I</span>Trước khi có kết quả, tôi cũng loay hoay như bất kỳ ai</h2>
-              <p>Nhiều người biết đến tôi bây giờ với hình ảnh một coach có kênh đạt nút bạc, có học viên ra kết quả. Nhưng ít ai biết điểm xuất phát của tôi cũng đầy vụng về.</p>
-              <p>Tôi xây kênh, nhưng kênh ít view. Tôi đăng bài, nhưng gần như không có bình luận. Tôi cố gắng bán hàng, nhưng không bán được. Cái cảm giác bỏ ra rất nhiều mà nhận lại rất ít — tôi đã sống với nó một thời gian dài.</p>
-              <p>Và rồi, khi tôi tưởng mình bắt đầu có đà, thì sai lầm tốn kém nhất đời làm online ập đến: tôi làm sai tiêu chuẩn cộng đồng của nền tảng. Tôi không cố tình. Tôi chỉ đơn giản là không hiểu luật chơi đủ sâu. Nhưng nền tảng không quan tâm bạn vô tình hay cố ý — nó chỉ thực thi quy tắc. Và cái giá tôi trả là cả một kênh.</p>
-            </section>
-
-            <!-- SECTION 2 -->
-            <section class="section reveal" id="khoanh-khac">
-              <hr class="section-rule" />
-              <h2><span class="sec-num">Phần II</span>Khoảnh khắc tôi định buông — và điều đã giữ tôi lại</h2>
-              <p>Sau cú khóa kênh đó, mọi thứ sụp đổ. Tôi mệt mỏi. Tôi tự hỏi liệu mình có hợp với con đường này không. Nhưng giữa lúc tệ nhất, tôi nhận ra một điều mà sau này trở thành kim chỉ nam cho toàn bộ sự nghiệp của tôi:</p>
-            </section>
-          </div>
-        </article>
-
-        <!-- INTERLUDE 1 (full-bleed dark, cinematic) -->
-        <section class="interlude reveal" aria-label="Trích dẫn">
-          <span class="bigmark" aria-hidden="true">“</span>
-          <div class="interlude-inner">
-            <p class="ksig">Kim chỉ nam của tôi</p>
-            <blockquote>Muốn đi xa trên internet, bạn không thể đi bằng chiêu trò. Bạn phải đi bằng sự tử tế và đúng luật.</blockquote>
-            <p class="qby">Nguyễn Thanh Vũ</p>
-          </div>
-        </section>
-
-        <article class="article">
-          <div class="wrap">
-            <section>
-              <p class="reveal">Tôi bắt đầu làm lại từ đầu, nhưng lần này khác hẳn. Tôi học kỹ tiêu chuẩn cộng đồng của từng nền tảng như học một bộ luật. Tôi xây nội dung sạch, không thổi phồng, không giật gân để câu tương tác bằng mọi giá. Tôi xây hệ thống để kênh phát triển bền — chứ không phải bùng lên rồi tắt ngúm, hoặc tệ hơn là bị xóa sổ lần nữa.</p>
-              <p class="reveal">Và điều kỳ diệu xảy ra: kênh của tôi không chỉ sống lại, mà còn lớn mạnh đến mức đạt nút bạc.</p>
-            </section>
-
-            <!-- SECTION 3 -->
-            <section class="section reveal" id="tro-thanh-coach">
-              <hr class="section-rule" />
-              <h2><span class="sec-num">Phần III</span>Từ một người làm nghề, tôi trở thành coach như thế nào</h2>
-              <p>Tôi chưa bao giờ lên kế hoạch trở thành coach. Con đường đến với coaching của tôi, thành thật mà nói, rất tình cờ và thú vị.</p>
-              <figure class="figure figure-narrow reveal">
-                <img src="assets/vu-suit-sitting.jpg" width="900" height="897" loading="lazy" decoding="async" alt="Nguyễn Thanh Vũ ngồi trầm tư, vest đen" />
-                <figcaption>Tôi không đứng trên bục giảng nói mình biết hết — tôi chỉ đi trước bạn vài bước, rồi quay lại nắm tay.</figcaption>
-              </figure>
-              <p>Sau khi ra kết quả và đạt nút bạc, tôi chia sẻ cách làm cho vài người bạn — chủ yếu là anh em trong cộng đồng BNI và Eagle Camp, những người bạn tôi tuy không nhiều nhưng rất chất lượng. Tôi chỉ nghĩ đơn giản: mình biết thì mình chia sẻ.</p>
-              <p>Rồi họ làm theo. Và họ cũng ra kết quả y như tôi.</p>
-              <p>Đến lúc đó, họ quay lại tìm tôi: “Vũ ơi, chỉ lại cho mình cách của Vũ đi.” Tôi chỉ. Họ làm tiếp, kết quả tiếp tục đến. Cuối cùng họ nói: “Vũ coaching riêng cho mình được không?”</p>
-              <p>Đó là lúc tôi hiểu ra: thứ tôi có không chỉ là một cái kênh thành công, mà là một <span class="strong">hệ thống có thể trao truyền được</span>. Và khi học viên đầu tiên của tôi tự tay xây được kênh của họ, tôi biết mình đã tìm thấy công việc cả đời: làm một người mentor cầm tay chỉ việc, đi cùng học viên đến khi họ thật sự ra kết quả.</p>
-            </section>
-
-            <!-- SECTION 4 -->
-            <section class="section reveal" id="su-menh">
-              <hr class="section-rule" />
-              <h2><span class="sec-num">Phần IV</span>Điều khiến tôi khó chịu — và sứ mệnh thầm lặng của tôi</h2>
-              <p>Càng đi sâu vào ngành, tôi càng thấy một thứ làm mình bất bình: marketing bẩn và chiêu trò.</p>
-              <p>Những lời hứa thổi phồng. Những con số ảo. Những kỹ thuật lách luật để tăng trưởng nhanh, bất chấp việc nó có thể khiến người làm bị khóa kênh, mất uy tín — đúng như những gì tôi từng nếm trải.</p>
-              <p>Tôi đặc biệt thấy điều này bất công với một nhóm người: <span class="strong">các chuyên gia y tế</span>. Bác sĩ, dược sĩ, chuyên gia dinh dưỡng — họ giỏi nghề thật sự, họ có giá trị thật để cho đi. Nhưng họ thường rất yếu về marketing, và càng yếu hơn về việc làm sao tuân thủ tiêu chuẩn cộng đồng khắt khe của Facebook. Kết quả là nhiều người giỏi nghề lại bị lu mờ trước những người ồn ào và chiêu trò.</p>
-            </section>
-          </div>
-        </article>
-
-        <!-- INTERLUDE 2 (full-bleed dark) -->
-        <section class="interlude reveal" aria-label="Sứ mệnh">
-          <span class="bigmark" aria-hidden="true">“</span>
-          <div class="interlude-inner">
-            <p class="ksig">Sứ mệnh thầm lặng</p>
-            <blockquote>Giúp người giỏi được nhìn thấy — bằng cách làm sạch và bền.</blockquote>
-            <p class="qby">Nguyễn Thanh Vũ</p>
-          </div>
-        </section>
-
-        <article class="article">
-          <div class="wrap">
-            <section class="reveal">
-              <p>Tôi không chấp nhận điều đó. Và đó trở thành sứ mệnh thầm lặng của tôi: giúp người giỏi được nhìn thấy, bằng cách làm sạch và bền.</p>
-            </section>
-
-            <!-- SECTION 5 — Q&A beliefs -->
-            <section class="section reveal" id="dieu-toi-tin">
-              <hr class="section-rule" />
-              <h2><span class="sec-num">Phần V</span>Những điều tôi tin — kể cả khi nó ngược số đông</h2>
-              <p>Làm nghề này lâu, tôi hình thành vài niềm tin mà đôi khi đi ngược đám đông. Mọi người hay hỏi tôi: tại sao phải làm online, tại sao phải làm AI, tại sao phải có “bộ não thứ hai”, tại sao là Fanbox chứ không phải YouTube, tại sao là Facebook chứ không phải TikTok. Đây là câu trả lời của tôi:</p>
-
-              <div class="beliefs">
-                <div class="belief">
-                  <div class="q"><span class="qi">Hỏi.</span><h3>Tại sao Facebook chứ không phải TikTok?</h3></div>
-                  <p class="a">Vì Facebook cho tôi tương tác hai chiều thật sự — nhắn tin trực tiếp với khách hàng, chăm sóc, remarketing dễ dàng. Với người làm chuyên môn như bác sĩ, mối quan hệ và niềm tin quan trọng hơn lượt xem ảo, và Facebook làm việc đó tốt hơn.</p>
-                </div>
-                <div class="belief">
-                  <div class="q"><span class="qi">Hỏi.</span><h3>Tại sao phải có “bộ não thứ hai”?</h3></div>
-                  <p class="a">Vì nó giúp tôi định hình phong cách và ngôn ngữ viết của riêng mình, giữ đúng tinh thần E-E-A-T — trải nghiệm, chuyên môn, uy tín, độ tin cậy. Nội dung của bạn phải mang dấu vân tay của chính bạn, chứ không phải bản sao của ai khác.</p>
-                </div>
-                <div class="belief">
-                  <div class="q"><span class="qi">Hỏi.</span><h3>Tại sao phải làm AI?</h3></div>
-                  <p class="a">Vì AI giúp tôi làm marketing tốt hơn gấp 10 lần — nhanh hơn, sâu hơn, nhất quán hơn. Người không dùng AI hôm nay sẽ bị bỏ lại, đơn giản vậy thôi.</p>
-                </div>
-                <div class="belief">
-                  <div class="q"><span class="qi">Hỏi.</span><h3>Và niềm tin lớn nhất, được trả giá bằng chính cú khóa kênh của tôi?</h3></div>
-                  <p class="a">Phải làm đúng tiêu chuẩn cộng đồng. Đó là cách duy nhất để xây một kênh bền vững, không bị xóa sổ chỉ sau một đêm.</p>
-                </div>
-              </div>
-            </section>
-
-            <!-- SECTION 6 -->
-            <section class="section reveal" id="toi-giup-ai">
-              <hr class="section-rule" />
-              <h2><span class="sec-num">Phần VI</span>Tôi giúp ai, và giúp điều gì</h2>
-              <p>Hôm nay, công việc của tôi rất rõ ràng: tôi giúp những người mới khởi nghiệp, những doanh nghiệp mới, và đặc biệt là các bác sĩ, dược sĩ, chuyên gia y tế — xây kênh online để được nhiều người biết đến và có học viên, bệnh nhân đều đặn.</p>
-              <p>Bằng hệ thống internet bài bản. Bằng AI. Và quan trọng nhất: bằng cách làm sạch, không phải bằng quảng cáo thổi phồng hay chiêu trò khiến bạn nơm nớp lo bị khóa kênh.</p>
-              <p>Nếu bạn từng sợ bước lên mạng vì sợ làm sai, sợ vi phạm, sợ mất uy tín nghề nghiệp — tôi hiểu nỗi sợ đó hơn ai hết. Tôi đã đứng ở đúng vị trí của bạn. Và tôi xây cả hệ thống của mình để bạn không phải trả cái giá mà tôi từng trả.</p>
-            </section>
-
-            <!-- SECTION 7 — chips -->
-            <section class="section reveal" id="con-nguoi">
-              <hr class="section-rule" />
-              <h2><span class="sec-num">Phần VII</span>Con người phía sau công việc</h2>
-              <div class="chips">
-                <span class="chip"><span class="ic">&#9679;</span>Mê cá koi</span>
-                <span class="chip"><span class="ic">&#9679;</span>Xuyên Việt cùng gia đình</span>
-                <span class="chip"><span class="ic">&#9679;</span>Mục tiêu Ironman 2027</span>
-                <span class="chip"><span class="ic">&#9679;</span>Kỷ luật &amp; bền bỉ</span>
-                <span class="chip"><span class="ic">&#9679;</span>Tin vào tự do</span>
-                <span class="chip"><span class="ic">&#9679;</span>Cho đi trước</span>
-                <span class="chip"><span class="ic">&#9679;</span>Học mỗi ngày</span>
-              </div>
-              <p>Ngoài những con số và hệ thống, tôi là một người mê cá koi, mê những chuyến đi xuyên Việt cùng gia đình, và đang theo đuổi một mục tiêu rất riêng: chạm tay vào huy chương Ironman năm 2027.</p>
-              <figure class="gallery reveal">
-                <div class="gallery-grid">
-                  <img class="span2" src="assets/vu-selfie-red.jpg" loading="lazy" decoding="async" alt="Nguyễn Thanh Vũ trong buổi tập chạy" />
-                  <img src="assets/vu-run-medal.jpg" loading="lazy" decoding="async" alt="Hoàn thành cự ly 21km — Eagle Camp" />
-                  <img src="assets/vu-run-thumbsup.jpg" loading="lazy" decoding="async" alt="Về đích giải chạy Cần Giờ" />
-                </div>
-                <figcaption>Eagle Camp · đường chạy 21km — kỷ luật và sự bền bỉ tôi mang thẳng vào cách xây kênh. Mục tiêu kế tiếp: huy chương Ironman 2027.</figcaption>
-              </figure>
-              <p>Tôi tin vào kỷ luật và sự bền bỉ — thứ mà thể thao dạy tôi mỗi ngày và tôi mang thẳng vào cách xây kênh. Tôi tin vào sự tự do — đó là lý do tôi xây hệ thống, để một ngày khi không còn phải làm vì tiền, tôi có thể sống tự do và đi khắp nơi. Và tôi tin vào việc cho đi trước — bởi chính những lần chia sẻ vô tư cho bạn bè đã vô tình mở ra cả sự nghiệp coaching của tôi.</p>
-              <p>Tôi cũng vẫn là một người học mỗi ngày. Tôi liên tục cập nhật AI, liên tục phát triển bản thân. Tôi không đứng trên bục giảng và nói rằng mình đã biết hết. Tôi chỉ đi trước bạn vài bước, và tôi sẵn lòng quay lại nắm tay bạn.</p>
-            </section>
-
-          </div>
-        </article>
-      </div>
-
-      <!-- TOC -->
-      <nav class="col-toc" aria-label="Mục lục">
-        <div class="toc" id="toc">
-          <div class="toc-label">Mục lục</div>
-          <ol>
-            <li><a href="#loay-hoay"><span class="tn">01</span><span class="tlabel">Loay hoay như bất kỳ ai</span><span class="tshort">Loay hoay</span></a></li>
-            <li><a href="#khoanh-khac"><span class="tn">02</span><span class="tlabel">Khoảnh khắc tôi định buông</span><span class="tshort">Định buông</span></a></li>
-            <li><a href="#tro-thanh-coach"><span class="tn">03</span><span class="tlabel">Trở thành coach thế nào</span><span class="tshort">Thành coach</span></a></li>
-            <li><a href="#su-menh"><span class="tn">04</span><span class="tlabel">Sứ mệnh thầm lặng</span><span class="tshort">Sứ mệnh</span></a></li>
-            <li><a href="#dieu-toi-tin"><span class="tn">05</span><span class="tlabel">Những điều tôi tin</span><span class="tshort">Điều tôi tin</span></a></li>
-            <li><a href="#toi-giup-ai"><span class="tn">06</span><span class="tlabel">Tôi giúp ai, giúp gì</span><span class="tshort">Tôi giúp ai</span></a></li>
-            <li><a href="#con-nguoi"><span class="tn">07</span><span class="tlabel">Con người phía sau</span><span class="tshort">Con người</span></a></li>
-            <li><a href="#loi-moi"><span class="tn">08</span><span class="tlabel">Lời mời</span><span class="tshort">Lời mời</span></a></li>
-          </ol>
+      <aside class="hero-card reveal">
+        <img class="hero-photo" src="assets/vu-portrait-suit.jpg" alt="Chân dung Nguyễn Thanh Vũ" />
+        <h3>Nguyễn Thanh Vũ</h3>
+        <p class="role">Mentor cầm tay chỉ việc · Dân Sài Gòn</p>
+        <div>
+          <span class="pill">Kênh nút bạc</span>
+          <span class="pill">Ironman 2027</span>
+          <span class="pill">Mê cá koi</span>
+          <span class="pill">BNI · Eagle Camp</span>
         </div>
-      </nav>
-
+      </aside>
     </div>
+  </header>
 
-    <!-- LỜI MỜI / CTA -->
-    <section class="invite reveal" id="loi-moi">
-      <div class="invite-inner">
-        <p class="eyebrow">Lời mời</p>
-        <h2>Nếu bạn thấy một phần của mình trong câu chuyện này</h2>
-        <p>Nếu trong câu chuyện này bạn thấy một phần của mình — một người giỏi nghề nhưng loay hoay với việc xây kênh, một người sợ làm sai luật chơi, một người muốn được nhiều người biết đến mà vẫn giữ được sự tử tế — thì có lẽ chúng ta nên nói chuyện.</p>
-        <p>Tôi không hứa với bạn sự tăng trưởng thần tốc bằng mọi giá. <span class="hl">Tôi hứa với bạn một con đường sạch và bền, có hệ thống, có người đi cùng.</span></p>
-        <p>Bởi vì tôi đã từng mất tất cả vì làm sai. Và tôi ở đây để bạn không phải lặp lại điều đó.</p>
-        <div class="invite-actions">
-          <a href="#top" class="btn btn-primary">Đặt lịch nói chuyện với tôi</a>
-          <a href="#top" class="btn btn-ghost">Tìm hiểu cách tôi làm việc</a>
+  <!-- THẾ GIỚI BÊN TRONG -->
+  <section id="the-gioi">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Thế giới bên trong</p>
+        <h2>Tôi là ai, ở phía sau công việc</h2>
+        <p>Bảy câu hỏi soi vào con người thật của tôi — vì sao những điều tôi làm lại có ý nghĩa với tôi.</p>
+      </div>
+      <div class="story">
+        <div class="story-item reveal">
+          <div class="q"><span class="num">01</span><h3>Mọi người thường hỏi tôi điều gì?</h3></div>
+          <p>Tại sao phải làm online. Tại sao phải dùng AI. Tại sao phải có "bộ não thứ hai". Tại sao phải chạy quảng cáo. Tại sao là Facebook chứ không phải TikTok, là Fanbox chứ không phải YouTube.</p>
+          <p class="takeaway">Người ta hỏi tôi nhiều nhất là những câu "tại sao" — và tôi mê nhất là ngồi trả lời cho rõ ngọn ngành.</p>
+        </div>
+        <div class="story-item reveal">
+          <div class="q"><span class="num">02</span><h3>Tôi thích nói về điều gì?</h3></div>
+          <p>Tôi thích nói về cách vận hành cả một hệ thống internet — cái tôi hay gọi là "internet power system". Một cái kênh không sống nhờ may rủi, nó sống nhờ hệ thống đứng sau.</p>
+        </div>
+        <div class="story-item reveal">
+          <div class="q"><span class="num">03</span><h3>Điều gì đến với tôi một cách dễ dàng?</h3></div>
+          <p>Mọi thao tác trên internet. Sở trường của tôi là đam mê internet tới mức cái gì người khác thấy rối, tôi thấy nhẹ tênh. Đặt tôi trước một cái kênh, tôi biết phải làm gì.</p>
+        </div>
+        <div class="story-item reveal">
+          <div class="q"><span class="num">04</span><h3>Khi rảnh, tôi thường làm gì?</h3></div>
+          <p>Tôi research. Đọc sách về kinh doanh, về tư duy, về marketing. Với tôi nghỉ ngơi không phải là ngừng học, mà là đổi sang một thứ mình tò mò hơn.</p>
+        </div>
+        <div class="story-item reveal">
+          <div class="q"><span class="num">05</span><h3>Nếu viết một cuốn sách, tôi viết về gì?</h3></div>
+          <p>Marketing online. Tôi mê những tiêu đề kiểu "Làm thế nào để..." — vì người đọc cần một con đường rõ ràng, chứ không cần thêm một bài lý thuyết nữa.</p>
+        </div>
+        <div class="story-item reveal">
+          <div class="q"><span class="num">06</span><h3>Sau này về già, tôi muốn gì?</h3></div>
+          <p>Khi không còn phải làm vì tiền nữa, tôi muốn được sống tự do và đi du lịch. Những chuyến xuyên Việt cùng gia đình bây giờ là bản nháp cho cái đời sống đó.</p>
+          <p class="takeaway">Tôi xây hệ thống không phải để bận rộn hơn, mà để một ngày được rảnh rang.</p>
+        </div>
+        <div class="story-item reveal">
+          <div class="q"><span class="num">07</span><h3>Sứ mệnh công việc của tôi là gì?</h3></div>
+          <p>Giúp những chuyên gia y tế giỏi nghề được nhiều người biết đến và có học viên, bệnh nhân đều đặn — bằng một con đường sạch, đúng chuẩn, không thổi phồng. Tôi muốn là người đầu tiên thật sự có ích trên hành trình internet marketing của họ.</p>
         </div>
       </div>
-    </section>
-
-    <div class="signoff reveal">
-      <div class="sig">— Nguyễn Thanh Vũ</div>
-      <div class="sig-line"></div>
     </div>
+  </section>
 
-    <!-- BÀI VIẾT KHÁC -->
-            <section class="morelist reveal" id="danh-muc" aria-label="Danh mục bài viết">
-      <div class="ml-head">Danh mục bài viết</div>
-      <p class="ml-sub">Cùng tôi xây kênh sạch, bền, đúng chuẩn.</p>
-      <a class="pcard" href="bai-2-loi-khoa-kenh.html">
-        <div class="pc-cat">Hướng dẫn · Số 02</div>
-        <div class="pc-title">5 thứ khiến bác sĩ bị Facebook khóa kênh sau một đêm</div>
-        <div class="pc-ex">5 lỗi hầu hết bác sĩ không biết mình đang phạm, và cách dọn sạch một bài đăng trong 60 giây trước khi bấm nút.</div>
-        <span class="pc-more">Đọc bài <span aria-hidden="true">&#8594;</span></span>
-      </a>
-      <a class="pcard" href="bai-3-bo-nao-thu-2.html">
-        <div class="pc-cat">Số 03 · Nội dung có chất riêng</div>
-        <div class="pc-title">Vì sao 90% nội dung AI viết ra đều nhạt như nhau, và &#x27;bộ não thứ hai&#x27; giúp bài của bác sĩ có dấu vân tay không ai bắt chước</div>
-        <div class="pc-ex">Bài AI viết ra nghe giống y hệt mười ngàn bác sĩ khác không phải lỗi của AI. Đây là lý do thật, và cách dựng một cái kho riêng để bài của bạn có dấu vân tay không ai sao chép nổi.</div>
-        <span class="pc-more">Đọc bài <span aria-hidden="true">&#8594;</span></span>
-      </a>
-      <a class="pcard" href="bai-4-ky-luat-ironman.html">
-        <div class="pc-cat">Số 04 · Bền hơn nhanh</div>
-        <div class="pc-title">Tôi tập Ironman để hiểu một sự thật về xây kênh: không có cú bứt phá, chỉ có kỷ luật mỗi ngày</div>
-        <div class="pc-ex">Cái bạn ngưỡng mộ ở người làm content giỏi không phải bài viral đó. Là cả trăm bài trước nó không ai thấy. Và cái kỷ luật để đẻ ra đống đó, bạn dư từ lâu rồi.</div>
-        <span class="pc-more">Đọc bài <span aria-hidden="true">&#8594;</span></span>
-      </a>
-      <a class="pcard" href="bai-5-duoc-biet-den.html">
-        <div class="pc-cat">Số 05 · Bước ra ánh sáng</div>
-        <div class="pc-title">Người giỏi nhất không thắng, người giỏi VÀ được biết đến mới thắng. Đây là bất công lớn nhất ngành y đang trả giá</div>
-        <div class="pc-ex">Một chị bác sĩ nhắn tôi: sao thằng kém hơn mình mà mấy trăm ngàn người theo? Tôi hỏi lại chị đúng một câu, rồi kể chuyện tôi từng mất sạch một cái kênh và làm lại tới nút bạc.</div>
-        <span class="pc-more">Đọc bài <span aria-hidden="true">&#8594;</span></span>
-      </a>
-    </section>
+  <!-- CÂU CHUYỆN (dark) -->
+  <section id="cau-chuyen" class="feature-dark">
+    <div class="wrap">
+      <p class="eyebrow reveal">Câu chuyện của tôi</p>
+      <h2 class="reveal">Tôi từng mất tất cả chỉ sau một đêm</h2>
+      <p class="reveal">Có một buổi sáng tôi mở điện thoại lên và thấy kênh của mình đã bị Facebook khóa. Không phải khóa tạm. Là biến mất. Mấy năm gây dựng, bay sạch sau một đêm, chỉ vì tôi không hiểu luật chơi đủ sâu.</p>
+      <p class="reveal">Tôi đã muốn bỏ cuộc. Nhưng rồi tôi làm lại từ con số không — lần này làm sạch, làm bền, đúng tiêu chuẩn cộng đồng. Cái kênh đó về sau lên tới nút bạc. Và khi tôi chia sẻ cách làm cho bạn bè trong BNI, Eagle Camp, họ cũng ra kết quả, rồi xin tôi coaching. Tôi thành coach một cách tình cờ như vậy.</p>
+      <p class="pull reveal">Muốn đi xa trên internet, không thể đi bằng chiêu trò. Phải đi bằng sự tử tế và đúng luật.</p>
+      <a class="btn btn-ghost reveal" href="cau-chuyen.html">Đọc trọn câu chuyện →</a>
+    </div>
+  </section>
 
-  </main>
+  <!-- GIÁ TRỊ CỐT LÕI -->
+  <section id="gia-tri" class="alt">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Giá trị cốt lõi</p>
+        <h2>Bốn điều dẫn lối cho mọi quyết định của tôi</h2>
+      </div>
+      <div class="values reveal">
+        <div class="value">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg></div>
+          <h3>Tử tế &amp; sạch</h3>
+          <p>Làm đúng tiêu chuẩn, không thổi phồng, không chiêu trò. Tôi dị ứng nặng với marketing bẩn.</p>
+        </div>
+        <div class="value">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 4v6h6M20 20v-6h-6"/><path d="M20 10a8 8 0 0 0-15-3M4 14a8 8 0 0 0 15 3"/></svg></div>
+          <h3>Bền bỉ</h3>
+          <p>Không có cú bứt phá, chỉ có kỷ luật mỗi ngày. Thứ thể thao và Ironman dạy tôi, tôi mang thẳng vào nghề.</p>
+        </div>
+        <div class="value">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M7 11V7a5 5 0 0 1 10 0"/><rect x="5" y="11" width="14" height="10" rx="1"/></svg></div>
+          <h3>Tự do</h3>
+          <p>Tôi xây hệ thống để một ngày được sống tự do, đi khắp nơi — chứ không phải để mãi mắc kẹt trong công việc.</p>
+        </div>
+        <div class="value">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M20 12v9H4v-9"/><path d="M2 7h20v5H2zM12 21V7M12 7S10 3 7.5 3 5 7 5 7M12 7s2-4 4.5-4S19 7 19 7"/></svg></div>
+          <h3>Cho đi trước</h3>
+          <p>Chính những lần chia sẻ vô tư cho bạn bè đã mở ra cả sự nghiệp coaching của tôi. Tôi tin vào việc cho trước.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <footer>
-    <div class="foot-brand">Nguyễn Thanh Vũ</div>
-    <div class="foot-role">Coach xây kênh online cho chuyên gia y tế &amp; người khởi nghiệp</div>
-    <div class="foot-meta">
-      <span>Làm sạch</span><span class="sep"></span>
-      <span>Làm bền</span><span class="sep"></span>
-      <span>Đúng tiêu chuẩn cộng đồng</span><span class="sep"></span>
-      <span>© 2026</span>
+  <!-- KHOẢNH KHẮC -->
+  <section id="khoanh-khac">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Khoảnh khắc</p>
+        <h2>Con người tôi ngoài bàn làm việc</h2>
+        <p>Kỷ luật trên đường chạy, sự bền bỉ tôi mang vào cách xây kênh — và mục tiêu Ironman 2027.</p>
+      </div>
+      <div class="gallery reveal">
+        <figure class="g-wide"><img src="assets/vu-selfie-red.jpg" loading="lazy" alt="Nguyễn Thanh Vũ trên đường chạy" /><figcaption>Mỗi buổi tập là một viên gạch — không có ngày nào bứt phá, chỉ có đều đặn.</figcaption></figure>
+        <figure><img src="assets/vu-run-medal.jpg" loading="lazy" alt="Về đích cự ly 21km" /><figcaption>Về đích 21km — chặng tập cho mục tiêu Ironman 2027.</figcaption></figure>
+        <figure><img src="assets/vu-run-thumbsup.jpg" loading="lazy" alt="Sau buổi chạy" /><figcaption>Bền bỉ là thứ tôi tin, cả trên đường chạy lẫn trong nghề.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- BÀI VIẾT -->
+  <section id="bai-viet" class="alt">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Blog</p>
+        <h2>Bài viết</h2>
+        <p>Những điều tôi học được về xây kênh, về nghề, và về con người tôi muốn trở thành.</p>
+      </div>
+      <div class="posts-grid reveal">
+        <a class="post-card feat" href="nguyen-thanh-vu-la-ai.html">
+          <span class="post-tag">Tự sự · Hồ sơ</span>
+          <h3>Nguyễn Thanh Vũ là ai?</h3>
+          <p>Tôi là ai, làm nghề gì, tin vào điều gì, và vì sao tôi cứ đâm đầu làm cho dân áo blouse. Kể luôn cái lần mất sạch kênh sau một đêm.</p>
+          <span class="read-more">Đọc tiếp →</span>
+        </a>
+        <a class="post-card" href="cau-chuyen.html">
+          <span class="post-tag">Tự sự · Câu chuyện</span>
+          <h3>Tôi từng mất tất cả vì một cú khóa kênh</h3>
+          <p>Từ một kênh bị xóa sổ sau một đêm đến nút bạc — và vì sao tôi chọn con đường làm sạch, làm bền.</p>
+          <span class="read-more">Đọc tiếp →</span>
+        </a>
+        <a class="post-card" href="bai-2-loi-khoa-kenh.html">
+          <span class="post-tag">Hướng dẫn</span>
+          <h3>5 thứ khiến bác sĩ bị Facebook khóa kênh sau một đêm</h3>
+          <p>5 lỗi hầu hết bác sĩ không biết mình đang phạm, và cách dọn sạch một bài đăng trong 60 giây.</p>
+          <span class="read-more">Đọc tiếp →</span>
+        </a>
+        <a class="post-card" href="bai-3-bo-nao-thu-2.html">
+          <span class="post-tag">Nội dung</span>
+          <h3>Vì sao nội dung AI viết ra đều nhạt như nhau</h3>
+          <p>Và cách "bộ não thứ hai" giúp bài của bác sĩ có dấu vân tay không ai bắt chước được.</p>
+          <span class="read-more">Đọc tiếp →</span>
+        </a>
+        <a class="post-card" href="bai-4-ky-luat-ironman.html">
+          <span class="post-tag">Tư duy</span>
+          <h3>Tôi tập Ironman để hiểu một sự thật về xây kênh</h3>
+          <p>Không có cú bứt phá, chỉ có kỷ luật mỗi ngày — và đó là tin tốt cho bạn.</p>
+          <span class="read-more">Đọc tiếp →</span>
+        </a>
+        <a class="post-card" href="bai-5-duoc-biet-den.html">
+          <span class="post-tag">Tuyên ngôn</span>
+          <h3>Người giỏi VÀ được biết đến mới thắng</h3>
+          <p>Bất công lớn nhất ngành y đang trả giá: người giỏi thì im lặng, kẻ ồn ào thì chiếm sân.</p>
+          <span class="read-more">Đọc tiếp →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LIÊN HỆ -->
+  <section id="lien-he">
+    <div class="wrap">
+      <div class="contact-card reveal">
+        <div class="c-copy">
+          <p class="eyebrow">Liên hệ</p>
+          <h2>Đang muốn xây một cái kênh sạch và bền?</h2>
+          <p>Nhắn cho tôi một dòng về cái kênh bạn đang xây dở. Tôi đọc hết, và sẽ chỉ cho bạn bước nhỏ tiếp theo nên làm.</p>
+        </div>
+        <div class="contact-actions">
+          <a href="mailto:hanjonguyen132@gmail.com"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>hanjonguyen132@gmail.com</a>
+          <a href="#bai-viet"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-12.5 7.5L3 21l2-5.5A8.5 8.5 0 1 1 21 11.5z"/></svg>Nhắn tin trao đổi cùng tôi</a>
+          <a href="nguyen-thanh-vu-la-ai.html"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Nguyễn Thanh Vũ là ai?</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div class="fb">Nguyễn Thanh Vũ</div>
+      <div>Làm sạch · Làm bền · Đúng tiêu chuẩn cộng đồng</div>
+      <div>© 2026 · Coach xây kênh online</div>
     </div>
   </footer>
 
 <script>
   document.body.classList.remove('no-js');
-
-  /* reading progress */
-  var bar = document.getElementById('progress');
-  function onProgress(){
-    var h = document.documentElement;
-    var scrolled = h.scrollTop || document.body.scrollTop;
-    var height = h.scrollHeight - h.clientHeight;
-    var pct = height > 0 ? (scrolled / height) * 100 : 0;
-    bar.style.width = pct + '%';
-  }
-  window.addEventListener('scroll', onProgress, {passive:true});
-  onProgress();
-
-  /* reveal on scroll — 3-tier safe fallback */
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var items = document.querySelectorAll('.reveal');
-  if (reduce || !('IntersectionObserver' in window)) {
-    items.forEach(function(el){ el.classList.add('in'); });
-  } else {
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
-      });
-    }, {threshold:0.12, rootMargin:'0px 0px -8% 0px'});
-    items.forEach(function(el){ io.observe(el); });
-  }
-
-  /* TOC scroll-spy — filters out missing ids so it never crashes */
-  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('#toc a'));
-  var spy = tocLinks
-    .map(function(a){
-      var id = a.getAttribute('href').slice(1);
-      var sec = document.getElementById(id);
-      return sec ? {link:a, sec:sec} : null;
-    })
-    .filter(Boolean);
-
-  function setActive(id){
-    spy.forEach(function(s){
-      if (s.link.getAttribute('href') === '#' + id) s.link.classList.add('active');
-      else s.link.classList.remove('active');
-    });
-  }
-
-  if (spy.length){
-    if ('IntersectionObserver' in window){
-      var spyIO = new IntersectionObserver(function(entries){
-        entries.forEach(function(e){
-          if (e.isIntersecting) setActive(e.target.id);
-        });
-      }, {rootMargin:'-45% 0px -50% 0px', threshold:0});
-      spy.forEach(function(s){ spyIO.observe(s.sec); });
-    }
-  }
-
-  /* smooth in-page scroll with navbar offset */
-  document.querySelectorAll('a[href^="#"]').forEach(function(a){
-    a.addEventListener('click', function(ev){
-      var id = a.getAttribute('href').slice(1);
-      if (!id) return;
-      var target = id === 'top' ? document.getElementById('top') : document.getElementById(id);
-      if (!target) return;
-      ev.preventDefault();
-      var navH = 76;
-      var y = target.getBoundingClientRect().top + window.pageYOffset - navH;
-      window.scrollTo({top: y < 0 ? 0 : y, behavior: reduce ? 'auto' : 'smooth'});
-    });
-  });
+  var t=document.getElementById('navToggle'),l=document.getElementById('navLinks');
+  if(t&&l){t.addEventListener('click',function(){l.classList.toggle('open');});
+    l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('open');});});}
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var items=document.querySelectorAll('.reveal');
+  if(reduce||!('IntersectionObserver' in window)){items.forEach(function(e){e.classList.add('in');});}
+  else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -6% 0px'});items.forEach(function(e){io.observe(e);});}
 </script>
 </body>
 </html>
