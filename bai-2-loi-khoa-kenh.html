@@ -105,6 +105,10 @@
     white-space:nowrap;
   }
   .nav-cta:hover{background:var(--wine-bright);}
+  .nav-menu{display:flex;align-items:center;gap:24px;}
+  .nav-menu a{font-family:var(--sans);font-weight:500;font-size:14.5px;color:var(--ink-dim);text-decoration:none;white-space:nowrap;transition:color .2s ease;}
+  .nav-menu a:hover,.nav-menu a.current{color:var(--wine);}
+  @media(max-width:680px){.nav-menu{display:none;}}
 
   /* ---------- layout grid : article + sticky TOC ---------- */
   .shell{
@@ -632,6 +636,10 @@
   <nav class="nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-brand"><img class="mark" src="assets/vu-portrait-suit.jpg" alt="" />Nguyễn Thanh Vũ</a>
+      <div class="nav-menu">
+        <a href="index.html">Câu chuyện</a>
+        <a href="bai-2-loi-khoa-kenh.html" class="current">5 lỗi khóa kênh</a>
+      </div>
       <a href="#loi-moi" class="nav-cta">Nhận checklist SẠCH</a>
     </div>
   </nav>
