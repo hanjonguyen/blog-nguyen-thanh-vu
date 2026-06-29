@@ -88,8 +88,9 @@
     background:var(--wine);color:var(--light);
     font-family:var(--serif);font-weight:700;font-size:16px;
     display:flex;align-items:center;justify-content:center;
-    flex-shrink:0;
-    transition:background .25s ease, transform .25s ease;
+    flex-shrink:0;object-fit:cover;object-position:50% 12%;
+    border:1px solid var(--wine-deep);
+    transition:transform .25s ease;
   }
   .nav-brand:hover .mark{background:var(--wine-bright);transform:rotate(-6deg);}
   .nav-cta{
@@ -202,9 +203,7 @@
   .avatar{
     width:56px;height:56px;border-radius:50%;flex:none;
     background:var(--wine);
-    color:var(--light);
-    font-family:var(--serif);font-weight:700;font-size:22px;
-    display:flex;align-items:center;justify-content:center;
+    object-fit:cover;object-position:50% 16%;
     border:2px solid var(--wine-deep);
   }
   .byline-meta .name{
@@ -214,6 +213,47 @@
   .byline-meta .role{
     font-family:var(--sans);font-size:13.5px;color:var(--ink-dim);
     margin-top:3px;
+  }
+
+  /* ---------- hero portrait (two-column) ---------- */
+  .hero-grid{
+    max-width:1140px;margin:0 auto;padding:0 28px;
+    display:grid;grid-template-columns:1fr;gap:38px;align-items:center;
+  }
+  .hero-copy{min-width:0;}
+  .hero-portrait{position:relative;margin:0;justify-self:center;width:100%;max-width:360px;}
+  .hero-portrait img{
+    width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 14%;
+    display:block;border:1px solid var(--rule);position:relative;z-index:1;
+  }
+  .hero-portrait::before{
+    content:"";position:absolute;z-index:0;left:16px;top:16px;right:-16px;bottom:-16px;
+    background:var(--wine);opacity:.15;pointer-events:none;
+  }
+  @media(min-width:900px){
+    .hero-grid{grid-template-columns:1.12fr 0.88fr;gap:54px;}
+    .hero-portrait{max-width:none;justify-self:stretch;}
+  }
+
+  /* ---------- inline figure ---------- */
+  .figure{margin:42px 0;}
+  .figure img{width:100%;height:auto;display:block;border:1px solid var(--rule);}
+  .figure.figure-narrow{max-width:560px;}
+  .figure figcaption,.gallery figcaption{
+    font-family:var(--sans);font-size:13.5px;line-height:1.55;color:var(--ink-dim);
+    margin-top:14px;padding-left:14px;border-left:2px solid var(--wine);
+  }
+
+  /* ---------- gallery (thể thao) ---------- */
+  .gallery{margin:34px 0 8px;}
+  .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+  .gallery-grid img{
+    width:100%;height:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 26%;
+    display:block;border:1px solid var(--rule);
+  }
+  @media(max-width:560px){
+    .gallery-grid{grid-template-columns:1fr 1fr;}
+    .gallery-grid img.span2{grid-column:1 / -1;aspect-ratio:16/10;object-position:50% 32%;}
   }
 
   /* ---------- article body ---------- */
@@ -546,7 +586,7 @@
 
   <nav class="nav">
     <div class="nav-inner">
-      <a href="#top" class="nav-brand"><span class="mark">V</span>Nguyễn Thanh Vũ</a>
+      <a href="#top" class="nav-brand"><img class="mark" src="assets/vu-portrait-suit.jpg" alt="" />Nguyễn Thanh Vũ</a>
       <a href="#loi-moi" class="nav-cta">Nói chuyện với tôi</a>
     </div>
   </nav>
@@ -555,20 +595,25 @@
 
     <!-- HERO -->
     <header class="hero">
-      <div class="wrap">
-        <div class="issue-line">
-          <span>Tự sự</span><span class="dot"></span><span>Số 01 · Hành trình làm sạch</span>
-        </div>
-        <p class="eyebrow">Câu chuyện cá nhân</p>
-        <h1 class="reveal">Tôi từng mất tất cả vì một cú <span class="accent">khóa kênh</span> — và đó là lý do hôm nay tôi dạy người khác làm “sạch”</h1>
-        <p class="lead reveal">Câu chuyện của Nguyễn Thanh Vũ — Coach xây kênh online cho chuyên gia y tế &amp; người khởi nghiệp.</p>
-        <div class="byline reveal">
-          <div class="avatar">NV</div>
-          <div class="byline-meta">
-            <div class="name">Nguyễn Thanh Vũ</div>
-            <div class="role">Coach xây kênh online · Mentor cầm tay chỉ việc</div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="issue-line">
+            <span>Tự sự</span><span class="dot"></span><span>Số 01 · Hành trình làm sạch</span>
+          </div>
+          <p class="eyebrow">Câu chuyện cá nhân</p>
+          <h1 class="reveal">Tôi từng mất tất cả vì một cú <span class="accent">khóa kênh</span> — và đó là lý do hôm nay tôi dạy người khác làm “sạch”</h1>
+          <p class="lead reveal">Câu chuyện của Nguyễn Thanh Vũ — Coach xây kênh online cho chuyên gia y tế &amp; người khởi nghiệp.</p>
+          <div class="byline reveal">
+            <img class="avatar" src="assets/vu-portrait-suit.jpg" alt="Chân dung Nguyễn Thanh Vũ" />
+            <div class="byline-meta">
+              <div class="name">Nguyễn Thanh Vũ</div>
+              <div class="role">Coach xây kênh online · Mentor cầm tay chỉ việc</div>
+            </div>
           </div>
         </div>
+        <figure class="hero-portrait reveal">
+          <img src="assets/vu-portrait-suit.jpg" width="800" height="1000" alt="Nguyễn Thanh Vũ — chân dung studio, vest đen cà vạt đỏ rượu vang" />
+        </figure>
       </div>
     </header>
 
@@ -626,6 +671,10 @@
               <hr class="section-rule" />
               <h2><span class="sec-num">Phần III</span>Từ một người làm nghề, tôi trở thành coach như thế nào</h2>
               <p>Tôi chưa bao giờ lên kế hoạch trở thành coach. Con đường đến với coaching của tôi, thành thật mà nói, rất tình cờ và thú vị.</p>
+              <figure class="figure figure-narrow reveal">
+                <img src="assets/vu-suit-sitting.jpg" width="900" height="897" loading="lazy" decoding="async" alt="Nguyễn Thanh Vũ ngồi trầm tư, vest đen" />
+                <figcaption>Tôi không đứng trên bục giảng nói mình biết hết — tôi chỉ đi trước bạn vài bước, rồi quay lại nắm tay.</figcaption>
+              </figure>
               <p>Sau khi ra kết quả và đạt nút bạc, tôi chia sẻ cách làm cho vài người bạn — chủ yếu là anh em trong cộng đồng BNI và Eagle Camp, những người bạn tôi tuy không nhiều nhưng rất chất lượng. Tôi chỉ nghĩ đơn giản: mình biết thì mình chia sẻ.</p>
               <p>Rồi họ làm theo. Và họ cũng ra kết quả y như tôi.</p>
               <p>Đến lúc đó, họ quay lại tìm tôi: “Vũ ơi, chỉ lại cho mình cách của Vũ đi.” Tôi chỉ. Họ làm tiếp, kết quả tiếp tục đến. Cuối cùng họ nói: “Vũ coaching riêng cho mình được không?”</p>
@@ -708,6 +757,14 @@
                 <span class="chip"><span class="ic">&#9679;</span>Học mỗi ngày</span>
               </div>
               <p>Ngoài những con số và hệ thống, tôi là một người mê cá koi, mê những chuyến đi xuyên Việt cùng gia đình, và đang theo đuổi một mục tiêu rất riêng: chạm tay vào huy chương Ironman năm 2027.</p>
+              <figure class="gallery reveal">
+                <div class="gallery-grid">
+                  <img class="span2" src="assets/vu-selfie-red.jpg" loading="lazy" decoding="async" alt="Nguyễn Thanh Vũ trong buổi tập chạy" />
+                  <img src="assets/vu-run-medal.jpg" loading="lazy" decoding="async" alt="Hoàn thành cự ly 21km — Eagle Camp" />
+                  <img src="assets/vu-run-thumbsup.jpg" loading="lazy" decoding="async" alt="Về đích giải chạy Cần Giờ" />
+                </div>
+                <figcaption>Eagle Camp · đường chạy 21km — kỷ luật và sự bền bỉ tôi mang thẳng vào cách xây kênh. Mục tiêu kế tiếp: huy chương Ironman 2027.</figcaption>
+              </figure>
               <p>Tôi tin vào kỷ luật và sự bền bỉ — thứ mà thể thao dạy tôi mỗi ngày và tôi mang thẳng vào cách xây kênh. Tôi tin vào sự tự do — đó là lý do tôi xây hệ thống, để một ngày khi không còn phải làm vì tiền, tôi có thể sống tự do và đi khắp nơi. Và tôi tin vào việc cho đi trước — bởi chính những lần chia sẻ vô tư cho bạn bè đã vô tình mở ra cả sự nghiệp coaching của tôi.</p>
               <p>Tôi cũng vẫn là một người học mỗi ngày. Tôi liên tục cập nhật AI, liên tục phát triển bản thân. Tôi không đứng trên bục giảng và nói rằng mình đã biết hết. Tôi chỉ đi trước bạn vài bước, và tôi sẵn lòng quay lại nắm tay bạn.</p>
             </section>
