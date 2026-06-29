@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Tôi từng mất tất cả vì một cú khóa kênh — Nguyễn Thanh Vũ</title>
-<meta name="description" content="Câu chuyện của Nguyễn Thanh Vũ — Coach xây kênh online cho chuyên gia y tế và người khởi nghiệp. Làm sạch, làm bền, đúng tiêu chuẩn cộng đồng." />
+<title>Vì sao 90% nội dung AI viết ra đều nhạt như nhau, và &#x27;bộ não thứ hai&#x27; giúp bài của bác sĩ có dấu vân tay không ai bắt chước — Nguyễn Thanh Vũ</title>
+<meta name="description" content="Bạn không lười, bạn kiệt sức. Và bài của bạn đang nghe giống y hệt mười ngàn bác sĩ khác. Đây là lý do thật, và cách sửa ngay trong một buổi tối." />
 <meta name="theme-color" content="#7b1e2b" />
-<meta property="og:title" content="Tôi từng mất tất cả vì một cú khóa kênh" />
-<meta property="og:description" content="Câu chuyện của Nguyễn Thanh Vũ — làm sạch, làm bền, đúng tiêu chuẩn cộng đồng." />
+<meta property="og:title" content="Vì sao 90% nội dung AI viết ra đều nhạt như nhau, và &#x27;bộ não thứ hai&#x27; giúp bài của bác sĩ có dấu vân tay không ai bắt chước" />
+<meta property="og:description" content="Bạn không lười, bạn kiệt sức. Và bài của bạn đang nghe giống y hệt mười ngàn bác sĩ khác. Đây là lý do thật, và cách sửa ngay trong một buổi tối." />
 <meta property="og:type" content="article" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -597,261 +597,93 @@
   .pc-ex{font-family:var(--sans);font-size:15.5px;line-height:1.6;color:var(--ink-dim);margin-bottom:13px;}
   .pc-more{font-family:var(--sans);font-weight:600;font-size:14px;color:var(--wine);display:inline-flex;align-items:center;gap:7px;transition:gap .2s ease;}
   .pcard:hover .pc-more{gap:12px;}
+
+  /* ---------- checklist 60 giây ---------- */
+  .checkcard{border:1px solid var(--rule);background:var(--cream-pure);padding:32px 30px 16px;margin:36px 0 12px;position:relative;}
+  .checkcard::before{content:"60 giây";position:absolute;top:-13px;left:24px;background:var(--wine);color:var(--light);font-family:var(--sans);font-weight:600;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;padding:6px 13px;}
+  .checkitem{display:flex;gap:18px;align-items:flex-start;padding:20px 0;border-top:1px solid var(--rule-soft);}
+  .checkcard .checkitem:first-of-type{border-top:none;}
+  .checkitem .cn{font-family:var(--serif);font-weight:800;font-style:italic;font-size:30px;color:var(--wine);line-height:.9;flex:none;width:34px;}
+  .checkitem .ct{margin:0;}
+  .checkitem .ct b{color:var(--wine-deep);font-weight:600;}
+  .belief .a p{margin:0 0 14px;}
+  .belief .a p:last-child{margin-bottom:0;}
 </style>
 </head>
 <body class="no-js">
-
   <div class="progress-track"><div class="progress-bar" id="progress"></div></div>
-
   <nav class="nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-brand"><img class="mark" src="assets/vu-portrait-suit.jpg" alt="" />Nguyễn Thanh Vũ</a>
-            <div class="nav-menu">
-        <a href="index.html" class="current">Câu chuyện</a>
+      <div class="nav-menu">
+        <a href="index.html">Câu chuyện</a>
         <a href="bai-2-loi-khoa-kenh.html">Khóa kênh</a>
-        <a href="bai-3-bo-nao-thu-2.html">Bộ não thứ 2</a>
+        <a href="bai-3-bo-nao-thu-2.html" class="current">Bộ não thứ 2</a>
         <a href="bai-4-ky-luat-ironman.html">Kỷ luật</a>
         <a href="bai-5-duoc-biet-den.html">Được biết đến</a>
       </div>
       <a href="#loi-moi" class="nav-cta">Nói chuyện với tôi</a>
     </div>
   </nav>
-
   <main id="top">
-
-    <!-- HERO -->
     <header class="hero">
       <div class="hero-grid">
         <div class="hero-copy">
-          <div class="issue-line">
-            <span>Tự sự</span><span class="dot"></span><span>Số 01 · Hành trình làm sạch</span>
-          </div>
-          <p class="eyebrow">Câu chuyện cá nhân</p>
-          <h1 class="reveal">Tôi từng mất tất cả vì một cú <span class="accent">khóa kênh</span> — và đó là lý do hôm nay tôi dạy người khác làm “sạch”</h1>
-          <p class="lead reveal">Câu chuyện của Nguyễn Thanh Vũ — Coach xây kênh online cho chuyên gia y tế &amp; người khởi nghiệp.</p>
+          <div class="issue-line"><span>Bài viết</span><span class="dot"></span><span>Số 03 · Nội dung có chất riêng</span></div>
+          <p class="eyebrow">Dành cho bác sĩ giỏi nghề mà ngại viết</p>
+          <h1 class="reveal">Vì sao 90% nội dung AI viết ra đều nhạt như nhau, và 'bộ não thứ hai' giúp bài của bác sĩ có dấu vân tay không ai bắt chước</h1>
+          <p class="lead reveal">Bạn không lười, bạn kiệt sức. Và bài của bạn đang nghe giống y hệt mười ngàn bác sĩ khác. Đây là lý do thật, và cách sửa ngay trong một buổi tối.</p>
           <div class="byline reveal">
             <img class="avatar" src="assets/vu-portrait-suit.jpg" alt="Chân dung Nguyễn Thanh Vũ" />
-            <div class="byline-meta">
-              <div class="name">Nguyễn Thanh Vũ</div>
-              <div class="role">Coach xây kênh online · Mentor cầm tay chỉ việc</div>
-            </div>
+            <div class="byline-meta"><div class="name">Nguyễn Thanh Vũ</div><div class="role">Coach xây kênh online · Mentor cầm tay chỉ việc</div></div>
           </div>
         </div>
-        <figure class="hero-portrait reveal">
-          <img src="assets/vu-portrait-suit.jpg" width="800" height="1000" alt="Nguyễn Thanh Vũ — chân dung studio, vest đen cà vạt đỏ rượu vang" />
-        </figure>
+        <figure class="hero-portrait reveal"><img src="assets/vu-suit-sitting.jpg" width="900" height="1125" alt="Nguyễn Thanh Vũ" /></figure>
       </div>
     </header>
-
     <div class="shell">
-
-      <!-- ARTICLE -->
       <div class="col-main">
-        <article class="article">
-          <div class="wrap">
-
-            <!-- INTRO -->
-            <section class="intro" id="mo-dau">
-              <p class="dropcap reveal" style="margin-top:48px;">Có một buổi sáng tôi mở điện thoại lên và thấy dòng thông báo lạnh người: kênh của tôi đã bị Facebook khóa.</p>
-              <p class="reveal">Không phải khóa tạm 24 giờ. Là biến mất. Bao nhiêu nội dung, bao nhiêu khách hàng đang nhắn tin, bao nhiêu công sức xây từng chút một — tất cả về số không chỉ sau một cú click của hệ thống. Tôi ngồi đó, nhìn màn hình, và lần đầu tiên trong hành trình làm online, tôi thật sự muốn bỏ cuộc.</p>
-              <p class="reveal">Nếu bạn từng xây một thứ gì đó bằng cả tâm huyết rồi chứng kiến nó sụp đổ trong một đêm, bạn sẽ hiểu cảm giác của tôi lúc ấy. Và nếu bạn là một bác sĩ, một dược sĩ, một chuyên gia đang ngại ngần bước chân lên mạng vì sợ “lỡ làm sai cái gì đó” — thì câu chuyện này, tôi viết cho bạn.</p>
-            </section>
-
-            <!-- SECTION 1 -->
-            <section class="section reveal" id="loay-hoay">
-              <hr class="section-rule" />
-              <h2><span class="sec-num">Phần I</span>Trước khi có kết quả, tôi cũng loay hoay như bất kỳ ai</h2>
-              <p>Nhiều người biết đến tôi bây giờ với hình ảnh một coach có kênh đạt nút bạc, có học viên ra kết quả. Nhưng ít ai biết điểm xuất phát của tôi cũng đầy vụng về.</p>
-              <p>Tôi xây kênh, nhưng kênh ít view. Tôi đăng bài, nhưng gần như không có bình luận. Tôi cố gắng bán hàng, nhưng không bán được. Cái cảm giác bỏ ra rất nhiều mà nhận lại rất ít — tôi đã sống với nó một thời gian dài.</p>
-              <p>Và rồi, khi tôi tưởng mình bắt đầu có đà, thì sai lầm tốn kém nhất đời làm online ập đến: tôi làm sai tiêu chuẩn cộng đồng của nền tảng. Tôi không cố tình. Tôi chỉ đơn giản là không hiểu luật chơi đủ sâu. Nhưng nền tảng không quan tâm bạn vô tình hay cố ý — nó chỉ thực thi quy tắc. Và cái giá tôi trả là cả một kênh.</p>
-            </section>
-
-            <!-- SECTION 2 -->
-            <section class="section reveal" id="khoanh-khac">
-              <hr class="section-rule" />
-              <h2><span class="sec-num">Phần II</span>Khoảnh khắc tôi định buông — và điều đã giữ tôi lại</h2>
-              <p>Sau cú khóa kênh đó, mọi thứ sụp đổ. Tôi mệt mỏi. Tôi tự hỏi liệu mình có hợp với con đường này không. Nhưng giữa lúc tệ nhất, tôi nhận ra một điều mà sau này trở thành kim chỉ nam cho toàn bộ sự nghiệp của tôi:</p>
-            </section>
-          </div>
-        </article>
-
-        <!-- INTERLUDE 1 (full-bleed dark, cinematic) -->
-        <section class="interlude reveal" aria-label="Trích dẫn">
-          <span class="bigmark" aria-hidden="true">“</span>
-          <div class="interlude-inner">
-            <p class="ksig">Kim chỉ nam của tôi</p>
-            <blockquote>Muốn đi xa trên internet, bạn không thể đi bằng chiêu trò. Bạn phải đi bằng sự tử tế và đúng luật.</blockquote>
-            <p class="qby">Nguyễn Thanh Vũ</p>
-          </div>
-        </section>
-
-        <article class="article">
-          <div class="wrap">
-            <section>
-              <p class="reveal">Tôi bắt đầu làm lại từ đầu, nhưng lần này khác hẳn. Tôi học kỹ tiêu chuẩn cộng đồng của từng nền tảng như học một bộ luật. Tôi xây nội dung sạch, không thổi phồng, không giật gân để câu tương tác bằng mọi giá. Tôi xây hệ thống để kênh phát triển bền — chứ không phải bùng lên rồi tắt ngúm, hoặc tệ hơn là bị xóa sổ lần nữa.</p>
-              <p class="reveal">Và điều kỳ diệu xảy ra: kênh của tôi không chỉ sống lại, mà còn lớn mạnh đến mức đạt nút bạc.</p>
-            </section>
-
-            <!-- SECTION 3 -->
-            <section class="section reveal" id="tro-thanh-coach">
-              <hr class="section-rule" />
-              <h2><span class="sec-num">Phần III</span>Từ một người làm nghề, tôi trở thành coach như thế nào</h2>
-              <p>Tôi chưa bao giờ lên kế hoạch trở thành coach. Con đường đến với coaching của tôi, thành thật mà nói, rất tình cờ và thú vị.</p>
-              <figure class="figure figure-narrow reveal">
-                <img src="assets/vu-suit-sitting.jpg" width="900" height="897" loading="lazy" decoding="async" alt="Nguyễn Thanh Vũ ngồi trầm tư, vest đen" />
-                <figcaption>Tôi không đứng trên bục giảng nói mình biết hết — tôi chỉ đi trước bạn vài bước, rồi quay lại nắm tay.</figcaption>
-              </figure>
-              <p>Sau khi ra kết quả và đạt nút bạc, tôi chia sẻ cách làm cho vài người bạn — chủ yếu là anh em trong cộng đồng BNI và Eagle Camp, những người bạn tôi tuy không nhiều nhưng rất chất lượng. Tôi chỉ nghĩ đơn giản: mình biết thì mình chia sẻ.</p>
-              <p>Rồi họ làm theo. Và họ cũng ra kết quả y như tôi.</p>
-              <p>Đến lúc đó, họ quay lại tìm tôi: “Vũ ơi, chỉ lại cho mình cách của Vũ đi.” Tôi chỉ. Họ làm tiếp, kết quả tiếp tục đến. Cuối cùng họ nói: “Vũ coaching riêng cho mình được không?”</p>
-              <p>Đó là lúc tôi hiểu ra: thứ tôi có không chỉ là một cái kênh thành công, mà là một <span class="strong">hệ thống có thể trao truyền được</span>. Và khi học viên đầu tiên của tôi tự tay xây được kênh của họ, tôi biết mình đã tìm thấy công việc cả đời: làm một người mentor cầm tay chỉ việc, đi cùng học viên đến khi họ thật sự ra kết quả.</p>
-            </section>
-
-            <!-- SECTION 4 -->
-            <section class="section reveal" id="su-menh">
-              <hr class="section-rule" />
-              <h2><span class="sec-num">Phần IV</span>Điều khiến tôi khó chịu — và sứ mệnh thầm lặng của tôi</h2>
-              <p>Càng đi sâu vào ngành, tôi càng thấy một thứ làm mình bất bình: marketing bẩn và chiêu trò.</p>
-              <p>Những lời hứa thổi phồng. Những con số ảo. Những kỹ thuật lách luật để tăng trưởng nhanh, bất chấp việc nó có thể khiến người làm bị khóa kênh, mất uy tín — đúng như những gì tôi từng nếm trải.</p>
-              <p>Tôi đặc biệt thấy điều này bất công với một nhóm người: <span class="strong">các chuyên gia y tế</span>. Bác sĩ, dược sĩ, chuyên gia dinh dưỡng — họ giỏi nghề thật sự, họ có giá trị thật để cho đi. Nhưng họ thường rất yếu về marketing, và càng yếu hơn về việc làm sao tuân thủ tiêu chuẩn cộng đồng khắt khe của Facebook. Kết quả là nhiều người giỏi nghề lại bị lu mờ trước những người ồn ào và chiêu trò.</p>
-            </section>
-          </div>
-        </article>
-
-        <!-- INTERLUDE 2 (full-bleed dark) -->
-        <section class="interlude reveal" aria-label="Sứ mệnh">
-          <span class="bigmark" aria-hidden="true">“</span>
-          <div class="interlude-inner">
-            <p class="ksig">Sứ mệnh thầm lặng</p>
-            <blockquote>Giúp người giỏi được nhìn thấy — bằng cách làm sạch và bền.</blockquote>
-            <p class="qby">Nguyễn Thanh Vũ</p>
-          </div>
-        </section>
-
-        <article class="article">
-          <div class="wrap">
-            <section class="reveal">
-              <p>Tôi không chấp nhận điều đó. Và đó trở thành sứ mệnh thầm lặng của tôi: giúp người giỏi được nhìn thấy, bằng cách làm sạch và bền.</p>
-            </section>
-
-            <!-- SECTION 5 — Q&A beliefs -->
-            <section class="section reveal" id="dieu-toi-tin">
-              <hr class="section-rule" />
-              <h2><span class="sec-num">Phần V</span>Những điều tôi tin — kể cả khi nó ngược số đông</h2>
-              <p>Làm nghề này lâu, tôi hình thành vài niềm tin mà đôi khi đi ngược đám đông. Mọi người hay hỏi tôi: tại sao phải làm online, tại sao phải làm AI, tại sao phải có “bộ não thứ hai”, tại sao là Fanbox chứ không phải YouTube, tại sao là Facebook chứ không phải TikTok. Đây là câu trả lời của tôi:</p>
-
-              <div class="beliefs">
-                <div class="belief">
-                  <div class="q"><span class="qi">Hỏi.</span><h3>Tại sao Facebook chứ không phải TikTok?</h3></div>
-                  <p class="a">Vì Facebook cho tôi tương tác hai chiều thật sự — nhắn tin trực tiếp với khách hàng, chăm sóc, remarketing dễ dàng. Với người làm chuyên môn như bác sĩ, mối quan hệ và niềm tin quan trọng hơn lượt xem ảo, và Facebook làm việc đó tốt hơn.</p>
-                </div>
-                <div class="belief">
-                  <div class="q"><span class="qi">Hỏi.</span><h3>Tại sao phải có “bộ não thứ hai”?</h3></div>
-                  <p class="a">Vì nó giúp tôi định hình phong cách và ngôn ngữ viết của riêng mình, giữ đúng tinh thần E-E-A-T — trải nghiệm, chuyên môn, uy tín, độ tin cậy. Nội dung của bạn phải mang dấu vân tay của chính bạn, chứ không phải bản sao của ai khác.</p>
-                </div>
-                <div class="belief">
-                  <div class="q"><span class="qi">Hỏi.</span><h3>Tại sao phải làm AI?</h3></div>
-                  <p class="a">Vì AI giúp tôi làm marketing tốt hơn gấp 10 lần — nhanh hơn, sâu hơn, nhất quán hơn. Người không dùng AI hôm nay sẽ bị bỏ lại, đơn giản vậy thôi.</p>
-                </div>
-                <div class="belief">
-                  <div class="q"><span class="qi">Hỏi.</span><h3>Và niềm tin lớn nhất, được trả giá bằng chính cú khóa kênh của tôi?</h3></div>
-                  <p class="a">Phải làm đúng tiêu chuẩn cộng đồng. Đó là cách duy nhất để xây một kênh bền vững, không bị xóa sổ chỉ sau một đêm.</p>
-                </div>
-              </div>
-            </section>
-
-            <!-- SECTION 6 -->
-            <section class="section reveal" id="toi-giup-ai">
-              <hr class="section-rule" />
-              <h2><span class="sec-num">Phần VI</span>Tôi giúp ai, và giúp điều gì</h2>
-              <p>Hôm nay, công việc của tôi rất rõ ràng: tôi giúp những người mới khởi nghiệp, những doanh nghiệp mới, và đặc biệt là các bác sĩ, dược sĩ, chuyên gia y tế — xây kênh online để được nhiều người biết đến và có học viên, bệnh nhân đều đặn.</p>
-              <p>Bằng hệ thống internet bài bản. Bằng AI. Và quan trọng nhất: bằng cách làm sạch, không phải bằng quảng cáo thổi phồng hay chiêu trò khiến bạn nơm nớp lo bị khóa kênh.</p>
-              <p>Nếu bạn từng sợ bước lên mạng vì sợ làm sai, sợ vi phạm, sợ mất uy tín nghề nghiệp — tôi hiểu nỗi sợ đó hơn ai hết. Tôi đã đứng ở đúng vị trí của bạn. Và tôi xây cả hệ thống của mình để bạn không phải trả cái giá mà tôi từng trả.</p>
-            </section>
-
-            <!-- SECTION 7 — chips -->
-            <section class="section reveal" id="con-nguoi">
-              <hr class="section-rule" />
-              <h2><span class="sec-num">Phần VII</span>Con người phía sau công việc</h2>
-              <div class="chips">
-                <span class="chip"><span class="ic">&#9679;</span>Mê cá koi</span>
-                <span class="chip"><span class="ic">&#9679;</span>Xuyên Việt cùng gia đình</span>
-                <span class="chip"><span class="ic">&#9679;</span>Mục tiêu Ironman 2027</span>
-                <span class="chip"><span class="ic">&#9679;</span>Kỷ luật &amp; bền bỉ</span>
-                <span class="chip"><span class="ic">&#9679;</span>Tin vào tự do</span>
-                <span class="chip"><span class="ic">&#9679;</span>Cho đi trước</span>
-                <span class="chip"><span class="ic">&#9679;</span>Học mỗi ngày</span>
-              </div>
-              <p>Ngoài những con số và hệ thống, tôi là một người mê cá koi, mê những chuyến đi xuyên Việt cùng gia đình, và đang theo đuổi một mục tiêu rất riêng: chạm tay vào huy chương Ironman năm 2027.</p>
-              <figure class="gallery reveal">
-                <div class="gallery-grid">
-                  <img class="span2" src="assets/vu-selfie-red.jpg" loading="lazy" decoding="async" alt="Nguyễn Thanh Vũ trong buổi tập chạy" />
-                  <img src="assets/vu-run-medal.jpg" loading="lazy" decoding="async" alt="Hoàn thành cự ly 21km — Eagle Camp" />
-                  <img src="assets/vu-run-thumbsup.jpg" loading="lazy" decoding="async" alt="Về đích giải chạy Cần Giờ" />
-                </div>
-                <figcaption>Eagle Camp · đường chạy 21km — kỷ luật và sự bền bỉ tôi mang thẳng vào cách xây kênh. Mục tiêu kế tiếp: huy chương Ironman 2027.</figcaption>
-              </figure>
-              <p>Tôi tin vào kỷ luật và sự bền bỉ — thứ mà thể thao dạy tôi mỗi ngày và tôi mang thẳng vào cách xây kênh. Tôi tin vào sự tự do — đó là lý do tôi xây hệ thống, để một ngày khi không còn phải làm vì tiền, tôi có thể sống tự do và đi khắp nơi. Và tôi tin vào việc cho đi trước — bởi chính những lần chia sẻ vô tư cho bạn bè đã vô tình mở ra cả sự nghiệp coaching của tôi.</p>
-              <p>Tôi cũng vẫn là một người học mỗi ngày. Tôi liên tục cập nhật AI, liên tục phát triển bản thân. Tôi không đứng trên bục giảng và nói rằng mình đã biết hết. Tôi chỉ đi trước bạn vài bước, và tôi sẵn lòng quay lại nắm tay bạn.</p>
-            </section>
-
-          </div>
-        </article>
+<article class="article"><div class="wrap"><section class="intro"><p class="dropcap reveal" style="margin-top:40px;">Tôi nhớ cái đêm đó. Sáng dậy mở điện thoại lên, kênh mình biến mất. Sạch. Mấy năm gầy dựng, bay trong một đêm, vì tôi không đọc kỹ tiêu chuẩn cộng đồng. Lúc đó tôi tưởng mình hết đường rồi.</p><p class="reveal">Kể chuyện đó ra trước, vì tôi muốn bạn biết người đang viết mấy dòng này không đứng trên cao nói xuống. Tôi từng ở dưới đáy. Và cái chuyện tôi muốn nói hôm nay, nó cứu tôi khỏi đáy đó.</p><p class="reveal">Bạn đăng bài mấy tháng nay rồi. Tương tác vẫn lẹt đẹt. Rồi bạn tự nhủ một câu mà tôi nghe hoài từ mấy anh chị bác sĩ: "Chắc mình không hợp với mạng xã hội thật."</p><p class="reveal">Không phải vậy đâu. Để tôi nói bạn nghe vì sao.</p></section><section class="section reveal" id="b03-chon-song"><hr class="section-rule" /><h2><span class="sec-num">Phần I</span>Năng lực của bạn đang bị chôn sống</h2><p>Để tôi đoán thử buổi tối của bạn.</p><p>Khám xong cả ngày, về tới nhà, mở laptop ra. Định đăng một bài. Rồi ngồi nhìn cái màn hình trắng. Mười lăm phút trôi qua. Chữ đầu tiên vẫn chưa ra.</p><p>Bạn giỏi nghề thiệt. Mười năm, mười lăm năm đứng phòng khám. Bệnh nhân tin bạn tới mức gọi điện hỏi giữa đêm. Vậy mà bước lên Facebook, bạn lóng ngóng y như sinh viên năm nhất. Lạ ha.</p><p>Cái fanpage của bạn nó im re. Bạn đổ công sức xuống đó. Bài viết, hình ảnh, mấy buổi tối thức khuya. Mà nó không vọng lại tiếng nào. Like đếm trên đầu ngón tay. Comment thì lâu lâu có một người, mà thường là người nhà.</p><p>Rồi bạn lướt thấy một đồng nghiệp. Người mà bạn biết rõ nghề chưa chắc đã bằng bạn. Vậy mà trên mạng ảnh mấy trăm ngàn follow. Clip nào cũng chục ngàn view. Bạn ngồi đó, vừa khó chịu vừa hoang mang. "Ủa, mình giỏi hơn nó mà?"</p><p>Đúng rồi đó. Bạn giỏi hơn thiệt. Mà không ai biết.</p><p>Rồi ChatGPT xuất hiện. Bạn mừng húm. Tưởng vớ được phao.</p><p>Bạn gõ: "AI viết giúp tôi một bài về bệnh tiểu đường." Ba giây sau nó nhả ra một bài. Trơn tru. Đủ ý. Mà nhạt thếch.</p><p>Bạn đọc lại mà thấy gờn gợn. Nó đúng á, mà nó hổng phải bạn. Nó là giọng của một con robot lễ phép nào đó, ở đâu trôi tới. Bạn vẫn đăng, vì kẹt bài. Rồi lại không ai đọc. Vòng lặp khép lại y như cũ.</p></section></div></article><section class="interlude reveal"><span class="bigmark" aria-hidden="true">"</span><div class="interlude-inner"><p class="ksig">Nói thẳng</p><blockquote>AI không làm bạn nhạt. Bạn nhạt vì để nó nghĩ thay phần hay nhất của mình.</blockquote><p class="qby">Nguyễn Thanh Vũ</p></div></section><article class="article"><div class="wrap"><section class="section reveal" id="b03-nghi-thay"><hr class="section-rule" /><h2><span class="sec-num">Phần II</span>AI không làm bạn nhạt. Bạn để nó nghĩ thay</h2><p>Nói cái này hơi mất lòng nha.</p><p>Cái bài nhạt đó không phải lỗi của AI. Lỗi của bạn.</p><p>Bạn đưa cho nó một cái đầu rỗng, rồi trách nó viết ra thứ rỗng. Bạn gõ "viết bài về tiểu đường" tức là bạn không đưa gì hết. Bạn bảo nó tự nghĩ. Và nó nghĩ.</p><p>Vấn đề nằm ở chỗ AI nó học từ đâu.</p><p>Nó học trên cái trung bình của cả internet. Hàng tỷ trang. Hàng triệu bài về tiểu đường mà người ta đã đăng từ đời nào. Cho nên khi bạn bảo nó tự nghĩ, nó nhả ra cái trung bình của tất cả. Đúng thì đúng đó. Mà khô không khốc, không có hồn. Vì trung bình của mười nghìn người thì làm gì còn cá tính.</p><p>Đây là chỗ tôi muốn bạn dừng lại đọc kỹ.</p><p>Mười lăm năm bạn ngồi phòng khám, đó là một <span class="strong">mỏ vàng</span>. Cái cách bệnh nhân tiểu đường cứ giấu chuyện ăn vụng mỗi chiều rồi vô khám mặt tỉnh rụi. Câu mà bệnh nhân nào cũng hỏi tới hỏi lui, hỏi tới mức bạn thuộc lòng. Cái lần bạn phải vẽ hình lên tờ giấy cho ông bác bảy mươi tuổi hiểu vì sao phải chích insulin, vẽ xong bác gật gù.</p><p>Mấy thứ đó AI không có. Cả internet gộp lại cũng không có. Chỉ mình bạn có.</p><p>Tôi không phải bác sĩ. Tôi là coach, tôi đứng ngoài nhìn vô. Nhưng tôi kèm đủ kiểu chuyên gia rồi. Có anh bác sĩ da liễu tôi coaching, hồi đầu ảnh than y chang bạn, "viết hoài không ai đọc." Tới lúc ảnh chịu lôi mấy ca thật ra kể, mấy câu bệnh nhân hay hỏi ảnh phát mệt, thì bài khác hẳn. Cũng nhờ AI viết nháp, mà ra giọng ảnh, không phải giọng máy.</p><p>Tôi hay nói với học viên: không phải con dao làm nên món ăn, là người đầu bếp. AI chỉ là con dao thôi. Mười lăm năm của bạn mới là nguyên liệu. Đưa đầu rỗng vô thì nó nấu ra món của mười nghìn người trùng nhau. Đưa nguyên liệu thật vô thì khác liền.</p></section><section class="section reveal" id="b03-bo-nao"><hr class="section-rule" /><h2><span class="sec-num">Phần III</span>"Bộ não thứ hai" nói theo kiểu bác sĩ hiểu liền</h2><p>Nghe "bộ não thứ hai" thấy nó kêu to quá ha. Thực ra đơn giản lắm.</p><p>Nó là một cái kho. Bạn cất vô đó những thứ chỉ mình bạn có.</p><p>Ca bệnh thật bạn từng gặp. Câu mà bệnh nhân hay hỏi bạn nhất. Cái cách bạn giải thích một thứ rối rắm cho bà cụ bảy mươi tuổi mà bả gật gù hiểu ngay. Mấy câu nói cửa miệng của bạn trong phòng khám. Những thứ này nó nằm rải rác. Trong đầu bạn, trong cuốn sổ tay, trong mấy tin nhắn Zalo bạn trả lời bệnh nhân lúc nửa đêm.</p><p>Bộ não thứ hai là chỗ gom hết lại một nơi.</p><p>Rồi bạn đưa cả cái kho đó cho AI. Bạn nói: viết bằng giọng này, dựa trên mấy ca này. Lúc đó AI hết tự nghĩ. Nó viết bằng chất liệu của bạn, bằng giọng của bạn.</p><p>Đây chính là cái Google nó gọi là E-E-A-T. Trải nghiệm, chuyên môn, uy tín, độ tin cậy. Mà hay ở chỗ nào bạn biết không? Cái E-E-A-T này không phải để làm vừa lòng con bot của Google đâu. Bệnh nhân đọc bài bạn, họ cũng cảm được. Đọc một ca thật bạn kể, họ thấy liền: à, người này làm thật, không phải chém gió. Niềm tin nó tới từ đó.</p><p>Tôi xài Obsidian làm bộ não thứ hai của mình. Mọi thứ tôi học, mọi câu chuyện học viên, mọi cách nói riêng, tôi cất hết vô đó. Tới lúc cần viết, tôi không bắt đầu từ con số 0. Tôi bắt đầu từ cái kho đã đầy sẵn. Nên giọng tôi vẫn là giọng tôi, dù có nhờ AI viết nháp đi nữa.</p><p>Bạn không cần Obsidian đâu. Một file Word cũng được. Cuốn sổ tay cũng được, hồi đầu. Quan trọng là bạn bắt đầu gom.</p></section></div></article><section class="interlude reveal"><span class="bigmark" aria-hidden="true">"</span><div class="interlude-inner"><p class="ksig">Cốt lõi</p><blockquote>Bạn không thiếu chất liệu. Bạn đang chôn vùi nó.</blockquote><p class="qby">Nguyễn Thanh Vũ</p></div></section><article class="article"><div class="wrap"><section class="section reveal" id="b03-bon-buoc"><hr class="section-rule" /><h2><span class="sec-num">Phần IV</span>Bốn bước dựng bộ não thứ hai, làm được ngay tối nay</h2><p>Đừng để cái tên dọa bạn. Tối nay làm được luôn.</p><div class="checkcard reveal"><div class="checkitem"><span class="cn">1</span><p class="ct"><b>Gom.</b> Mỗi ngày khám, thế nào cũng có một ca hay, hoặc một câu bệnh nhân hỏi làm bạn khựng lại. Ghi xuống. Hai dòng thôi. Ca gì, bạn nói gì với họ. Năm phút mỗi ngày, không hơn. Lúc nghỉ trưa, hoặc tối trước khi ngủ. Đừng cầu toàn, ghi xấu cũng được, miễn có.</p></div><div class="checkitem"><span class="cn">2</span><p class="ct"><b>Phân loại.</b> Mỗi tuần một lần, mở kho ra, gắn nhãn theo bệnh. Tiểu đường một cụm. Da liễu, tim mạch tách riêng ra. Vậy thôi. Sau này cần viết về cái nào, bạn lôi đúng cụm đó ra, khỏi tìm.</p></div><div class="checkitem"><span class="cn">3</span><p class="ct"><b>Nạp.</b> Khi muốn viết, bạn copy nguyên cụm ghi chú liên quan, dán cho AI. Kèm một câu mô tả giọng văn của bạn: tôi hay nói chuyện gần gũi, hay ví von, hay xưng "mình" với bệnh nhân. AI đọc xong sẽ viết bằng chất đó.</p></div><div class="checkitem"><span class="cn">4</span><p class="ct"><b>Tinh.</b> AI viết nháp. Bạn đừng đăng liền. Đọc lại, sửa chừng mười phần trăm. Thêm một câu chỉ bạn mới nói được. Đổi một chữ cho ra giọng bạn. Cắt một đoạn nghe máy quá. Mười phần trăm đó là phần làm bài thành của bạn.</p></div></div><p>Cộng lại, một bài có dấu vân tay mất khoảng nửa tiếng. Thay vì ba tiếng ngồi vật lộn cái màn hình trắng rồi cuối cùng đăng một bài ai đọc cũng quên.</p><p>Bạn thấy khác chưa? Phần lớn người ta xài AI để khỏi phải nghĩ. Còn bạn xài AI để nghĩ nhanh hơn. Hai cái đó ra hai kết quả ngược nhau hoàn toàn.</p></section><section class="section reveal" id="b03-van-tay"><hr class="section-rule" /><h2><span class="sec-num">Phần V</span>Phép thử dấu vân tay</h2><p>Đây là cách kiểm tra bài bạn. Đơn giản mà tàn nhẫn.</p><p>Lấy một bài bạn vừa viết. Xóa tên tác giả đi. Đưa cho người quen đọc.</p><p>Họ có đoán được đây là bạn viết không?</p><p>Nếu họ đọc xong buột miệng "ờ cái này giọng anh ghê, đúng kiểu anh hay nói" thì bài đó có dấu vân tay rồi. Không ai bắt chước được. Vì nó được làm ra từ mười lăm năm của riêng bạn, không ai có.</p><p>Còn nếu gắn tên ai vào cũng trôi, bác sĩ nào đăng cũng xong? Bài máy. Bỏ. Làm lại.</p><p>Mà dấu vân tay này, nó phục vụ đúng thứ bạn cần. Không phải triệu view. Bạn là bác sĩ, đâu phải mấy bạn trẻ làm clip nhảy nhót câu view. Triệu view của mấy clip đó không nuôi được phòng khám bạn.</p><p>Thứ bạn cần là một trăm bệnh nhân nhắn tin. Một trăm người đọc bài bạn, thấy đáng tin, rồi chủ động inbox "bác sĩ ơi cho em hỏi." Đó là lý do tôi ở lại Facebook chứ không qua TikTok. Trên Facebook, bệnh nhân inbox được, nhắn qua nhắn lại được. Đó là thứ tôi cần, nên tôi ở lại đây. Bác sĩ sống bằng quan hệ và niềm tin, chứ không sống bằng con số view trôi qua.</p><p>Giờ quay lại cái câu bạn tự nhủ lúc đầu. "Mình không hợp với mạng xã hội."</p><p>Cho tôi nói thẳng lần nữa. Bạn không thiếu chất liệu. Bạn đang chôn vùi nó.</p><p>Mỗi ngày bạn gặp năm bảy câu chuyện đáng giá ở phòng khám. Mỗi ngày bạn nói ra những câu giải thích mà cả internet gộp lại cũng không hay bằng. Rồi tối về bạn quên sạch, ngồi nhìn màn hình trắng than mình bí ý. Tiếc lắm.</p><p>Tôi đi qua đoạn ngồi nhìn màn hình trắng đó rồi. Hồi mới làm lại từ số 0 sau cái đêm mất kênh, tôi cũng tưởng mình hết chuyện để nói. Hóa ra không. Tôi chỉ chưa biết cách giữ lại những gì mình đã sống qua. Khi tôi bắt đầu gom, mỗi ngày vài dòng, thì hóa ra nói cả năm không hết. Cái kênh làm lại đó về sau lên nút bạc. Không phải vì tôi giỏi hơn ai. Vì tôi không còn bỏ phí chất liệu của chính mình nữa.</p><p>Cứ thử mà coi. Đầu rỗng thì ra bài của mười nghìn người. Bỏ mười lăm năm phòng khám vô thì khác liền.</p><p>Bắt đầu từ tối nay. Ghi hai dòng về ca bệnh đáng nhớ nhất hôm nay của bạn. Chỉ hai dòng thôi. Đó là viên đầu tiên của cái kho. Và là ngày cuối cùng bạn ngồi than mình "không hợp với mạng xã hội."</p></section></div></article>
       </div>
-
-      <!-- TOC -->
       <nav class="col-toc" aria-label="Mục lục">
         <div class="toc" id="toc">
           <div class="toc-label">Mục lục</div>
           <ol>
-            <li><a href="#loay-hoay"><span class="tn">01</span><span class="tlabel">Loay hoay như bất kỳ ai</span><span class="tshort">Loay hoay</span></a></li>
-            <li><a href="#khoanh-khac"><span class="tn">02</span><span class="tlabel">Khoảnh khắc tôi định buông</span><span class="tshort">Định buông</span></a></li>
-            <li><a href="#tro-thanh-coach"><span class="tn">03</span><span class="tlabel">Trở thành coach thế nào</span><span class="tshort">Thành coach</span></a></li>
-            <li><a href="#su-menh"><span class="tn">04</span><span class="tlabel">Sứ mệnh thầm lặng</span><span class="tshort">Sứ mệnh</span></a></li>
-            <li><a href="#dieu-toi-tin"><span class="tn">05</span><span class="tlabel">Những điều tôi tin</span><span class="tshort">Điều tôi tin</span></a></li>
-            <li><a href="#toi-giup-ai"><span class="tn">06</span><span class="tlabel">Tôi giúp ai, giúp gì</span><span class="tshort">Tôi giúp ai</span></a></li>
-            <li><a href="#con-nguoi"><span class="tn">07</span><span class="tlabel">Con người phía sau</span><span class="tshort">Con người</span></a></li>
-            <li><a href="#loi-moi"><span class="tn">08</span><span class="tlabel">Lời mời</span><span class="tshort">Lời mời</span></a></li>
+            <li><a href="#b03-mat-kenh"><span class="tn">01</span><span class="tlabel">Cái đêm tôi mất sạch một kênh</span><span class="tshort">Mở đầu</span></a></li>
+            <li><a href="#b03-chon-song"><span class="tn">02</span><span class="tlabel">Phần I — Năng lực của bạn đang bị chôn sống</span><span class="tshort">Phần I</span></a></li>
+            <li><a href="#b03-nghi-thay"><span class="tn">03</span><span class="tlabel">Phần II — AI không làm bạn nhạt, bạn để nó nghĩ thay</span><span class="tshort">Phần II</span></a></li>
+            <li><a href="#b03-bo-nao"><span class="tn">04</span><span class="tlabel">Phần III — Bộ não thứ hai nói cho bác sĩ hiểu liền</span><span class="tshort">Phần III</span></a></li>
+            <li><a href="#b03-bon-buoc"><span class="tn">05</span><span class="tlabel">Phần IV — Bốn bước dựng, làm được tối nay</span><span class="tshort">Phần IV</span></a></li>
+            <li><a href="#b03-van-tay"><span class="tn">06</span><span class="tlabel">Phần V — Phép thử dấu vân tay</span><span class="tshort">Phần V</span></a></li>
           </ol>
         </div>
       </nav>
-
     </div>
-
-    <!-- LỜI MỜI / CTA -->
     <section class="invite reveal" id="loi-moi">
       <div class="invite-inner">
         <p class="eyebrow">Lời mời</p>
-        <h2>Nếu bạn thấy một phần của mình trong câu chuyện này</h2>
-        <p>Nếu trong câu chuyện này bạn thấy một phần của mình — một người giỏi nghề nhưng loay hoay với việc xây kênh, một người sợ làm sai luật chơi, một người muốn được nhiều người biết đến mà vẫn giữ được sự tử tế — thì có lẽ chúng ta nên nói chuyện.</p>
-        <p>Tôi không hứa với bạn sự tăng trưởng thần tốc bằng mọi giá. <span class="hl">Tôi hứa với bạn một con đường sạch và bền, có hệ thống, có người đi cùng.</span></p>
-        <p>Bởi vì tôi đã từng mất tất cả vì làm sai. Và tôi ở đây để bạn không phải lặp lại điều đó.</p>
+        <h2>Nhận mẫu "Bộ não thứ hai khởi đầu" cho bác sĩ, dược sĩ</h2>
+<p>Tôi có một mẫu bảng để bạn gom ca bệnh và câu hỏi bệnh nhân thành <span class="hl">nguyên liệu content</span>, kèm một prompt mô tả giọng văn của bạn cho AI. Cái này tôi tự xài mỗi ngày.</p><p>Comment <span class="hl">"BỘ NÃO"</span> để mình gửi bạn. Hoặc đăng ký buổi chia sẻ miễn phí, mình hướng dẫn dựng nó từ A tới Z và demo một bài ra đời ngay tại chỗ.</p><p>Tôi từng mất sạch một kênh rồi làm lại từ số 0. Cái khung này là thứ tôi ước có hồi đó. Giờ tôi đưa bạn.</p>
         <div class="invite-actions">
-          <a href="#top" class="btn btn-primary">Đặt lịch nói chuyện với tôi</a>
-          <a href="#top" class="btn btn-ghost">Tìm hiểu cách tôi làm việc</a>
+          <a href="#loi-moi" class="btn btn-primary">Comment "BỘ NÃO" để nhận</a>
+          <a href="index.html" class="btn btn-ghost">Đọc câu chuyện của tôi</a>
         </div>
       </div>
     </section>
-
-    <div class="signoff reveal">
-      <div class="sig">— Nguyễn Thanh Vũ</div>
-      <div class="sig-line"></div>
-    </div>
-
-    <!-- BÀI VIẾT KHÁC -->
-        <section class="morelist reveal" aria-label="Bài viết khác">
+    <div class="signoff reveal"><div class="sig">— Nguyễn Thanh Vũ</div><div class="sig-line"></div></div>
+    <section class="morelist reveal" aria-label="Bài viết khác">
       <div class="ml-head">Bài viết khác</div>
       <p class="ml-sub">Cùng tôi xây kênh sạch, bền, đúng chuẩn.</p>
+      <a class="pcard" href="index.html">
+        <div class="pc-cat">Tự sự · Số 01</div>
+        <div class="pc-title">Tôi từng mất tất cả vì một cú khóa kênh</div>
+        <div class="pc-ex">Câu chuyện thật của tôi: từ một kênh bị xóa sổ sau một đêm đến nút bạc, và vì sao tôi chọn con đường làm sạch, làm bền.</div>
+        <span class="pc-more">Đọc bài <span aria-hidden="true">&#8594;</span></span>
+      </a>
       <a class="pcard" href="bai-2-loi-khoa-kenh.html">
         <div class="pc-cat">Hướng dẫn · Số 02</div>
         <div class="pc-title">5 thứ khiến bác sĩ bị Facebook khóa kênh sau một đêm</div>
         <div class="pc-ex">5 lỗi hầu hết bác sĩ không biết mình đang phạm, và cách dọn sạch một bài đăng trong 60 giây trước khi bấm nút.</div>
-        <span class="pc-more">Đọc bài <span aria-hidden="true">&#8594;</span></span>
-      </a>
-      <a class="pcard" href="bai-3-bo-nao-thu-2.html">
-        <div class="pc-cat">Số 03 · Nội dung có chất riêng</div>
-        <div class="pc-title">Vì sao 90% nội dung AI viết ra đều nhạt như nhau, và &#x27;bộ não thứ hai&#x27; giúp bài của bác sĩ có dấu vân tay không ai bắt chước</div>
-        <div class="pc-ex">Bài AI viết ra nghe giống y hệt mười ngàn bác sĩ khác không phải lỗi của AI. Đây là lý do thật, và cách dựng một cái kho riêng để bài của bạn có dấu vân tay không ai sao chép nổi.</div>
         <span class="pc-more">Đọc bài <span aria-hidden="true">&#8594;</span></span>
       </a>
       <a class="pcard" href="bai-4-ky-luat-ironman.html">
@@ -867,90 +699,26 @@
         <span class="pc-more">Đọc bài <span aria-hidden="true">&#8594;</span></span>
       </a>
     </section>
-
   </main>
-
   <footer>
     <div class="foot-brand">Nguyễn Thanh Vũ</div>
     <div class="foot-role">Coach xây kênh online cho chuyên gia y tế &amp; người khởi nghiệp</div>
-    <div class="foot-meta">
-      <span>Làm sạch</span><span class="sep"></span>
-      <span>Làm bền</span><span class="sep"></span>
-      <span>Đúng tiêu chuẩn cộng đồng</span><span class="sep"></span>
-      <span>© 2026</span>
-    </div>
+    <div class="foot-meta"><span><a href="index.html" style="color:inherit;text-decoration:none;">Câu chuyện của tôi</a></span><span class="sep"></span><span>Làm sạch</span><span class="sep"></span><span>Làm bền</span><span class="sep"></span><span>Đúng tiêu chuẩn cộng đồng</span><span class="sep"></span><span>© 2026</span></div>
   </footer>
-
 <script>
   document.body.classList.remove('no-js');
-
-  /* reading progress */
-  var bar = document.getElementById('progress');
-  function onProgress(){
-    var h = document.documentElement;
-    var scrolled = h.scrollTop || document.body.scrollTop;
-    var height = h.scrollHeight - h.clientHeight;
-    var pct = height > 0 ? (scrolled / height) * 100 : 0;
-    bar.style.width = pct + '%';
-  }
-  window.addEventListener('scroll', onProgress, {passive:true});
-  onProgress();
-
-  /* reveal on scroll — 3-tier safe fallback */
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var items = document.querySelectorAll('.reveal');
-  if (reduce || !('IntersectionObserver' in window)) {
-    items.forEach(function(el){ el.classList.add('in'); });
-  } else {
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
-      });
-    }, {threshold:0.12, rootMargin:'0px 0px -8% 0px'});
-    items.forEach(function(el){ io.observe(el); });
-  }
-
-  /* TOC scroll-spy — filters out missing ids so it never crashes */
-  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('#toc a'));
-  var spy = tocLinks
-    .map(function(a){
-      var id = a.getAttribute('href').slice(1);
-      var sec = document.getElementById(id);
-      return sec ? {link:a, sec:sec} : null;
-    })
-    .filter(Boolean);
-
-  function setActive(id){
-    spy.forEach(function(s){
-      if (s.link.getAttribute('href') === '#' + id) s.link.classList.add('active');
-      else s.link.classList.remove('active');
-    });
-  }
-
-  if (spy.length){
-    if ('IntersectionObserver' in window){
-      var spyIO = new IntersectionObserver(function(entries){
-        entries.forEach(function(e){
-          if (e.isIntersecting) setActive(e.target.id);
-        });
-      }, {rootMargin:'-45% 0px -50% 0px', threshold:0});
-      spy.forEach(function(s){ spyIO.observe(s.sec); });
-    }
-  }
-
-  /* smooth in-page scroll with navbar offset */
-  document.querySelectorAll('a[href^="#"]').forEach(function(a){
-    a.addEventListener('click', function(ev){
-      var id = a.getAttribute('href').slice(1);
-      if (!id) return;
-      var target = id === 'top' ? document.getElementById('top') : document.getElementById(id);
-      if (!target) return;
-      ev.preventDefault();
-      var navH = 76;
-      var y = target.getBoundingClientRect().top + window.pageYOffset - navH;
-      window.scrollTo({top: y < 0 ? 0 : y, behavior: reduce ? 'auto' : 'smooth'});
-    });
-  });
+  var bar=document.getElementById('progress');
+  function onP(){var h=document.documentElement;var s=h.scrollTop||document.body.scrollTop;var ht=h.scrollHeight-h.clientHeight;bar.style.width=(ht>0?(s/ht)*100:0)+'%';}
+  window.addEventListener('scroll',onP,{passive:true});onP();
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var items=document.querySelectorAll('.reveal');
+  if(reduce||!('IntersectionObserver' in window)){items.forEach(function(el){el.classList.add('in');});}
+  else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.12,rootMargin:'0px 0px -8% 0px'});items.forEach(function(el){io.observe(el);});}
+  var tl=Array.prototype.slice.call(document.querySelectorAll('#toc a'));
+  var spy=tl.map(function(a){var id=a.getAttribute('href').slice(1);var s=document.getElementById(id);return s?{link:a,sec:s}:null;}).filter(Boolean);
+  function setA(id){spy.forEach(function(s){if(s.link.getAttribute('href')==='#'+id)s.link.classList.add('active');else s.link.classList.remove('active');});}
+  if(spy.length&&'IntersectionObserver' in window){var sio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)setA(e.target.id);});},{rootMargin:'-45% 0px -50% 0px',threshold:0});spy.forEach(function(s){sio.observe(s.sec);});}
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(ev){var id=a.getAttribute('href').slice(1);if(!id)return;var t=id==='top'?document.getElementById('top'):document.getElementById(id);if(!t)return;ev.preventDefault();var y=t.getBoundingClientRect().top+window.pageYOffset-76;window.scrollTo({top:y<0?0:y,behavior:reduce?'auto':'smooth'});});});
 </script>
 </body>
 </html>

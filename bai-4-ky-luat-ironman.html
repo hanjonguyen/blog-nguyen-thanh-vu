@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Tôi từng mất tất cả vì một cú khóa kênh — Nguyễn Thanh Vũ</title>
-<meta name="description" content="Câu chuyện của Nguyễn Thanh Vũ — Coach xây kênh online cho chuyên gia y tế và người khởi nghiệp. Làm sạch, làm bền, đúng tiêu chuẩn cộng đồng." />
+<title>Tôi tập Ironman để hiểu một sự thật về xây kênh: không có cú bứt phá, chỉ có kỷ luật mỗi ngày — Nguyễn Thanh Vũ</title>
+<meta name="description" content="Bạn không thất bại. Bạn chỉ đang so sánh mình với một lời nói dối." />
 <meta name="theme-color" content="#7b1e2b" />
-<meta property="og:title" content="Tôi từng mất tất cả vì một cú khóa kênh" />
-<meta property="og:description" content="Câu chuyện của Nguyễn Thanh Vũ — làm sạch, làm bền, đúng tiêu chuẩn cộng đồng." />
+<meta property="og:title" content="Tôi tập Ironman để hiểu một sự thật về xây kênh: không có cú bứt phá, chỉ có kỷ luật mỗi ngày" />
+<meta property="og:description" content="Bạn không thất bại. Bạn chỉ đang so sánh mình với một lời nói dối." />
 <meta property="og:type" content="article" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -597,251 +597,102 @@
   .pc-ex{font-family:var(--sans);font-size:15.5px;line-height:1.6;color:var(--ink-dim);margin-bottom:13px;}
   .pc-more{font-family:var(--sans);font-weight:600;font-size:14px;color:var(--wine);display:inline-flex;align-items:center;gap:7px;transition:gap .2s ease;}
   .pcard:hover .pc-more{gap:12px;}
+
+  /* ---------- checklist 60 giây ---------- */
+  .checkcard{border:1px solid var(--rule);background:var(--cream-pure);padding:32px 30px 16px;margin:36px 0 12px;position:relative;}
+  .checkcard::before{content:"60 giây";position:absolute;top:-13px;left:24px;background:var(--wine);color:var(--light);font-family:var(--sans);font-weight:600;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;padding:6px 13px;}
+  .checkitem{display:flex;gap:18px;align-items:flex-start;padding:20px 0;border-top:1px solid var(--rule-soft);}
+  .checkcard .checkitem:first-of-type{border-top:none;}
+  .checkitem .cn{font-family:var(--serif);font-weight:800;font-style:italic;font-size:30px;color:var(--wine);line-height:.9;flex:none;width:34px;}
+  .checkitem .ct{margin:0;}
+  .checkitem .ct b{color:var(--wine-deep);font-weight:600;}
+  .belief .a p{margin:0 0 14px;}
+  .belief .a p:last-child{margin-bottom:0;}
 </style>
 </head>
 <body class="no-js">
-
   <div class="progress-track"><div class="progress-bar" id="progress"></div></div>
-
   <nav class="nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-brand"><img class="mark" src="assets/vu-portrait-suit.jpg" alt="" />Nguyễn Thanh Vũ</a>
-            <div class="nav-menu">
-        <a href="index.html" class="current">Câu chuyện</a>
+      <div class="nav-menu">
+        <a href="index.html">Câu chuyện</a>
         <a href="bai-2-loi-khoa-kenh.html">Khóa kênh</a>
         <a href="bai-3-bo-nao-thu-2.html">Bộ não thứ 2</a>
-        <a href="bai-4-ky-luat-ironman.html">Kỷ luật</a>
+        <a href="bai-4-ky-luat-ironman.html" class="current">Kỷ luật</a>
         <a href="bai-5-duoc-biet-den.html">Được biết đến</a>
       </div>
       <a href="#loi-moi" class="nav-cta">Nói chuyện với tôi</a>
     </div>
   </nav>
-
   <main id="top">
-
-    <!-- HERO -->
     <header class="hero">
       <div class="hero-grid">
         <div class="hero-copy">
-          <div class="issue-line">
-            <span>Tự sự</span><span class="dot"></span><span>Số 01 · Hành trình làm sạch</span>
-          </div>
-          <p class="eyebrow">Câu chuyện cá nhân</p>
-          <h1 class="reveal">Tôi từng mất tất cả vì một cú <span class="accent">khóa kênh</span> — và đó là lý do hôm nay tôi dạy người khác làm “sạch”</h1>
-          <p class="lead reveal">Câu chuyện của Nguyễn Thanh Vũ — Coach xây kênh online cho chuyên gia y tế &amp; người khởi nghiệp.</p>
+          <div class="issue-line"><span>Bài viết</span><span class="dot"></span><span>Số 04 · Bền hơn nhanh</span></div>
+          <p class="eyebrow">Cho người đã mệt và từng nghĩ mình không hợp</p>
+          <h1 class="reveal">Tôi tập Ironman để hiểu một sự thật về xây kênh: không có cú bứt phá, chỉ có kỷ luật mỗi ngày</h1>
+          <p class="lead reveal">Bạn không thất bại. Bạn chỉ đang so sánh mình với một lời nói dối.</p>
           <div class="byline reveal">
             <img class="avatar" src="assets/vu-portrait-suit.jpg" alt="Chân dung Nguyễn Thanh Vũ" />
-            <div class="byline-meta">
-              <div class="name">Nguyễn Thanh Vũ</div>
-              <div class="role">Coach xây kênh online · Mentor cầm tay chỉ việc</div>
-            </div>
+            <div class="byline-meta"><div class="name">Nguyễn Thanh Vũ</div><div class="role">Coach xây kênh online · Mentor cầm tay chỉ việc</div></div>
           </div>
         </div>
-        <figure class="hero-portrait reveal">
-          <img src="assets/vu-portrait-suit.jpg" width="800" height="1000" alt="Nguyễn Thanh Vũ — chân dung studio, vest đen cà vạt đỏ rượu vang" />
-        </figure>
+        <figure class="hero-portrait reveal"><img src="assets/vu-suit-sitting.jpg" width="900" height="1125" alt="Nguyễn Thanh Vũ" /></figure>
       </div>
     </header>
-
     <div class="shell">
-
-      <!-- ARTICLE -->
       <div class="col-main">
-        <article class="article">
-          <div class="wrap">
+<article class="article"><div class="wrap"><section class="intro"><p class="dropcap reveal" style="margin-top:40px;">Bạn lướt Facebook, thấy người ta một bài triệu view, một đêm nổi tiếng. Rồi quay qua nhìn cái kênh của mình. Lèo tèo. Và tự kết luận: mình thất bại.</p><p class="reveal">Tôi nói thẳng. Bạn không thất bại đâu.</p><p class="reveal">Bạn chỉ đang đem mình ra so với một lời nói dối.</p></section>
 
-            <!-- INTRO -->
-            <section class="intro" id="mo-dau">
-              <p class="dropcap reveal" style="margin-top:48px;">Có một buổi sáng tôi mở điện thoại lên và thấy dòng thông báo lạnh người: kênh của tôi đã bị Facebook khóa.</p>
-              <p class="reveal">Không phải khóa tạm 24 giờ. Là biến mất. Bao nhiêu nội dung, bao nhiêu khách hàng đang nhắn tin, bao nhiêu công sức xây từng chút một — tất cả về số không chỉ sau một cú click của hệ thống. Tôi ngồi đó, nhìn màn hình, và lần đầu tiên trong hành trình làm online, tôi thật sự muốn bỏ cuộc.</p>
-              <p class="reveal">Nếu bạn từng xây một thứ gì đó bằng cả tâm huyết rồi chứng kiến nó sụp đổ trong một đêm, bạn sẽ hiểu cảm giác của tôi lúc ấy. Và nếu bạn là một bác sĩ, một dược sĩ, một chuyên gia đang ngại ngần bước chân lên mạng vì sợ “lỡ làm sai cái gì đó” — thì câu chuyện này, tôi viết cho bạn.</p>
-            </section>
+<section class="section reveal" id="b04-kiet-suc"><hr class="section-rule" /><h2><span class="sec-num">Phần I</span>Khách không lười. Khách kiệt sức.</h2><p>Để tôi tả một buổi tối, coi có giống bạn không.</p><p>Hơn tám giờ. Bạn vừa khám xong, có hôm hai mươi mấy, ba chục bệnh nhân. Cổ mỏi. Mắt rát. Cái đầu thì còn lởn vởn ca chiều, người ta hỏi tới hỏi lui mà mình vẫn chưa thiệt yên tâm. Về tới nhà, lùa vội chén cơm.</p><p>Bạn cũng có nghĩ tới cái kênh đó chứ. Thật mà. Tối nay viết một bài, bạn từng tự dặn vậy. Mở điện thoại ra. Con trỏ nhấp nháy trong cái ô soạn bài, nhấp nháy hoài.</p><p>Rồi thôi. Mai viết.</p><p>Bạn quẹt lên cho đỡ căng đầu. Và đúng cái lúc rã rời nhất đó, Facebook quăng vô mặt bạn một anh nào đó vừa <span class="strong">nổ banh nóc</span> sau một cái clip. Mấy chục ngàn like. Người ta khen tới tấp. Bạn nằm đó, tay cầm điện thoại, tự hỏi: ủa, mình làm sai cái gì vậy ta.</p><p>Không. Bạn không làm sai gì hết.</p><p>Tôi gặp cái kiểu tự dằn vặt này hoài. Và có một câu tôi ghét nhất, cái câu người ta hay tự gán cho mình: tại mình lười. Trời. Một người trực đêm, theo bệnh nhân từng ngày, học sáu năm trời, mà gọi là lười thì ai mới là người chăm.</p><p>Bạn không lười. Bạn kiệt sức.</p><p>Mà người kiệt sức thì cần một cách làm nhẹ và đều, chứ đâu cần thêm một cú so sánh để tự thấy mình tệ. Cái feed nó có cho bạn thấy mấy trăm buổi tối thằng kia cũng ngồi rã rời y chang bạn đâu. Nó chỉ chìa ra đúng cái đêm nó trúng. Đem một đêm tệ của mình so với đêm đẹp nhất của người ta. Thua là phải.</p></section></div></article>
 
-            <!-- SECTION 1 -->
-            <section class="section reveal" id="loay-hoay">
-              <hr class="section-rule" />
-              <h2><span class="sec-num">Phần I</span>Trước khi có kết quả, tôi cũng loay hoay như bất kỳ ai</h2>
-              <p>Nhiều người biết đến tôi bây giờ với hình ảnh một coach có kênh đạt nút bạc, có học viên ra kết quả. Nhưng ít ai biết điểm xuất phát của tôi cũng đầy vụng về.</p>
-              <p>Tôi xây kênh, nhưng kênh ít view. Tôi đăng bài, nhưng gần như không có bình luận. Tôi cố gắng bán hàng, nhưng không bán được. Cái cảm giác bỏ ra rất nhiều mà nhận lại rất ít — tôi đã sống với nó một thời gian dài.</p>
-              <p>Và rồi, khi tôi tưởng mình bắt đầu có đà, thì sai lầm tốn kém nhất đời làm online ập đến: tôi làm sai tiêu chuẩn cộng đồng của nền tảng. Tôi không cố tình. Tôi chỉ đơn giản là không hiểu luật chơi đủ sâu. Nhưng nền tảng không quan tâm bạn vô tình hay cố ý — nó chỉ thực thi quy tắc. Và cái giá tôi trả là cả một kênh.</p>
-            </section>
+<section class="interlude reveal"><span class="bigmark" aria-hidden="true">"</span><div class="interlude-inner"><p class="ksig">Buổi tối đó</p><blockquote>Bạn không lười. Một người trực đêm, học sáu năm trời mà gọi là lười, thì ai mới là người chăm.</blockquote><p class="qby">Nguyễn Thanh Vũ</p></div></section>
 
-            <!-- SECTION 2 -->
-            <section class="section reveal" id="khoanh-khac">
-              <hr class="section-rule" />
-              <h2><span class="sec-num">Phần II</span>Khoảnh khắc tôi định buông — và điều đã giữ tôi lại</h2>
-              <p>Sau cú khóa kênh đó, mọi thứ sụp đổ. Tôi mệt mỏi. Tôi tự hỏi liệu mình có hợp với con đường này không. Nhưng giữa lúc tệ nhất, tôi nhận ra một điều mà sau này trở thành kim chỉ nam cho toàn bộ sự nghiệp của tôi:</p>
-            </section>
-          </div>
-        </article>
+<article class="article"><div class="wrap"><section class="section reveal" id="b04-khong-co-but-pha"><hr class="section-rule" /><h2><span class="sec-num">Phần II</span>Cái tôi đang tập không có ngày nào "bứt phá"</h2><p>Tôi đang tập cho Ironman 2027. Bơi 3.8 cây, đạp 180, rồi chạy nguyên cái marathon 42 cây phía sau. Và tôi nói thiệt: suốt cái quá trình đó, không có lấy một ngày nào gọi là bứt phá.</p><p>Không có buổi sáng nào tôi thức dậy rồi tự nhiên bơi giỏi hơn hôm qua một cách thần kỳ. Không có cú nào hết.</p><p>Cái có thật, là cái đồng hồ reo lúc năm giờ sáng. Trời còn tối thui. Người đau ê ẩm vì buổi tập hôm trước. Cả cái thân chỉ muốn nằm yên, kéo mền lên ngủ tiếp. Sáng nào tôi cũng phải cãi nhau với chính mình đúng cái khoảnh khắc đó. Đa số thì tôi thắng. Lê dậy, xỏ giày, đi.</p><p>Chán chứ. Chán muốn chết.</p><p>Tôi còn nhớ buổi bơi open-water đầu tiên. Xuống nước cứ uống nước sặc sụa, bơi được năm chục mét đã thở không ra hơi, hoảng. Có bữa đạp một mạch hướng Vũng Tàu rồi quay đầu, về tới nhà cái mông ê tới tối, hai bàn tay rộp vì níu ghi-đông. Toàn mấy chuyện không có gì để khoe.</p><p>Nhưng đây mới là chỗ tôi muốn bạn nghe cho kỹ. Chính cái kỷ luật chán ngắt đó, cái việc lặp đi lặp lại khi cơ thể chỉ muốn bỏ cuộc, mới là thứ đẻ ra cái kết quả mà sau này người ngoài nhìn vô tưởng là tài năng.</p><p>Tới ngày tôi về đích, kiểu gì cũng có người nói anh này có tố chất. Không. Tôi đâu có tố chất gì hơn ai. Tôi chỉ có vài trăm cái buổi sáng năm giờ mà không ai thấy. Tấm huy chương đó nó không nằm ở vạch đích đâu. Nó nằm rải rác trong từng buổi tập không ai chứng kiến.</p><figure class="gallery reveal"><div class="gallery-grid"><img class="span2" src="assets/vu-selfie-red.jpg" loading="lazy" decoding="async" alt="Nguyễn Thanh Vũ trên đường chạy buổi sáng" /><img src="assets/vu-run-medal.jpg" loading="lazy" decoding="async" alt="Vũ với tấm huy chương sau một buổi chạy" /><img src="assets/vu-run-thumbsup.jpg" loading="lazy" decoding="async" alt="Vũ giơ tay sau khi hoàn thành cự ly" /></div><figcaption>Không có buổi nào "bứt phá". Chỉ có đường chạy lặp lại lúc 5 giờ sáng, cái kỷ luật chán ngắt đang dồn về Ironman 2027.</figcaption></figure></section></div></article>
 
-        <!-- INTERLUDE 1 (full-bleed dark, cinematic) -->
-        <section class="interlude reveal" aria-label="Trích dẫn">
-          <span class="bigmark" aria-hidden="true">“</span>
-          <div class="interlude-inner">
-            <p class="ksig">Kim chỉ nam của tôi</p>
-            <blockquote>Muốn đi xa trên internet, bạn không thể đi bằng chiêu trò. Bạn phải đi bằng sự tử tế và đúng luật.</blockquote>
-            <p class="qby">Nguyễn Thanh Vũ</p>
-          </div>
-        </section>
+<article class="article"><div class="wrap"><section class="section reveal" id="b04-khong-phai-viral"><hr class="section-rule" /><h2><span class="sec-num">Phần III</span>Cái bạn ngưỡng mộ không phải khoảnh khắc viral</h2><p>Quay lại cái kênh.</p><p>Bạn nể một người làm content giỏi. Bạn coi cái bài viral của họ mà thấy phục. Đúng không?</p><p>Tôi nói cái này, hơi mất lòng với cách nghĩ số đông. Cái bạn đang ngưỡng mộ không phải là khoảnh khắc viral đó. Mà là hơn trăm bài trước nó, mấy bài chẳng ai thèm coi.</p><p>Cả trăm bài mà lúc đăng được vài cái like của người thân. Cả trăm lần ngồi gõ trong khi tự hỏi làm vầy có ích gì không. Cái bài triệu view bạn thấy hôm nay, nó mọc lên từ đúng cái đống "không ai thấy" đó.</p><p>Kênh bền nó không có cú nổ nào hết á. Nó cứ bồi lên từng chút, tới một ngày nhìn lại mới giật mình. Mỗi bài bạn viết là một viên gạch lòng tin. Một bài thì chẳng ai nhớ. Nhưng cả trăm bài tử tế, đều đặn, cùng một giọng, cùng một con người, thì nó cộng lại thành cái thứ khó nhất trên đời: người ta tin bạn. Mà lòng tin có viral được đâu. Nó bồi từ từ.</p><p>Còn viral hả? Viral là phần thưởng ngẫu nhiên cho người chịu đăng đều. Bạn không đi săn nó được. Người đăng đều thì sớm muộn cũng trúng một cú. Người ngồi chờ "ý tưởng triệu view" rồi mới chịu đăng thì có trúng đâu, vì có đăng gì đâu mà trúng. Người ta thấy cái ngày bạn trúng. Người ta không thấy mấy trăm ngày bạn gieo trước đó.</p></section></div></article>
 
-        <article class="article">
-          <div class="wrap">
-            <section>
-              <p class="reveal">Tôi bắt đầu làm lại từ đầu, nhưng lần này khác hẳn. Tôi học kỹ tiêu chuẩn cộng đồng của từng nền tảng như học một bộ luật. Tôi xây nội dung sạch, không thổi phồng, không giật gân để câu tương tác bằng mọi giá. Tôi xây hệ thống để kênh phát triển bền — chứ không phải bùng lên rồi tắt ngúm, hoặc tệ hơn là bị xóa sổ lần nữa.</p>
-              <p class="reveal">Và điều kỳ diệu xảy ra: kênh của tôi không chỉ sống lại, mà còn lớn mạnh đến mức đạt nút bạc.</p>
-            </section>
+<section class="interlude reveal"><span class="bigmark" aria-hidden="true">"</span><div class="interlude-inner"><p class="ksig">Về viral</p><blockquote>Người ta thấy cái ngày bạn trúng. Người ta không thấy mấy trăm ngày bạn gieo trước đó.</blockquote><p class="qby">Nguyễn Thanh Vũ</p></div></section>
 
-            <!-- SECTION 3 -->
-            <section class="section reveal" id="tro-thanh-coach">
-              <hr class="section-rule" />
-              <h2><span class="sec-num">Phần III</span>Từ một người làm nghề, tôi trở thành coach như thế nào</h2>
-              <p>Tôi chưa bao giờ lên kế hoạch trở thành coach. Con đường đến với coaching của tôi, thành thật mà nói, rất tình cờ và thú vị.</p>
-              <figure class="figure figure-narrow reveal">
-                <img src="assets/vu-suit-sitting.jpg" width="900" height="897" loading="lazy" decoding="async" alt="Nguyễn Thanh Vũ ngồi trầm tư, vest đen" />
-                <figcaption>Tôi không đứng trên bục giảng nói mình biết hết — tôi chỉ đi trước bạn vài bước, rồi quay lại nắm tay.</figcaption>
-              </figure>
-              <p>Sau khi ra kết quả và đạt nút bạc, tôi chia sẻ cách làm cho vài người bạn — chủ yếu là anh em trong cộng đồng BNI và Eagle Camp, những người bạn tôi tuy không nhiều nhưng rất chất lượng. Tôi chỉ nghĩ đơn giản: mình biết thì mình chia sẻ.</p>
-              <p>Rồi họ làm theo. Và họ cũng ra kết quả y như tôi.</p>
-              <p>Đến lúc đó, họ quay lại tìm tôi: “Vũ ơi, chỉ lại cho mình cách của Vũ đi.” Tôi chỉ. Họ làm tiếp, kết quả tiếp tục đến. Cuối cùng họ nói: “Vũ coaching riêng cho mình được không?”</p>
-              <p>Đó là lúc tôi hiểu ra: thứ tôi có không chỉ là một cái kênh thành công, mà là một <span class="strong">hệ thống có thể trao truyền được</span>. Và khi học viên đầu tiên của tôi tự tay xây được kênh của họ, tôi biết mình đã tìm thấy công việc cả đời: làm một người mentor cầm tay chỉ việc, đi cùng học viên đến khi họ thật sự ra kết quả.</p>
-            </section>
+<article class="article"><div class="wrap"><section class="section reveal" id="b04-tin-tot"><hr class="section-rule" /><h2><span class="sec-num">Phần IV</span>Vì sao đây là tin cực tốt cho một bác sĩ bận</h2><p>Phần này tôi muốn bạn để ý nhất.</p><p>Thử tưởng tượng nha. Nếu xây kênh thành công bắt buộc bạn phải là thiên tài content, kiểu phải duyên trước camera, phải nghĩ ra trò viral, phải có khiếu trời cho, thì xin lỗi, bạn thua từ vòng giữ xe. Vì bạn đâu có học mấy cái đó. Bạn học chữa bệnh.</p><p>Nhưng sự thật đâu phải vậy.</p><p>Xây kênh bền không cần thiên tài. Nó cần đúng một thứ thôi: cái khả năng làm một việc đều đặn, ngày này qua ngày khác, kể cả khi chưa thấy kết quả, kể cả khi chán muốn quăng cờ.</p><p>Mà cái đó thì bạn ơi, bạn có thừa.</p><p>Bạn học y sáu năm. Sáu năm lặp lại những thứ khô khốc, thi cử dồn dập, mà không bỏ ngang. Bạn trực đêm, thức trắng, sáng ra vẫn đứng khám. Bạn theo một bệnh nhân từng ngày, chỉnh từng chút, chờ cơ thể người ta đáp ứng. Mà đáp ứng thì có nhanh đâu, nó cũng cộng dồn từ từ y như một cái kênh vậy. Bạn sống bằng kỷ luật cộng dồn cả đời nghề rồi mà chưa gọi tên nó ra thôi.</p><p>Cho nên nghe tôi câu này: bạn không thiếu tố chất để xây kênh. Bạn dư. Dư xa luôn.</p><p>Cái bạn thiếu không phải tố chất. Là chưa ai chỉ cho bạn đặt cái kỷ luật sẵn có đó vào đâu cho đúng chỗ. Bạn đang đổ hết cái kỷ luật kinh khủng của mình vô phòng khám, không còn lại một giọt nào cho cái kênh. Không phải vì bạn yếu. Mà vì chưa ai bày cho bạn một cái khung đủ nhẹ, để mỗi ngày bạn nhỏ vô đó vài phút thôi là nó cũng chạy.</p></section></div></article>
 
-            <!-- SECTION 4 -->
-            <section class="section reveal" id="su-menh">
-              <hr class="section-rule" />
-              <h2><span class="sec-num">Phần IV</span>Điều khiến tôi khó chịu — và sứ mệnh thầm lặng của tôi</h2>
-              <p>Càng đi sâu vào ngành, tôi càng thấy một thứ làm mình bất bình: marketing bẩn và chiêu trò.</p>
-              <p>Những lời hứa thổi phồng. Những con số ảo. Những kỹ thuật lách luật để tăng trưởng nhanh, bất chấp việc nó có thể khiến người làm bị khóa kênh, mất uy tín — đúng như những gì tôi từng nếm trải.</p>
-              <p>Tôi đặc biệt thấy điều này bất công với một nhóm người: <span class="strong">các chuyên gia y tế</span>. Bác sĩ, dược sĩ, chuyên gia dinh dưỡng — họ giỏi nghề thật sự, họ có giá trị thật để cho đi. Nhưng họ thường rất yếu về marketing, và càng yếu hơn về việc làm sao tuân thủ tiêu chuẩn cộng đồng khắt khe của Facebook. Kết quả là nhiều người giỏi nghề lại bị lu mờ trước những người ồn ào và chiêu trò.</p>
-            </section>
-          </div>
-        </article>
-
-        <!-- INTERLUDE 2 (full-bleed dark) -->
-        <section class="interlude reveal" aria-label="Sứ mệnh">
-          <span class="bigmark" aria-hidden="true">“</span>
-          <div class="interlude-inner">
-            <p class="ksig">Sứ mệnh thầm lặng</p>
-            <blockquote>Giúp người giỏi được nhìn thấy — bằng cách làm sạch và bền.</blockquote>
-            <p class="qby">Nguyễn Thanh Vũ</p>
-          </div>
-        </section>
-
-        <article class="article">
-          <div class="wrap">
-            <section class="reveal">
-              <p>Tôi không chấp nhận điều đó. Và đó trở thành sứ mệnh thầm lặng của tôi: giúp người giỏi được nhìn thấy, bằng cách làm sạch và bền.</p>
-            </section>
-
-            <!-- SECTION 5 — Q&A beliefs -->
-            <section class="section reveal" id="dieu-toi-tin">
-              <hr class="section-rule" />
-              <h2><span class="sec-num">Phần V</span>Những điều tôi tin — kể cả khi nó ngược số đông</h2>
-              <p>Làm nghề này lâu, tôi hình thành vài niềm tin mà đôi khi đi ngược đám đông. Mọi người hay hỏi tôi: tại sao phải làm online, tại sao phải làm AI, tại sao phải có “bộ não thứ hai”, tại sao là Fanbox chứ không phải YouTube, tại sao là Facebook chứ không phải TikTok. Đây là câu trả lời của tôi:</p>
-
-              <div class="beliefs">
-                <div class="belief">
-                  <div class="q"><span class="qi">Hỏi.</span><h3>Tại sao Facebook chứ không phải TikTok?</h3></div>
-                  <p class="a">Vì Facebook cho tôi tương tác hai chiều thật sự — nhắn tin trực tiếp với khách hàng, chăm sóc, remarketing dễ dàng. Với người làm chuyên môn như bác sĩ, mối quan hệ và niềm tin quan trọng hơn lượt xem ảo, và Facebook làm việc đó tốt hơn.</p>
-                </div>
-                <div class="belief">
-                  <div class="q"><span class="qi">Hỏi.</span><h3>Tại sao phải có “bộ não thứ hai”?</h3></div>
-                  <p class="a">Vì nó giúp tôi định hình phong cách và ngôn ngữ viết của riêng mình, giữ đúng tinh thần E-E-A-T — trải nghiệm, chuyên môn, uy tín, độ tin cậy. Nội dung của bạn phải mang dấu vân tay của chính bạn, chứ không phải bản sao của ai khác.</p>
-                </div>
-                <div class="belief">
-                  <div class="q"><span class="qi">Hỏi.</span><h3>Tại sao phải làm AI?</h3></div>
-                  <p class="a">Vì AI giúp tôi làm marketing tốt hơn gấp 10 lần — nhanh hơn, sâu hơn, nhất quán hơn. Người không dùng AI hôm nay sẽ bị bỏ lại, đơn giản vậy thôi.</p>
-                </div>
-                <div class="belief">
-                  <div class="q"><span class="qi">Hỏi.</span><h3>Và niềm tin lớn nhất, được trả giá bằng chính cú khóa kênh của tôi?</h3></div>
-                  <p class="a">Phải làm đúng tiêu chuẩn cộng đồng. Đó là cách duy nhất để xây một kênh bền vững, không bị xóa sổ chỉ sau một đêm.</p>
-                </div>
-              </div>
-            </section>
-
-            <!-- SECTION 6 -->
-            <section class="section reveal" id="toi-giup-ai">
-              <hr class="section-rule" />
-              <h2><span class="sec-num">Phần VI</span>Tôi giúp ai, và giúp điều gì</h2>
-              <p>Hôm nay, công việc của tôi rất rõ ràng: tôi giúp những người mới khởi nghiệp, những doanh nghiệp mới, và đặc biệt là các bác sĩ, dược sĩ, chuyên gia y tế — xây kênh online để được nhiều người biết đến và có học viên, bệnh nhân đều đặn.</p>
-              <p>Bằng hệ thống internet bài bản. Bằng AI. Và quan trọng nhất: bằng cách làm sạch, không phải bằng quảng cáo thổi phồng hay chiêu trò khiến bạn nơm nớp lo bị khóa kênh.</p>
-              <p>Nếu bạn từng sợ bước lên mạng vì sợ làm sai, sợ vi phạm, sợ mất uy tín nghề nghiệp — tôi hiểu nỗi sợ đó hơn ai hết. Tôi đã đứng ở đúng vị trí của bạn. Và tôi xây cả hệ thống của mình để bạn không phải trả cái giá mà tôi từng trả.</p>
-            </section>
-
-            <!-- SECTION 7 — chips -->
-            <section class="section reveal" id="con-nguoi">
-              <hr class="section-rule" />
-              <h2><span class="sec-num">Phần VII</span>Con người phía sau công việc</h2>
-              <div class="chips">
-                <span class="chip"><span class="ic">&#9679;</span>Mê cá koi</span>
-                <span class="chip"><span class="ic">&#9679;</span>Xuyên Việt cùng gia đình</span>
-                <span class="chip"><span class="ic">&#9679;</span>Mục tiêu Ironman 2027</span>
-                <span class="chip"><span class="ic">&#9679;</span>Kỷ luật &amp; bền bỉ</span>
-                <span class="chip"><span class="ic">&#9679;</span>Tin vào tự do</span>
-                <span class="chip"><span class="ic">&#9679;</span>Cho đi trước</span>
-                <span class="chip"><span class="ic">&#9679;</span>Học mỗi ngày</span>
-              </div>
-              <p>Ngoài những con số và hệ thống, tôi là một người mê cá koi, mê những chuyến đi xuyên Việt cùng gia đình, và đang theo đuổi một mục tiêu rất riêng: chạm tay vào huy chương Ironman năm 2027.</p>
-              <figure class="gallery reveal">
-                <div class="gallery-grid">
-                  <img class="span2" src="assets/vu-selfie-red.jpg" loading="lazy" decoding="async" alt="Nguyễn Thanh Vũ trong buổi tập chạy" />
-                  <img src="assets/vu-run-medal.jpg" loading="lazy" decoding="async" alt="Hoàn thành cự ly 21km — Eagle Camp" />
-                  <img src="assets/vu-run-thumbsup.jpg" loading="lazy" decoding="async" alt="Về đích giải chạy Cần Giờ" />
-                </div>
-                <figcaption>Eagle Camp · đường chạy 21km — kỷ luật và sự bền bỉ tôi mang thẳng vào cách xây kênh. Mục tiêu kế tiếp: huy chương Ironman 2027.</figcaption>
-              </figure>
-              <p>Tôi tin vào kỷ luật và sự bền bỉ — thứ mà thể thao dạy tôi mỗi ngày và tôi mang thẳng vào cách xây kênh. Tôi tin vào sự tự do — đó là lý do tôi xây hệ thống, để một ngày khi không còn phải làm vì tiền, tôi có thể sống tự do và đi khắp nơi. Và tôi tin vào việc cho đi trước — bởi chính những lần chia sẻ vô tư cho bạn bè đã vô tình mở ra cả sự nghiệp coaching của tôi.</p>
-              <p>Tôi cũng vẫn là một người học mỗi ngày. Tôi liên tục cập nhật AI, liên tục phát triển bản thân. Tôi không đứng trên bục giảng và nói rằng mình đã biết hết. Tôi chỉ đi trước bạn vài bước, và tôi sẵn lòng quay lại nắm tay bạn.</p>
-            </section>
-
-          </div>
-        </article>
+<article class="article"><div class="wrap"><section class="section reveal" id="b04-xang-va-xe"><hr class="section-rule" /><h2><span class="sec-num">Phần V</span>Kỷ luật là xăng. Bạn thiếu cái xe để đổ vô.</h2><p>Tôi gom lại cho dễ nhớ.</p><p>Kỷ luật là xăng. Cái này bạn có sẵn, đầy bình rồi, khỏi bàn. Nhưng xăng mà đổ ra đất thì cháy được cái gì. Phải có cái xe để nó chạy. Cái xe đó là hệ thống: quy trình, cái khung, biết tối nay viết về cái gì để bạn khỏi phải ngồi nghĩ từ con số không lúc đã mệt rã.</p><p>Còn AI á, nó như cái số trên xe. Bạn đang chạy thì nó nhân tốc lên, còn đứng yên thì nhân mấy cũng vậy. Tôi tin AI giúp tôi làm marketing tốt hơn gấp mười lần, nhanh hơn nhiều mà đều hơn nữa. Tôi dùng một "bộ não thứ hai", cái Obsidian. Mỗi sáng ngồi cà phê tôi quăng vô đó hết: một ca tôi gặp, một câu khách hỏi, một ý chợt nghĩ ra lúc đạp xe. Để khi viết, bài ra còn đúng chất tôi, đọc là biết tôi viết chứ không phải giống y mấy ông khác. AI bồi lên cái nền đó, chứ không thay được nó.</p><p>Nhưng phải nói thẳng kẻo bạn hiểu lầm. AI không cứu người lười. Đối thủ của bạn cũng có AI trong tay. Nên cái giây bạn dừng lại, bạn không phải đứng yên đâu. Là khách hết nhớ tới bạn. Vì người khác vẫn đang chạy, lại có thêm cái số.</p><p>Giờ tới chỗ tôi thật lòng nhất.</p><p>Tôi không bán cho bạn cú bứt phá. Ai hứa với bạn "một đêm nổi tiếng" thì người đó đang bán cho bạn đúng cái lời nói dối ở đầu bài.</p><p>Cái tôi làm khác. Tôi đi cùng bạn qua đúng cái đoạn khó nhất, cái đoạn "đã làm rồi mà chưa thấy kết quả". Cái đoạn mà gần như ai cũng quăng cờ. Mấy người tôi từng đi cùng, ai rớt là rớt ngay quãng đó. Không phải vì họ dở. Vì họ tới đó một mình, không ai nói cho họ biết ráng thêm chút nữa thôi, sắp tới rồi.</p><p>Tôi biết cái nỗi "mua khóa học rồi để xó". Bạn từng mua, học được vài bữa, rồi đời cuốn đi, cái khóa nằm đó phủ bụi. Tôi hiểu. Đó là lý do tôi không làm kiểu bán khóa xong vẫy tay chào. Tôi làm kiểu đi cùng, cầm tay chỉ việc tới khi bạn ra kết quả thật.</p><p>Đúng cái cách tôi từng làm với mấy anh em đầu tiên trong BNI và cộng đồng Eagle Camp. Bạn tôi không đông, nhưng chất. Có một anh làm nha khoa, tôi biểu đăng đều một bài mỗi ngày, cứ kể chuyện nghề thôi, đừng bán gì hết. Cỡ hai ba tháng sau anh nhắn lại, giọng còn hơi ngỡ ngàng: lần đầu có người lạ hoắc inbox hỏi đặt lịch, không phải người quen giới thiệu. Họ làm theo, ra được kết quả như vậy, rồi mới quay lại xin tôi coaching riêng. Cái nghề coach tới với tôi tình cờ như vậy đó.</p><p>Mà tôi đi cùng được, vì tôi từng đứng ở chỗ tệ nhất.</p><p>Tôi từng mất sạch một cái kênh sau một đêm. Làm sai tiêu chuẩn cộng đồng vì hồi đó không hiểu luật đủ sâu. Sáng đó mở điện thoại, cái trang gây dựng bao nhiêu năm hiện đúng một dòng chữ xám lạnh tanh: không còn nữa. Tay tôi lạnh ngắt. Bấm kháng nghị, gửi đi, rồi ngồi chờ một câu trả lời không bao giờ tới. Tôi ngồi thừ nguyên đêm, muốn bỏ cuộc cho rồi.</p><p>Thứ kéo tôi lại không phải động lực. Động lực bay hơi sau ba bữa. Thứ giữ tôi ở lại là một cái khung để bám vào, và vài người bạn không để tôi bỏ. Tôi làm lại từ con số không. Nội dung sạch, xây từ từ. Cái kênh đó về sau lên tới nút bạc, đúng mốc một trăm ngàn người theo dõi, mà tôi phải làm lại gần hai năm trời mới chạm tới.</p><p>Không phải vì tôi giỏi hơn ai. Mà vì tôi không dừng lại đúng cái chỗ mà phần lớn người ta dừng.</p></section></div></article>
       </div>
-
-      <!-- TOC -->
       <nav class="col-toc" aria-label="Mục lục">
         <div class="toc" id="toc">
           <div class="toc-label">Mục lục</div>
           <ol>
-            <li><a href="#loay-hoay"><span class="tn">01</span><span class="tlabel">Loay hoay như bất kỳ ai</span><span class="tshort">Loay hoay</span></a></li>
-            <li><a href="#khoanh-khac"><span class="tn">02</span><span class="tlabel">Khoảnh khắc tôi định buông</span><span class="tshort">Định buông</span></a></li>
-            <li><a href="#tro-thanh-coach"><span class="tn">03</span><span class="tlabel">Trở thành coach thế nào</span><span class="tshort">Thành coach</span></a></li>
-            <li><a href="#su-menh"><span class="tn">04</span><span class="tlabel">Sứ mệnh thầm lặng</span><span class="tshort">Sứ mệnh</span></a></li>
-            <li><a href="#dieu-toi-tin"><span class="tn">05</span><span class="tlabel">Những điều tôi tin</span><span class="tshort">Điều tôi tin</span></a></li>
-            <li><a href="#toi-giup-ai"><span class="tn">06</span><span class="tlabel">Tôi giúp ai, giúp gì</span><span class="tshort">Tôi giúp ai</span></a></li>
-            <li><a href="#con-nguoi"><span class="tn">07</span><span class="tlabel">Con người phía sau</span><span class="tshort">Con người</span></a></li>
-            <li><a href="#loi-moi"><span class="tn">08</span><span class="tlabel">Lời mời</span><span class="tshort">Lời mời</span></a></li>
+            <li><a href="#b04-kiet-suc"><span class="tn">01</span><span class="tlabel">Khách không lười, khách kiệt sức</span><span class="tshort">Kiệt sức</span></a></li>
+            <li><a href="#b04-khong-co-but-pha"><span class="tn">02</span><span class="tlabel">Cái tôi đang tập không có ngày nào bứt phá</span><span class="tshort">Ironman</span></a></li>
+            <li><a href="#b04-khong-phai-viral"><span class="tn">03</span><span class="tlabel">Cái bạn ngưỡng mộ không phải khoảnh khắc viral</span><span class="tshort">Cộng dồn</span></a></li>
+            <li><a href="#b04-tin-tot"><span class="tn">04</span><span class="tlabel">Vì sao đây là tin cực tốt cho một bác sĩ bận</span><span class="tshort">Tin tốt</span></a></li>
+            <li><a href="#b04-xang-va-xe"><span class="tn">05</span><span class="tlabel">Kỷ luật là xăng, bạn thiếu cái xe để đổ vô</span><span class="tshort">Xăng và xe</span></a></li>
           </ol>
         </div>
       </nav>
-
     </div>
-
-    <!-- LỜI MỜI / CTA -->
     <section class="invite reveal" id="loi-moi">
       <div class="invite-inner">
         <p class="eyebrow">Lời mời</p>
-        <h2>Nếu bạn thấy một phần của mình trong câu chuyện này</h2>
-        <p>Nếu trong câu chuyện này bạn thấy một phần của mình — một người giỏi nghề nhưng loay hoay với việc xây kênh, một người sợ làm sai luật chơi, một người muốn được nhiều người biết đến mà vẫn giữ được sự tử tế — thì có lẽ chúng ta nên nói chuyện.</p>
-        <p>Tôi không hứa với bạn sự tăng trưởng thần tốc bằng mọi giá. <span class="hl">Tôi hứa với bạn một con đường sạch và bền, có hệ thống, có người đi cùng.</span></p>
-        <p>Bởi vì tôi đã từng mất tất cả vì làm sai. Và tôi ở đây để bạn không phải lặp lại điều đó.</p>
+        <h2>Kể tôi nghe về cái kênh bạn đang xây dở</h2>
+<p>Nếu bạn đang mệt, và từng có lúc nghĩ <span class="hl">"có lẽ mình không hợp cái này"</span>, thì tôi muốn nghe câu chuyện của bạn.</p><p>Nhắn cho tôi một dòng thôi, về cái kênh bạn đang xây dở. Tôi đọc hết, và sẽ chỉ cho bạn đâu là bước nhỏ tiếp theo nên làm. Không phải một cú bứt phá. Chỉ là bước kế tiếp, và tôi đi cùng bạn qua đúng cái đoạn mà phần lớn người ta bỏ ngang.</p>
         <div class="invite-actions">
-          <a href="#top" class="btn btn-primary">Đặt lịch nói chuyện với tôi</a>
-          <a href="#top" class="btn btn-ghost">Tìm hiểu cách tôi làm việc</a>
+          <a href="#loi-moi" class="btn btn-primary">Nhắn tin cho tôi</a>
+          <a href="index.html" class="btn btn-ghost">Đọc câu chuyện của tôi</a>
         </div>
       </div>
     </section>
-
-    <div class="signoff reveal">
-      <div class="sig">— Nguyễn Thanh Vũ</div>
-      <div class="sig-line"></div>
-    </div>
-
-    <!-- BÀI VIẾT KHÁC -->
-        <section class="morelist reveal" aria-label="Bài viết khác">
+    <div class="signoff reveal"><div class="sig">— Nguyễn Thanh Vũ</div><div class="sig-line"></div></div>
+    <section class="morelist reveal" aria-label="Bài viết khác">
       <div class="ml-head">Bài viết khác</div>
       <p class="ml-sub">Cùng tôi xây kênh sạch, bền, đúng chuẩn.</p>
+      <a class="pcard" href="index.html">
+        <div class="pc-cat">Tự sự · Số 01</div>
+        <div class="pc-title">Tôi từng mất tất cả vì một cú khóa kênh</div>
+        <div class="pc-ex">Câu chuyện thật của tôi: từ một kênh bị xóa sổ sau một đêm đến nút bạc, và vì sao tôi chọn con đường làm sạch, làm bền.</div>
+        <span class="pc-more">Đọc bài <span aria-hidden="true">&#8594;</span></span>
+      </a>
       <a class="pcard" href="bai-2-loi-khoa-kenh.html">
         <div class="pc-cat">Hướng dẫn · Số 02</div>
         <div class="pc-title">5 thứ khiến bác sĩ bị Facebook khóa kênh sau một đêm</div>
@@ -854,12 +705,6 @@
         <div class="pc-ex">Bài AI viết ra nghe giống y hệt mười ngàn bác sĩ khác không phải lỗi của AI. Đây là lý do thật, và cách dựng một cái kho riêng để bài của bạn có dấu vân tay không ai sao chép nổi.</div>
         <span class="pc-more">Đọc bài <span aria-hidden="true">&#8594;</span></span>
       </a>
-      <a class="pcard" href="bai-4-ky-luat-ironman.html">
-        <div class="pc-cat">Số 04 · Bền hơn nhanh</div>
-        <div class="pc-title">Tôi tập Ironman để hiểu một sự thật về xây kênh: không có cú bứt phá, chỉ có kỷ luật mỗi ngày</div>
-        <div class="pc-ex">Cái bạn ngưỡng mộ ở người làm content giỏi không phải bài viral đó. Là cả trăm bài trước nó không ai thấy. Và cái kỷ luật để đẻ ra đống đó, bạn dư từ lâu rồi.</div>
-        <span class="pc-more">Đọc bài <span aria-hidden="true">&#8594;</span></span>
-      </a>
       <a class="pcard" href="bai-5-duoc-biet-den.html">
         <div class="pc-cat">Số 05 · Bước ra ánh sáng</div>
         <div class="pc-title">Người giỏi nhất không thắng, người giỏi VÀ được biết đến mới thắng. Đây là bất công lớn nhất ngành y đang trả giá</div>
@@ -867,90 +712,26 @@
         <span class="pc-more">Đọc bài <span aria-hidden="true">&#8594;</span></span>
       </a>
     </section>
-
   </main>
-
   <footer>
     <div class="foot-brand">Nguyễn Thanh Vũ</div>
     <div class="foot-role">Coach xây kênh online cho chuyên gia y tế &amp; người khởi nghiệp</div>
-    <div class="foot-meta">
-      <span>Làm sạch</span><span class="sep"></span>
-      <span>Làm bền</span><span class="sep"></span>
-      <span>Đúng tiêu chuẩn cộng đồng</span><span class="sep"></span>
-      <span>© 2026</span>
-    </div>
+    <div class="foot-meta"><span><a href="index.html" style="color:inherit;text-decoration:none;">Câu chuyện của tôi</a></span><span class="sep"></span><span>Làm sạch</span><span class="sep"></span><span>Làm bền</span><span class="sep"></span><span>Đúng tiêu chuẩn cộng đồng</span><span class="sep"></span><span>© 2026</span></div>
   </footer>
-
 <script>
   document.body.classList.remove('no-js');
-
-  /* reading progress */
-  var bar = document.getElementById('progress');
-  function onProgress(){
-    var h = document.documentElement;
-    var scrolled = h.scrollTop || document.body.scrollTop;
-    var height = h.scrollHeight - h.clientHeight;
-    var pct = height > 0 ? (scrolled / height) * 100 : 0;
-    bar.style.width = pct + '%';
-  }
-  window.addEventListener('scroll', onProgress, {passive:true});
-  onProgress();
-
-  /* reveal on scroll — 3-tier safe fallback */
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var items = document.querySelectorAll('.reveal');
-  if (reduce || !('IntersectionObserver' in window)) {
-    items.forEach(function(el){ el.classList.add('in'); });
-  } else {
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
-      });
-    }, {threshold:0.12, rootMargin:'0px 0px -8% 0px'});
-    items.forEach(function(el){ io.observe(el); });
-  }
-
-  /* TOC scroll-spy — filters out missing ids so it never crashes */
-  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('#toc a'));
-  var spy = tocLinks
-    .map(function(a){
-      var id = a.getAttribute('href').slice(1);
-      var sec = document.getElementById(id);
-      return sec ? {link:a, sec:sec} : null;
-    })
-    .filter(Boolean);
-
-  function setActive(id){
-    spy.forEach(function(s){
-      if (s.link.getAttribute('href') === '#' + id) s.link.classList.add('active');
-      else s.link.classList.remove('active');
-    });
-  }
-
-  if (spy.length){
-    if ('IntersectionObserver' in window){
-      var spyIO = new IntersectionObserver(function(entries){
-        entries.forEach(function(e){
-          if (e.isIntersecting) setActive(e.target.id);
-        });
-      }, {rootMargin:'-45% 0px -50% 0px', threshold:0});
-      spy.forEach(function(s){ spyIO.observe(s.sec); });
-    }
-  }
-
-  /* smooth in-page scroll with navbar offset */
-  document.querySelectorAll('a[href^="#"]').forEach(function(a){
-    a.addEventListener('click', function(ev){
-      var id = a.getAttribute('href').slice(1);
-      if (!id) return;
-      var target = id === 'top' ? document.getElementById('top') : document.getElementById(id);
-      if (!target) return;
-      ev.preventDefault();
-      var navH = 76;
-      var y = target.getBoundingClientRect().top + window.pageYOffset - navH;
-      window.scrollTo({top: y < 0 ? 0 : y, behavior: reduce ? 'auto' : 'smooth'});
-    });
-  });
+  var bar=document.getElementById('progress');
+  function onP(){var h=document.documentElement;var s=h.scrollTop||document.body.scrollTop;var ht=h.scrollHeight-h.clientHeight;bar.style.width=(ht>0?(s/ht)*100:0)+'%';}
+  window.addEventListener('scroll',onP,{passive:true});onP();
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var items=document.querySelectorAll('.reveal');
+  if(reduce||!('IntersectionObserver' in window)){items.forEach(function(el){el.classList.add('in');});}
+  else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.12,rootMargin:'0px 0px -8% 0px'});items.forEach(function(el){io.observe(el);});}
+  var tl=Array.prototype.slice.call(document.querySelectorAll('#toc a'));
+  var spy=tl.map(function(a){var id=a.getAttribute('href').slice(1);var s=document.getElementById(id);return s?{link:a,sec:s}:null;}).filter(Boolean);
+  function setA(id){spy.forEach(function(s){if(s.link.getAttribute('href')==='#'+id)s.link.classList.add('active');else s.link.classList.remove('active');});}
+  if(spy.length&&'IntersectionObserver' in window){var sio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)setA(e.target.id);});},{rootMargin:'-45% 0px -50% 0px',threshold:0});spy.forEach(function(s){sio.observe(s.sec);});}
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(ev){var id=a.getAttribute('href').slice(1);if(!id)return;var t=id==='top'?document.getElementById('top'):document.getElementById(id);if(!t)return;ev.preventDefault();var y=t.getBoundingClientRect().top+window.pageYOffset-76;window.scrollTo({top:y<0?0:y,behavior:reduce?'auto':'smooth'});});});
 </script>
 </body>
 </html>
