@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mua bất động sản tạo dòng tiền: vì sao chọn đúng người cố vấn quan trọng hơn chọn đúng căn nhà — Nguyễn Thanh Vũ</title>
+<meta name="description" content="Trong đầu tư bất động sản dòng tiền, chọn đúng người cố vấn quan trọng hơn chọn đúng căn nhà. Cách phân biệt 'cò đất' và 'cố vấn', mua tài sản thay vì mua kỳ vọng, và 4 dấu hiệu nhận diện người tư vấn tử tế." />
+<meta name="theme-color" content="#7b1e2b" />
+<meta property="og:title" content="Mua bất động sản tạo dòng tiền: vì sao chọn đúng người cố vấn quan trọng hơn chọn đúng căn nhà" />
+<meta property="og:description" content="Bạn không mua một căn nhà. Bạn mua một quyết định. Và quyết định tốt luôn bắt đầu từ việc nghe đúng người." />
+<meta property="og:type" content="article" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    /* ----- thang đỏ rượu vang 4 bậc theo trục độ sáng (hue ~351°), mọi glow/viền đều phái sinh từ đây ----- */
+    --wine-deep:#561019;   /* đáy gradient / đổ bóng sâu */
+    --wine:#7b1e2b;        /* màu thương hiệu chủ đạo, nền nút */
+    --wine-bright:#a02234; /* đỉnh gradient / hover */
+    --wine-soft:#c97b85;   /* accent / chữ nhấn trên nền tối */
+
+    --cream:#f7f4ef;
+    --cream-pure:#ffffff;
+    --ink:#1a1416;
+    --ink-dim:#5c5256;
+    --ink-faint:#7a7176;
+    --black:#0d0b0c;
+    --black-2:#161213;
+    --light:#f2ede6;
+    --light-dim:rgba(242,237,230,0.62);
+    --light-faint:rgba(242,237,230,0.42);
+
+    --rule:rgba(123,30,43,0.26);
+    --rule-soft:rgba(26,20,22,0.12);
+
+    --maxw:700px;
+    --serif:'Playfair Display', Georgia, 'Times New Roman', serif;
+    --sans:'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:18px;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--wine);color:var(--light);}
+
+  /* ---------- reading progress ---------- */
+  .progress-track{
+    position:fixed;top:0;left:0;right:0;height:3px;
+    background:transparent;z-index:140;pointer-events:none;
+  }
+  .progress-bar{
+    height:100%;width:0%;
+    background:linear-gradient(90deg,var(--wine),var(--wine-bright));
+    transition:width .12s linear;
+  }
+
+  /* ---------- navbar ---------- */
+  .nav{
+    position:sticky;top:0;z-index:120;
+    background:rgba(247,244,239,0.86);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--rule-soft);
+  }
+  .nav-inner{
+    max-width:1140px;margin:0 auto;
+    padding:13px 28px;
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+  }
+  .nav-brand{
+    font-family:var(--serif);
+    font-weight:700;font-size:19px;letter-spacing:.01em;
+    color:var(--ink);text-decoration:none;
+    display:flex;align-items:center;gap:11px;
+    min-height:44px;
+  }
+  .nav-brand .mark{
+    width:32px;height:32px;border-radius:50%;
+    background:var(--wine);color:var(--light);
+    font-family:var(--serif);font-weight:700;font-size:16px;
+    display:flex;align-items:center;justify-content:center;
+    flex-shrink:0;object-fit:cover;object-position:50% 12%;
+    border:1px solid var(--wine-deep);
+    transition:transform .25s ease;
+  }
+  .nav-brand:hover .mark{background:var(--wine-bright);transform:rotate(-6deg);}
+  .nav-cta{
+    font-family:var(--sans);font-weight:600;font-size:14px;
+    letter-spacing:.02em;
+    background:var(--wine);color:var(--light);
+    border:none;border-radius:0;
+    padding:11px 20px;min-height:44px;
+    text-decoration:none;cursor:pointer;
+    display:inline-flex;align-items:center;
+    transition:background .2s ease;
+    white-space:nowrap;
+  }
+  .nav-cta:hover{background:var(--wine-bright);}
+  .nav-menu{display:flex;align-items:center;gap:24px;}
+  .nav-menu a{font-family:var(--sans);font-weight:500;font-size:14.5px;color:var(--ink-dim);text-decoration:none;white-space:nowrap;transition:color .2s ease;}
+  .nav-menu a:hover,.nav-menu a.current{color:var(--wine);}
+  @media(max-width:680px){.nav-menu{display:none;}}
+
+  /* ---------- layout grid : article + sticky TOC ---------- */
+  .shell{
+    max-width:1140px;margin:0 auto;
+    display:grid;
+    grid-template-columns:1fr minmax(0,var(--maxw)) 1fr;
+    column-gap:36px;
+  }
+  .shell > .col-main{grid-column:2;min-width:0;}
+  .shell > .col-toc{grid-column:3;}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+
+  /* ---------- TOC (desktop sidebar) ---------- */
+  .toc{
+    position:sticky;top:88px;
+    align-self:start;
+    padding:30px 0 0 4px;
+    font-family:var(--sans);
+  }
+  .toc-label{
+    font-size:11px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--wine);margin-bottom:16px;padding-left:14px;
+  }
+  .toc ol{list-style:none;}
+  .toc a{
+    display:flex;gap:11px;align-items:baseline;
+    padding:9px 14px;min-height:44px;
+    text-decoration:none;
+    border-left:2px solid var(--rule-soft);
+    color:var(--ink-dim);
+    font-size:13.5px;line-height:1.4;
+    transition:color .2s ease, border-color .2s ease, background .2s ease;
+  }
+  .toc a .tn{
+    font-family:var(--serif);font-style:italic;font-weight:600;
+    font-size:13px;color:var(--ink-dim);flex:none;
+    transition:color .2s ease;
+  }
+  .toc a:hover{color:var(--ink);border-left-color:var(--wine-soft);}
+  .toc a.active{
+    color:var(--wine-deep);font-weight:500;
+    border-left-color:var(--wine);
+    background:rgba(123,30,43,0.06);
+  }
+  .toc a.active .tn{color:var(--wine);}
+
+  /* ---------- hero ---------- */
+  .hero{
+    padding:80px 0 56px;
+    border-bottom:1px solid var(--rule);
+    position:relative;
+  }
+  .issue-line{
+    display:flex;align-items:center;gap:14px;
+    font-family:var(--sans);font-weight:600;
+    font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--wine);
+    margin-bottom:30px;
+  }
+  .issue-line::before,.issue-line::after{
+    content:"";height:1px;flex:0 0 28px;background:var(--wine);opacity:.5;
+  }
+  .issue-line::after{flex:1 1 auto;}
+  .issue-line .dot{width:5px;height:5px;border-radius:50%;background:var(--wine);flex:none;}
+  .eyebrow{
+    font-family:var(--sans);font-weight:600;
+    font-size:13px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--ink-dim);margin-bottom:22px;
+  }
+  .hero h1{
+    font-family:var(--serif);
+    font-weight:800;
+    font-size:clamp(34px,8.2vw,84px);
+    line-height:1.06;
+    letter-spacing:-0.012em;
+    color:var(--ink);
+    margin-bottom:30px;
+    overflow-wrap:break-word;
+    word-break:break-word;
+  }
+  .hero h1 .accent{color:var(--wine);font-style:italic;font-weight:700;}
+  .hero .lead{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:clamp(20px,2.6vw,25px);
+    line-height:1.5;
+    color:var(--ink-dim);
+    max-width:600px;
+    margin-bottom:40px;
+  }
+  .byline{
+    display:flex;align-items:center;gap:16px;
+    padding-top:26px;border-top:1px solid var(--rule-soft);
+  }
+  .avatar{
+    width:56px;height:56px;border-radius:50%;flex:none;
+    background:var(--wine);
+    object-fit:cover;object-position:50% 16%;
+    border:2px solid var(--wine-deep);
+  }
+  .byline-meta .name{
+    font-family:var(--serif);font-weight:600;font-size:18px;color:var(--ink);
+    line-height:1.2;
+  }
+  .byline-meta .role{
+    font-family:var(--sans);font-size:13.5px;color:var(--ink-dim);
+    margin-top:3px;
+  }
+
+  /* ---------- hero portrait (two-column) ---------- */
+  .hero-grid{
+    max-width:1140px;margin:0 auto;padding:0 28px;
+    display:grid;grid-template-columns:1fr;gap:38px;align-items:center;
+  }
+  .hero-copy{min-width:0;}
+  .hero-portrait{position:relative;margin:0;justify-self:center;width:100%;max-width:360px;}
+  .hero-portrait img{
+    width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 14%;
+    display:block;border:1px solid var(--rule);position:relative;z-index:1;
+  }
+  .hero-portrait::before{
+    content:"";position:absolute;z-index:0;left:16px;top:16px;right:-16px;bottom:-16px;
+    background:var(--wine);opacity:.15;pointer-events:none;
+  }
+  @media(min-width:900px){
+    .hero-grid{grid-template-columns:1.12fr 0.88fr;gap:54px;}
+    .hero-portrait{max-width:none;justify-self:stretch;}
+  }
+
+  /* ---------- inline figure ---------- */
+  .figure{margin:42px 0;}
+  .figure img{width:100%;height:auto;display:block;border:1px solid var(--rule);}
+  .figure.figure-narrow{max-width:560px;}
+  .figure figcaption,.gallery figcaption{
+    font-family:var(--sans);font-size:13.5px;line-height:1.55;color:var(--ink-dim);
+    margin-top:14px;padding-left:14px;border-left:2px solid var(--wine);
+  }
+
+  /* ---------- gallery (thể thao) ---------- */
+  .gallery{margin:34px 0 8px;}
+  .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+  .gallery-grid img{
+    width:100%;height:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 26%;
+    display:block;border:1px solid var(--rule);
+  }
+  @media(max-width:560px){
+    .gallery-grid{grid-template-columns:1fr 1fr;}
+    .gallery-grid img.span2{grid-column:1 / -1;aspect-ratio:16/10;object-position:50% 32%;}
+  }
+
+  /* ---------- article body ---------- */
+  .article{padding:18px 0 40px;}
+  .article p{
+    margin:0 0 26px;
+    color:var(--ink);
+  }
+  .article p .strong{font-weight:600;color:var(--wine-deep);}
+
+  .dropcap::first-letter{
+    font-family:var(--serif);
+    font-weight:800;
+    color:var(--wine);
+    float:left;
+    font-size:5.6em;
+    line-height:.72;
+    padding:10px 14px 0 0;
+    margin-top:6px;
+  }
+
+  /* ---------- section heads ---------- */
+  .section{padding-top:30px;margin-top:30px;scroll-margin-top:96px;}
+  .section-rule{
+    border:none;border-top:1px solid var(--rule);
+    margin:6px 0 38px;
+  }
+  .section h2{
+    font-family:var(--serif);
+    font-weight:700;
+    font-size:clamp(26px,4.2vw,42px);
+    line-height:1.18;
+    letter-spacing:-0.01em;
+    color:var(--ink);
+    margin-bottom:28px;
+    position:relative;
+    overflow-wrap:break-word;
+    word-break:break-word;
+  }
+  .sec-num{
+    display:block;
+    font-family:var(--sans);font-weight:600;
+    font-size:12px;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--wine);
+    margin-bottom:14px;
+  }
+  .section h2::after{
+    content:"";display:block;width:54px;height:2px;background:var(--wine);
+    margin-top:20px;opacity:.85;
+  }
+
+  /* ---------- pull quote (light, inline) ---------- */
+  .pullquote{
+    margin:48px auto;
+    text-align:center;
+    max-width:620px;
+    padding:8px 0;
+  }
+  .pullquote .qmark{
+    font-family:var(--serif);
+    font-size:64px;line-height:0;color:var(--wine);
+    opacity:.55;display:block;height:34px;
+  }
+  .pullquote p{
+    font-family:var(--serif);
+    font-style:italic;
+    font-weight:600;
+    font-size:clamp(23px,3.4vw,32px);
+    line-height:1.34;
+    color:var(--wine-deep);
+    margin:18px 0;
+  }
+  .pullquote .by{
+    font-family:var(--sans);
+    font-weight:600;font-size:12px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--ink-dim);
+  }
+  .pullquote::after{
+    content:"";display:block;width:48px;height:1px;
+    background:var(--wine);margin:22px auto 0;opacity:.6;
+  }
+
+  /* ---------- interlude full-bleed dark (cinematic) ---------- */
+  .interlude{
+    position:relative;
+    margin:64px 0;
+    margin-left:calc(50% - 50vw);
+    width:100vw;
+    background:var(--black);
+    color:var(--light);
+    overflow:hidden;
+    isolation:isolate;
+  }
+  .interlude::before{
+    content:"";position:absolute;inset:0;z-index:-1;
+    background:radial-gradient(120% 120% at 22% 0%, rgba(160,34,52,0.40), transparent 56%),
+               radial-gradient(100% 100% at 100% 100%, rgba(123,30,43,0.34), transparent 60%);
+    pointer-events:none;
+  }
+  .interlude .bigmark{
+    position:absolute;top:-0.18em;left:0.02em;z-index:-1;
+    font-family:var(--serif);font-weight:900;
+    font-size:clamp(180px,34vw,340px);line-height:1;
+    color:var(--wine-soft);opacity:.10;
+    pointer-events:none;user-select:none;
+  }
+  .interlude-inner{
+    max-width:var(--maxw);margin:0 auto;
+    padding:88px 28px 92px;
+    position:relative;
+  }
+  .interlude .ksig{
+    font-family:var(--sans);font-weight:600;
+    font-size:12px;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--wine-soft);margin-bottom:24px;
+  }
+  .interlude blockquote{
+    font-family:var(--serif);font-style:italic;font-weight:600;
+    font-size:clamp(26px,4.4vw,42px);
+    line-height:1.3;
+    color:var(--light);
+    letter-spacing:-0.01em;
+  }
+  .interlude .qby{
+    margin-top:26px;
+    font-family:var(--sans);font-weight:600;font-size:12px;
+    letter-spacing:.2em;text-transform:uppercase;
+    color:var(--light-dim);
+    display:flex;align-items:center;gap:12px;
+  }
+  .interlude .qby::before{content:"";width:30px;height:1px;background:var(--wine-soft);flex:none;}
+
+  /* ---------- beliefs / Q&A ---------- */
+  .beliefs{
+    margin:38px 0 8px;
+    display:flex;flex-direction:column;gap:0;
+  }
+  .belief{
+    padding:26px 0;
+    border-top:1px solid var(--rule-soft);
+  }
+  .belief:last-child{border-bottom:1px solid var(--rule-soft);}
+  .belief .q{
+    display:flex;gap:14px;align-items:flex-start;
+    margin-bottom:12px;
+  }
+  .belief .q .qi{
+    font-family:var(--serif);font-weight:700;font-style:italic;
+    font-size:21px;color:var(--wine);
+    flex:none;line-height:1.25;
+  }
+  .belief .q h3{
+    font-family:var(--serif);
+    font-weight:600;font-size:20px;line-height:1.32;
+    color:var(--ink);
+  }
+  .belief .a{
+    color:var(--ink);
+    padding-left:35px;
+    margin:0;
+  }
+  @media(max-width:480px){.belief .a{padding-left:0;}}
+
+  /* ---------- chips ---------- */
+  .chips{
+    display:flex;flex-wrap:wrap;gap:11px;
+    margin:8px 0 34px;
+  }
+  .chip{
+    font-family:var(--sans);font-weight:500;font-size:14px;
+    color:var(--wine-deep);
+    background:rgba(123,30,43,0.07);
+    border:1px solid var(--rule);
+    border-radius:0;
+    padding:12px 16px;min-height:44px;
+    display:inline-flex;align-items:center;gap:8px;
+    transition:background .2s ease, color .2s ease, transform .18s ease;
+  }
+  .chip:hover{background:var(--wine);color:var(--light);transform:translateY(-2px);}
+  .chip .ic{font-size:11px;line-height:1;color:var(--wine);transition:color .2s ease;}
+  .chip:hover .ic{color:var(--light);}
+
+  /* ---------- CTA / lời mời ---------- */
+  .invite{
+    background:var(--black);
+    color:var(--light);
+    margin-top:72px;
+    position:relative;
+    overflow:hidden;
+  }
+  .invite::before{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(120% 90% at 18% 0%, rgba(160,34,52,0.42), transparent 58%),
+               radial-gradient(90% 80% at 100% 100%, rgba(123,30,43,0.30), transparent 60%);
+    pointer-events:none;
+  }
+  .invite-inner{
+    position:relative;
+    max-width:var(--maxw);margin:0 auto;
+    padding:74px 28px 78px;
+  }
+  .invite .eyebrow{color:var(--wine-soft);margin-bottom:24px;}
+  .invite h2{
+    font-family:var(--serif);
+    font-weight:700;
+    font-size:clamp(30px,5vw,48px);
+    line-height:1.14;
+    color:var(--light);
+    margin-bottom:26px;
+    letter-spacing:-0.01em;
+    overflow-wrap:break-word;
+    word-break:break-word;
+  }
+  .invite p{
+    color:var(--light-dim);
+    font-size:18px;
+    margin-bottom:22px;
+    max-width:620px;
+  }
+  .invite p .hl{color:var(--light);font-weight:600;}
+  .invite-actions{
+    display:flex;flex-wrap:wrap;gap:16px;margin-top:38px;
+  }
+  .btn{
+    font-family:var(--sans);font-weight:600;font-size:15px;letter-spacing:.02em;
+    border-radius:0;padding:16px 30px;min-height:44px;
+    cursor:pointer;text-decoration:none;
+    display:inline-flex;align-items:center;gap:10px;
+    transition:background .2s ease, color .2s ease, border-color .2s ease, transform .15s ease;
+  }
+  .btn:active{transform:translateY(1px);}
+  .btn-primary{background:var(--wine-bright);color:var(--light);border:1px solid var(--wine-bright);}
+  .btn-primary:hover{background:var(--light);color:var(--wine-deep);border-color:var(--light);}
+  .btn-ghost{background:transparent;color:var(--light);border:1px solid rgba(242,237,230,0.4);}
+  .btn-ghost:hover{border-color:var(--light);background:rgba(242,237,230,0.08);}
+
+  /* ---------- signature ---------- */
+  .signoff{
+    max-width:var(--maxw);margin:0 auto;
+    padding:60px 28px 20px;text-align:center;
+  }
+  .signoff .sig{
+    font-family:var(--serif);font-style:italic;font-weight:600;
+    font-size:30px;color:var(--wine);
+    margin-bottom:8px;
+  }
+  .signoff .sig-line{
+    width:64px;height:1px;background:var(--rule);margin:18px auto 0;
+  }
+
+  /* ---------- footer ---------- */
+  footer{
+    border-top:1px solid var(--rule-soft);
+    margin-top:30px;
+    padding:46px 28px 60px;
+    text-align:center;
+  }
+  .foot-brand{
+    font-family:var(--serif);font-weight:700;font-size:22px;color:var(--ink);
+    margin-bottom:8px;
+  }
+  .foot-role{font-family:var(--sans);font-size:13.5px;color:var(--ink-dim);margin-bottom:24px;}
+  .foot-meta{
+    font-family:var(--sans);font-size:12.5px;letter-spacing:.06em;
+    color:var(--ink-dim);
+    display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center;align-items:center;
+  }
+  .foot-meta .sep{width:3px;height:3px;border-radius:50%;background:var(--wine);opacity:.6;}
+
+  /* ---------- reveal ---------- */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease, transform .8s ease;}
+  .reveal.in{opacity:1;transform:none;}
+  .no-js .reveal{opacity:1;transform:none;}
+
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1 !important;transform:none !important;transition:none;}
+    html{scroll-behavior:auto;}
+    .progress-bar{transition:none;}
+  }
+
+  /* ---------- responsive : collapse TOC ---------- */
+  @media(max-width:1080px){
+    .shell{
+      display:block;max-width:var(--maxw);
+    }
+    .shell > .col-main{grid-column:auto;}
+    .toc{
+      position:static;
+      padding:0;margin:0 0 8px;
+      border-top:1px solid var(--rule-soft);
+      border-bottom:1px solid var(--rule-soft);
+    }
+    .toc-label{padding:18px 28px 0;margin-bottom:12px;}
+    .toc ol{
+      display:flex;gap:8px;overflow-x:auto;
+      padding:0 28px 18px;
+      -webkit-overflow-scrolling:touch;
+      scrollbar-width:none;
+    }
+    .toc ol::-webkit-scrollbar{display:none;}
+    .toc a{
+      border-left:none;border:1px solid var(--rule-soft);
+      white-space:nowrap;flex:none;min-height:44px;
+      padding:11px 14px;border-radius:0;
+    }
+    .toc a.active{border-color:var(--wine);background:rgba(123,30,43,0.07);}
+    .toc a .tlabel{display:none;}
+    .toc a .tn{font-size:13px;}
+    .toc a .tshort{display:inline;}
+  }
+  @media(min-width:1081px){.toc a .tshort{display:none;}}
+
+  @media(max-width:600px){
+    body{font-size:17px;}
+    .wrap,.invite-inner,.interlude-inner,.signoff,footer{padding-left:22px;padding-right:22px;}
+    .hero{padding:54px 0 44px;}
+    .nav-inner{padding:11px 20px;}
+    .nav-cta{padding:10px 16px;font-size:13px;}
+    .dropcap::first-letter{font-size:4.6em;padding:8px 10px 0 0;}
+    .pullquote{margin:40px auto;}
+    .interlude{margin:48px 0;}
+    .interlude-inner{padding:64px 22px 68px;}
+    .toc-label,.toc ol{padding-left:22px;padding-right:22px;}
+  }
+
+  /* ---------- checklist 60 giây (Bài 2) ---------- */
+  .checkcard{
+    border:1px solid var(--rule);
+    background:var(--cream-pure);
+    padding:32px 30px 16px;
+    margin:36px 0 12px;
+    position:relative;
+  }
+  .checkcard::before{
+    content:"60 giây";
+    position:absolute;top:-13px;left:24px;
+    background:var(--wine);color:var(--light);
+    font-family:var(--sans);font-weight:600;font-size:11.5px;
+    letter-spacing:.2em;text-transform:uppercase;
+    padding:6px 13px;
+  }
+  .checkitem{
+    display:flex;gap:18px;align-items:flex-start;
+    padding:20px 0;border-top:1px solid var(--rule-soft);
+  }
+  .checkcard .checkitem:first-of-type{border-top:none;}
+  .checkitem .cn{
+    font-family:var(--serif);font-weight:800;font-style:italic;
+    font-size:30px;color:var(--wine);line-height:.9;flex:none;width:34px;
+  }
+  .checkitem .ct{margin:0;}
+  .checkitem .ct b{color:var(--wine-deep);font-weight:600;}
+  .belief .a p{margin:0 0 14px;}
+  .belief .a p:last-child{margin-bottom:0;}
+
+  /* ---------- danh sách "Bài viết khác" ---------- */
+  .morelist{max-width:var(--maxw);margin:0 auto;padding:64px 28px 8px;}
+  .ml-head{font-family:var(--sans);font-weight:600;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--wine);margin-bottom:8px;display:flex;align-items:center;gap:14px;}
+  .ml-head::after{content:"";height:1px;flex:1;background:var(--rule);}
+  .ml-sub{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--ink-dim);margin-bottom:16px;}
+  .pcard{display:block;text-decoration:none;border-top:1px solid var(--rule-soft);padding:26px 0;transition:padding-left .2s ease;}
+  .pcard:last-of-type{border-bottom:1px solid var(--rule-soft);}
+  .pcard:hover{padding-left:10px;}
+  .pc-cat{font-family:var(--sans);font-weight:600;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--wine);margin-bottom:10px;}
+  .pc-title{font-family:var(--serif);font-weight:700;font-size:clamp(20px,3vw,27px);line-height:1.24;color:var(--ink);margin-bottom:10px;transition:color .2s ease;}
+  .pcard:hover .pc-title{color:var(--wine);}
+  .pc-ex{font-family:var(--sans);font-size:15.5px;line-height:1.6;color:var(--ink-dim);margin-bottom:13px;}
+  .pc-more{font-family:var(--sans);font-weight:600;font-size:14px;color:var(--wine);display:inline-flex;align-items:center;gap:7px;transition:gap .2s ease;}
+  .pcard:hover .pc-more{gap:12px;}
+</style>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TV837VZN');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8JT8DGRZNZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8JT8DGRZNZ');
+    </script>
+    <!-- End Google Analytics 4 -->
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "xf52pujnzt");
+    </script>
+    <!-- End Microsoft Clarity -->
+  </head>
+<body class="no-js">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TV837VZN"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+  <div class="progress-track"><div class="progress-bar" id="progress"></div></div>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand"><img class="mark" src="assets/vu-portrait-suit.jpg" alt="" />Nguyễn Thanh Vũ</a>
+                        <div class="nav-menu">
+        <a href="index.html">Trang chủ</a>
+        <a href="index.html#bai-viet">Bài viết</a>
+        <a href="index.html#lien-he">Liên hệ</a>
+      </div>
+      <a href="#loi-moi" class="nav-cta">Đọc tiếp cuối bài</a>
+    </div>
+  </nav>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <header class="hero">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="issue-line">
+            <span>Góc nhìn</span><span class="dot"></span><span>Đầu tư &amp; xây dựng tài sản</span>
+          </div>
+          <p class="eyebrow">Dành cho người mua nhà lần đầu &amp; nhà đầu tư dòng tiền</p>
+          <h1 class="reveal">Mua bất động sản tạo dòng tiền: vì sao chọn đúng <span class="accent">người cố vấn</span> quan trọng hơn chọn đúng căn nhà</h1>
+          <p class="lead reveal">Đa số người mua không thua vì sản phẩm tệ. Họ thua vì tin nhầm người. Viết ra để bạn nghe đúng người trước khi xuống tiền.</p>
+          <div class="byline reveal">
+            <img class="avatar" src="assets/vu-portrait-suit.jpg" alt="Chân dung Nguyễn Thanh Vũ" />
+            <div class="byline-meta">
+              <div class="name">Nguyễn Thanh Vũ</div>
+              <div class="role">Chia sẻ góc nhìn về đầu tư &amp; xây dựng tài sản</div>
+            </div>
+          </div>
+        </div>
+        <figure class="hero-portrait reveal">
+          <img src="assets/vu-suit-sitting.jpg" width="900" height="1125" alt="Nguyễn Thanh Vũ ngồi trầm tư, vest đen" />
+        </figure>
+      </div>
+    </header>
+
+    <div class="shell">
+
+      <!-- ARTICLE -->
+      <div class="col-main">
+        <article class="article">
+          <div class="wrap">
+
+            <!-- INTRO -->
+            <section class="intro" id="mo-dau">
+              <p class="dropcap reveal" style="margin-top:48px;">Trong đầu tư bất động sản, người ta hay tranh nhau câu hỏi “mua ở đâu, mua căn nào”. Đó là câu hỏi ai cũng hỏi, và cũng là câu hỏi khiến nhiều người trả giá đắt nhất.</p>
+              <p class="reveal">Bởi vì sau nhiều thương vụ đi qua, tôi nhận ra có một câu hỏi đứng trước cả hai câu đó, quan trọng hơn cả hai câu đó: <span class="strong">bạn đang nghe lời ai?</span></p>
+              <p class="reveal">Một căn hộ hay một lô đất tự nó không nói cho bạn biết nó tốt hay xấu. Nó chỉ là gạch, là đất, là giấy tờ. Người môi giới đứng giữa mới là người diễn giải nó cho bạn — biến một con số khô khan thành một câu chuyện hấp dẫn, hoặc thành một lời cảnh báo thẳng thắn. Và chính ở khâu diễn giải này, đa số người mua thua thiệt. Họ không thua vì sản phẩm tệ. Họ thua vì tin nhầm người.</p>
+              <p class="reveal">Bài viết này không dạy bạn cách xem phong thủy hay đoán giá đất. Nó nói về thứ căn bản hơn: cách nhận ra ai đang đứng về phía bạn, và ai đang đứng về phía cái hoa hồng của họ.</p>
+            </section>
+
+            <!-- SECTION 1 -->
+            <section class="section reveal" id="co-dat-co-van">
+              <hr class="section-rule" />
+              <h2><span class="sec-num">Phần I</span>“Cò đất” và “cố vấn” — khác nhau ở một chữ</h2>
+              <p>Thị trường bất động sản Việt Nam có hai kiểu người làm nghề môi giới, và điều đáng buồn là người mua thường không phân biệt được cho tới khi đã ký hợp đồng.</p>
+              <p><span class="strong">Kiểu thứ nhất bán cho bạn một giấc mơ.</span> Họ nói giá sẽ lên gấp đôi trong hai năm, khu này sắp có đường lớn, sắp có cầu, sắp có khu công nghiệp. Họ tạo áp lực: “anh chị không đặt cọc hôm nay là mai mất căn, có người khác đang xem rồi”. Họ vẽ ra một tương lai óng ánh mà trong đó bạn không thể thua. Vấn đề là: họ sống bằng hoa hồng của thương vụ trước mắt. Nếu bạn không mua, họ không có gì. Nên động lực sâu xa nhất của họ là chốt — bằng mọi giá, kể cả cái giá là sự thật.</p>
+              <p><span class="strong">Kiểu thứ hai bán cho bạn một con số biết nói.</span> Họ ngồi xuống và bóc tách cho bạn nghe: căn này cho thuê được bao nhiêu một tháng theo giá thị trường thực tế, không phải giá trong mơ. Sau khi trừ phí quản lý, thuế, khấu hao, và đặc biệt là lãi vay, thì dòng tiền thực còn lại trong túi bạn là bao nhiêu. Thanh khoản của nó ra sao — nghĩa là khi bạn cần tiền gấp và muốn bán, bạn mất bao lâu và phải giảm giá bao nhiêu để có người mua. Họ không hứa giấc mơ. Họ đưa bạn dữ liệu, rồi lùi lại để bạn tự quyết.</p>
+              <p>Khác biệt giữa hai kiểu người này, nói cho cùng, không nằm ở kỹ thuật bán hàng. Người bán giấc mơ nhiều khi còn giỏi ăn nói hơn. Khác biệt nằm ở một chữ duy nhất: <span class="strong">thật</span>. Giá trị thật, dòng tiền thật, lợi ích thật cho người mua — chứ không phải lợi ích thật cho người bán được ngụy trang thành lợi ích của người mua.</p>
+              <p>Và đây là điều ít người nói ra: một người cố vấn tử tế đôi khi kiếm được ít hơn trong ngắn hạn, vì họ dám khuyên bạn không mua. Nhưng họ đi đường dài, và họ hiểu rằng một khách hàng tin tưởng sẽ quay lại, sẽ giới thiệu người khác, trong suốt mười năm hai mươi năm. Người bán giấc mơ thì cần một khách mới mỗi tuần, vì không ai quay lại với người đã lừa mình.</p>
+            </section>
+          </div>
+        </article>
+
+        <!-- INTERLUDE 1 -->
+        <section class="interlude reveal" aria-label="Trích dẫn">
+          <span class="bigmark" aria-hidden="true">“</span>
+          <div class="interlude-inner">
+            <p class="ksig">Điều cần nhớ</p>
+            <blockquote>Đa số người mua không thua vì sản phẩm tệ. Họ thua vì tin nhầm người.</blockquote>
+            <p class="qby">Nguyễn Thanh Vũ</p>
+          </div>
+        </section>
+
+        <article class="article">
+          <div class="wrap">
+
+            <!-- SECTION 2 — dòng tiền -->
+            <section class="section reveal" id="dong-tien">
+              <hr class="section-rule" />
+              <h2><span class="sec-num">Phần II</span>Bất động sản dòng tiền: mua tài sản, không mua kỳ vọng</h2>
+              <p>Vậy “bất động sản dòng tiền” thực chất là gì, nói cho gọn?</p>
+              <p>Đó là loại tài sản mỗi tháng tự sinh ra tiền cho bạn — chủ yếu qua việc cho thuê — chứ không chỉ nằm im một chỗ chờ tăng giá. Nghe thì đơn giản, nhưng sự khác biệt về mặt tài chính lẫn tâm lý là rất lớn.</p>
+              <p>Khi bạn mua một tài sản chỉ để kỳ vọng tăng giá, bạn đang đặt cược vào tương lai. Mỗi tháng bạn phải gồng lãi vay, phải trả tiền cho ngân hàng, phải chờ đợi, và trong lòng luôn thầm cầu nguyện thị trường đi lên. Nếu thị trường tăng, bạn thắng lớn. Nhưng nếu thị trường đứng yên ba năm, bốn năm — điều đã xảy ra nhiều lần trong lịch sử bất động sản Việt Nam — thì bạn không chỉ lỗ tiền lãi, bạn còn lỗ thời gian, lỗ cơ hội, và lỗ cả sự bình yên trong đầu. Nhiều người vỡ nợ không phải vì mua sai chỗ, mà vì mua thứ không tạo ra dòng tiền và không đủ sức gồng qua giai đoạn thị trường nguội.</p>
+              <p>Khi bạn mua một tài sản tạo dòng tiền, câu chuyện đảo ngược. Ngay từ tháng đầu tiên, tài sản đã bắt đầu trả công cho bạn. Tiền thuê về, bù vào lãi vay, thậm chí dư ra. Bạn không phải cầu nguyện thị trường, vì bạn đâu cần nó tăng để sống. Giá có tăng hay không trở thành phần thưởng cộng thêm, chứ không phải điều kiện sống còn. Bạn ngủ ngon hơn. Và một nhà đầu tư ngủ ngon là một nhà đầu tư ra quyết định tỉnh táo.</p>
+              <p>Người mua khôn ngoan, vì vậy, không hỏi “bao giờ giá lên?”. Câu hỏi đó là câu hỏi của người đánh bạc — đặt cửa rồi hồi hộp chờ mở bát. Người xây tài sản hỏi khác: <span class="strong">“Mỗi tháng nó đẻ ra bao nhiêu, và tôi giữ nó có mệt không?”</span>. Đó là hai câu hỏi rất tỉnh, rất trần trụi, và chính vì trần trụi mà nó bảo vệ bạn.</p>
+              <p>Điều này không có nghĩa là mọi bất động sản tăng giá đều xấu. Nó có nghĩa là bạn phải biết mình đang chơi trò chơi nào, và có đủ nội lực để chơi trò đó hay không. Với đa số người đi làm công ăn lương, tích cóp từng đồng, thì dòng tiền là điểm tựa an toàn hơn nhiều so với việc cược cả gia tài vào một kỳ vọng.</p>
+            </section>
+          </div>
+        </article>
+
+        <!-- INTERLUDE 2 -->
+        <section class="interlude reveal" aria-label="Trích dẫn">
+          <span class="bigmark" aria-hidden="true">“</span>
+          <div class="interlude-inner">
+            <p class="ksig">Đổi câu hỏi</p>
+            <blockquote>Đừng hỏi “bao giờ giá lên?”. Hãy hỏi “mỗi tháng nó đẻ ra bao nhiêu, và tôi giữ nó có mệt không?”.</blockquote>
+            <p class="qby">Nguyễn Thanh Vũ</p>
+          </div>
+        </section>
+
+        <article class="article">
+          <div class="wrap">
+
+            <!-- SECTION 3 — tư vấn tử tế -->
+            <section class="section reveal" id="tu-van-tu-te">
+              <hr class="section-rule" />
+              <h2><span class="sec-num">Phần III</span>Làm sao để biết mình đang được tư vấn tử tế?</h2>
+              <p>Đây có lẽ là phần quan trọng nhất của bài viết, vì nó là thứ bạn dùng được ngay. Sau nhiều năm quan sát cả người bán lẫn người mua, tôi rút ra vài dấu hiệu nhận biết một người cố vấn đáng tin. Bạn có thể dùng nó như một bộ lọc trước khi trao niềm tin — và tiền — cho ai đó.</p>
+
+              <div class="beliefs">
+                <div class="belief">
+                  <div class="q"><span class="qi">Dấu hiệu 1.</span><h3>Họ dám nói “không nên mua”</h3></div>
+                  <div class="a">
+                    <p>Đây là bài kiểm tra đơn giản nhất và khắc nghiệt nhất. Người chỉ muốn chốt sẽ không bao giờ khuyên bạn dừng lại, vì bạn dừng lại là họ mất hoa hồng. Người tử tế thì có những lúc nói thẳng: “Căn này không hợp với anh chị đâu, để em tìm căn khác.” Nếu bạn gặp một người môi giới cả đời chưa từng can bạn khỏi một thương vụ nào, hãy cẩn thận.</p>
+                  </div>
+                </div>
+
+                <div class="belief">
+                  <div class="q"><span class="qi">Dấu hiệu 2.</span><h3>Họ đưa con số trước, cảm xúc sau</h3></div>
+                  <div class="a">
+                    <p>Một người tư vấn tử tế mở đầu bằng dòng tiền, chi phí, rủi ro thanh khoản — những thứ khô khan nhưng thật. Cảm xúc, câu chuyện, sự phấn khích chỉ đến sau, và chỉ để minh họa cho con số. Ngược lại, người bán giấc mơ mở đầu bằng cảm xúc và giấu con số ở đâu đó phía sau những lời “đảm bảo lời”, “chắc chắn lãi”, “khu này không bao giờ xuống”.</p>
+                  </div>
+                </div>
+
+                <div class="belief">
+                  <div class="q"><span class="qi">Dấu hiệu 3.</span><h3>Họ chịu trách nhiệm như thể đó là tiền của chính họ</h3></div>
+                  <div class="a">
+                    <p>Có một câu hỏi rất đơn giản để thử bất kỳ ai: <span class="strong">“Nếu là tiền của anh, anh có xuống tiền căn này không, ngay bây giờ?”</span> Hãy nhìn kỹ cách họ trả lời. Người tử tế sẽ ngập ngừng, sẽ nói “còn tùy”, sẽ hỏi lại bạn về tình hình tài chính của bạn. Người chỉ muốn bán sẽ trả lời “chắc chắn có” mà không chớp mắt, vì với họ đó chỉ là một câu trong kịch bản.</p>
+                  </div>
+                </div>
+
+                <div class="belief">
+                  <div class="q"><span class="qi">Dấu hiệu 4.</span><h3>Họ đi đường dài với bạn</h3></div>
+                  <div class="a">
+                    <p>Người làm nghề bền bỉ xây uy tín qua nhiều năm, nhiều khách hàng, nhiều thương vụ lớn nhỏ. Họ có tên tuổi để bảo vệ. Họ không biến mất sau khi nhận hoa hồng, vì họ cần bạn quay lại và giới thiệu người khác. Trước khi tin ai, hãy hỏi: người này đã làm nghề bao lâu, khách cũ nói gì về họ, họ có dám để lại tên thật và mặt thật của mình không.</p>
+                  </div>
+                </div>
+              </div>
+
+              <p style="margin-top:30px;">Gộp bốn dấu hiệu này lại, bạn sẽ thấy chúng đều xoay quanh một điều: đồng tiền bạn bỏ ra mua nhà là đồng tiền mồ hôi, tích cóp có khi cả đời.</p>
+            </section>
+          </div>
+        </article>
+
+        <!-- INTERLUDE 3 -->
+        <section class="interlude reveal" aria-label="Bài học cốt lõi">
+          <span class="bigmark" aria-hidden="true">“</span>
+          <div class="interlude-inner">
+            <p class="ksig">Nếu chỉ nhớ một câu</p>
+            <blockquote>Người cố vấn đúng nghĩa là người bảo vệ đồng tiền đó cho bạn, chứ không phải người tìm cách tiêu nó giúp bạn.</blockquote>
+            <p class="qby">Nguyễn Thanh Vũ</p>
+          </div>
+        </section>
+
+        <article class="article">
+          <div class="wrap">
+
+            <!-- SECTION 4 — tư duy + nguồn tham khảo -->
+            <section class="section reveal" id="tu-duy">
+              <hr class="section-rule" />
+              <h2><span class="sec-num">Phần IV</span>Tư duy đúng quan trọng hơn một thương vụ</h2>
+              <p>Điều tôi tâm đắc nhất khi tìm hiểu sâu về nghề này không phải là mánh khóe chốt deal, không phải kỹ thuật đàm phán hay chiêu trò tạo khan hiếm. Thứ ở lại với tôi là tư duy đằng sau mỗi nước đi.</p>
+              <p>Bởi vì một thương vụ tốt chỉ giúp được một người, một lần. Nhưng một tư duy đúng, khi được truyền đi, có thể thay đổi cách cả một thế hệ làm nghề — và quan trọng hơn, thay đổi cách cả một thế hệ người mua tự bảo vệ mình. Nếu ngày càng nhiều người mua biết hỏi “mỗi tháng nó đẻ ra bao nhiêu” thay vì “bao giờ giá lên”, thì tự khắc những người bán giấc mơ sẽ hết đất sống, và nghề môi giới sẽ tử tế lên. Thị trường sạch hơn không đến từ luật lệ, nó đến từ việc người mua khôn hơn.</p>
+              <p>Nếu bạn đang muốn tìm hiểu sâu hơn về cách chọn bất động sản tạo dòng tiền và cách nhận diện một người tư vấn đáng tin, tôi gợi ý bạn đọc các bài viết của <a href="https://dotanminh.com" target="_blank" rel="noopener">cố vấn bất động sản dòng tiền Đỗ Tấn Minh</a> — một người theo đuổi triết lý làm nghề bằng bốn giá trị rất rõ ràng: sự thật, trách nhiệm, bền bỉ và tận tâm. Anh viết lại toàn bộ trải nghiệm thực chiến của mình một cách thẳng thắn, không tô hồng, và dễ đọc kể cả với người mới.</p>
+              <p>Đặc biệt, bài <a href="https://dotanminh.com/bai-viet/co-dat-thanh-co-van.html" target="_blank" rel="noopener">“Từ ‘cò đất’ thành cố vấn”</a> là một góc nhìn rất đáng đọc về hành trình thay đổi định kiến của cả một nghề — từ hình ảnh người chỉ chăm chăm chốt khách, thành hình ảnh một người đồng hành đáng tin.</p>
+              <p>Cuối cùng, xin nhắc lại điều đã nói ở đầu bài, vì nó xứng đáng được nhắc lại: <span class="strong">bạn không mua một căn nhà. Bạn mua một quyết định.</span> Căn nhà chỉ là kết quả bề mặt; quyết định mới là thứ định đoạt bạn giàu lên hay nghèo đi sau mười năm. Và một quyết định tốt, gần như luôn luôn, bắt đầu từ việc bạn nghe đúng người.</p>
+            </section>
+
+          </div>
+        </article>
+      </div>
+
+      <!-- TOC -->
+      <nav class="col-toc" aria-label="Mục lục">
+        <div class="toc" id="toc">
+          <div class="toc-label">Mục lục</div>
+          <ol>
+            <li><a href="#co-dat-co-van"><span class="tn">01</span><span class="tlabel">“Cò đất” và “cố vấn”</span><span class="tshort">Cò đất</span></a></li>
+            <li><a href="#dong-tien"><span class="tn">02</span><span class="tlabel">Bất động sản dòng tiền</span><span class="tshort">Dòng tiền</span></a></li>
+            <li><a href="#tu-van-tu-te"><span class="tn">03</span><span class="tlabel">Được tư vấn tử tế?</span><span class="tshort">Tư vấn</span></a></li>
+            <li><a href="#tu-duy"><span class="tn">04</span><span class="tlabel">Tư duy đúng &amp; nguồn đọc thêm</span><span class="tshort">Tư duy</span></a></li>
+            <li><a href="#loi-moi"><span class="tn">05</span><span class="tlabel">Trước khi bạn xuống tiền</span><span class="tshort">Đọc thêm</span></a></li>
+          </ol>
+        </div>
+      </nav>
+
+    </div>
+
+    <!-- LỜI MỜI / CTA -->
+    <section class="invite reveal" id="loi-moi">
+      <div class="invite-inner">
+        <p class="eyebrow">Lời mời</p>
+        <h2>Trước khi bạn xuống tiền cho bất kỳ căn nào</h2>
+        <p>Hãy tự hỏi đúng một câu: người đang tư vấn cho bạn đưa ra <span class="hl">con số</span>, hay đưa ra <span class="hl">giấc mơ</span>? Nếu là con số — dòng tiền thật, chi phí thật, rủi ro thật — bạn đang đi đúng đường.</p>
+        <p>Và nếu người đó dám nói với bạn “căn này không nên mua”, hãy giữ lấy họ. Người như vậy hiếm hơn bạn tưởng.</p>
+        <p><span class="hl">Bạn không mua một căn nhà. Bạn mua một quyết định.</span> Và quyết định tốt luôn bắt đầu từ việc nghe đúng người.</p>
+        <div class="invite-actions">
+          <a href="#tu-van-tu-te" class="btn btn-primary">Đọc lại 4 dấu hiệu</a>
+          <a href="index.html" class="btn btn-ghost">Về trang chủ</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="signoff reveal">
+      <div class="sig">— Nguyễn Thanh Vũ</div>
+      <div class="sig-line"></div>
+    </div>
+
+    <!-- BÀI VIẾT KHÁC -->
+                <section class="morelist reveal" id="danh-muc" aria-label="Danh mục bài viết">
+      <div class="ml-head">Bài viết khác trên blog</div>
+      <p class="ml-sub">Vài góc nhìn khác của tôi về nghề, về con người và về cách làm cho tử tế.</p>
+      <a class="pcard" href="index.html">
+        <div class="pc-cat">Tự sự · Số 01</div>
+        <div class="pc-title">Tôi từng mất tất cả vì một cú khóa kênh</div>
+        <div class="pc-ex">Câu chuyện thật của tôi: từ một kênh bị xóa sổ sau một đêm đến nút bạc, và vì sao tôi chọn con đường làm sạch, làm bền.</div>
+        <span class="pc-more">Đọc bài <span aria-hidden="true">&#8594;</span></span>
+      </a>
+      <a class="pcard" href="nguyen-thanh-vu-la-ai.html">
+        <div class="pc-cat">Hồ sơ · Về tôi</div>
+        <div class="pc-title">Nguyễn Thanh Vũ là ai?</div>
+        <div class="pc-ex">Tôi là ai, làm nghề gì, tin vào cái gì, và tại sao tôi cứ đâm đầu làm cho dân áo blouse. Kể luôn cái lần mất sạch kênh sau một đêm.</div>
+        <span class="pc-more">Đọc bài <span aria-hidden="true">&#8594;</span></span>
+      </a>
+      <a class="pcard" href="bai-3-bo-nao-thu-2.html">
+        <div class="pc-cat">Số 03 · Nội dung có chất riêng</div>
+        <div class="pc-title">Vì sao 90% nội dung AI viết ra đều nhạt như nhau, và &#x27;bộ não thứ hai&#x27; giúp bài của bác sĩ có dấu vân tay không ai bắt chước</div>
+        <div class="pc-ex">Bài AI viết ra nghe giống y hệt mười ngàn bác sĩ khác không phải lỗi của AI. Đây là lý do thật, và cách dựng một cái kho riêng để bài của bạn có dấu vân tay không ai sao chép nổi.</div>
+        <span class="pc-more">Đọc bài <span aria-hidden="true">&#8594;</span></span>
+      </a>
+      <a class="pcard" href="bai-4-ky-luat-ironman.html">
+        <div class="pc-cat">Số 04 · Bền hơn nhanh</div>
+        <div class="pc-title">Tôi tập Ironman để hiểu một sự thật về xây kênh: không có cú bứt phá, chỉ có kỷ luật mỗi ngày</div>
+        <div class="pc-ex">Cái bạn ngưỡng mộ ở người làm content giỏi không phải bài viral đó. Là cả trăm bài trước nó không ai thấy. Và cái kỷ luật để đẻ ra đống đó, bạn dư từ lâu rồi.</div>
+        <span class="pc-more">Đọc bài <span aria-hidden="true">&#8594;</span></span>
+      </a>
+      <a class="pcard" href="bai-5-duoc-biet-den.html">
+        <div class="pc-cat">Số 05 · Bước ra ánh sáng</div>
+        <div class="pc-title">Người giỏi nhất không thắng, người giỏi VÀ được biết đến mới thắng. Đây là bất công lớn nhất ngành y đang trả giá</div>
+        <div class="pc-ex">Một chị bác sĩ nhắn tôi: sao thằng kém hơn mình mà mấy trăm ngàn người theo? Tôi hỏi lại chị đúng một câu, rồi kể chuyện tôi từng mất sạch một cái kênh và làm lại tới nút bạc.</div>
+        <span class="pc-more">Đọc bài <span aria-hidden="true">&#8594;</span></span>
+      </a>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="foot-brand">Nguyễn Thanh Vũ</div>
+    <div class="foot-role">Coach xây kênh online cho chuyên gia y tế &amp; người khởi nghiệp</div>
+    <div class="foot-meta">
+      <span><a href="index.html" style="color:inherit;text-decoration:none;">Câu chuyện của tôi</a></span><span class="sep"></span>
+      <span>Làm sạch</span><span class="sep"></span>
+      <span>Làm bền</span><span class="sep"></span>
+      <span>Đúng tiêu chuẩn cộng đồng</span><span class="sep"></span>
+      <span>© 2026</span>
+    </div>
+  </footer>
+
+<script>
+  document.body.classList.remove('no-js');
+  var bar = document.getElementById('progress');
+  function onProgress(){
+    var h = document.documentElement;
+    var scrolled = h.scrollTop || document.body.scrollTop;
+    var height = h.scrollHeight - h.clientHeight;
+    var pct = height > 0 ? (scrolled / height) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', onProgress, {passive:true});
+  onProgress();
+
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var items = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    items.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+    items.forEach(function(el){ io.observe(el); });
+  }
+
+  var tocLinks = Array.prototype.slice.call(document.querySelectorAll('#toc a'));
+  var spy = tocLinks
+    .map(function(a){
+      var id = a.getAttribute('href').slice(1);
+      var sec = document.getElementById(id);
+      return sec ? {link:a, sec:sec} : null;
+    })
+    .filter(Boolean);
+
+  function setActive(id){
+    spy.forEach(function(s){
+      if (s.link.getAttribute('href') === '#' + id) s.link.classList.add('active');
+      else s.link.classList.remove('active');
+    });
+  }
+
+  if (spy.length && 'IntersectionObserver' in window){
+    var spyIO = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) setActive(e.target.id);
+      });
+    }, {rootMargin:'-45% 0px -50% 0px', threshold:0});
+    spy.forEach(function(s){ spyIO.observe(s.sec); });
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(ev){
+      var id = a.getAttribute('href').slice(1);
+      if (!id) return;
+      var target = id === 'top' ? document.getElementById('top') : document.getElementById(id);
+      if (!target) return;
+      ev.preventDefault();
+      var navH = 76;
+      var y = target.getBoundingClientRect().top + window.pageYOffset - navH;
+      window.scrollTo({top: y < 0 ? 0 : y, behavior: reduce ? 'auto' : 'smooth'});
+    });
+  });
+</script>
+</body>
+</html>
